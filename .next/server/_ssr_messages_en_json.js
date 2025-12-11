@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_ssr_messages_en_json";
+exports.ids = ["_ssr_messages_en_json"];
+exports.modules = {
+
+/***/ "(ssr)/./messages/en.json":
+/*!**************************!*\
+  !*** ./messages/en.json ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"common":{"site_name":"ToolHub","home":"Home","tools":"Tools","about":"About","contact":"Contact","privacy_policy":"Privacy Policy","terms_of_service":"Terms of Service","all_rights_reserved":"All rights reserved"},"home":{"title":"Free Online Tools - No Registration Required","description":"100+ free online tools for image conversion, PDF manipulation, password generation, and more. 100% client-side processing - your files never leave your device.","hero_title":"Powerful Tools, Zero Friction","hero_subtitle":"Free online utilities that work entirely in your browser. No registration, no uploads to servers.","search_placeholder":"Search tools...","popular_tools":"Popular Tools","all_tools":"All Tools","view_all":"View All"},"tools":{"password_generator":{"title":"Password Generator","description":"Generate secure, random passwords instantly","generate":"Generate Password","copy":"Copy","copied":"Copied!","length":"Length","include_uppercase":"Include Uppercase","include_lowercase":"Include Lowercase","include_numbers":"Include Numbers","include_symbols":"Include Symbols"},"qr_code_generator":{"title":"QR Code Generator","description":"Create QR codes for any text or URL","enter_text":"Enter text or URL","download":"Download QR Code"},"image_converter":{"title":"Image Converter","description":"Convert images between formats (JPG, PNG, WebP, AVIF)","select_file":"Select Image","convert":"Convert","download":"Download"}},"categories":{"image":"Image Tools","pdf":"PDF Tools","text":"Text Utilities","developer":"Developer Tools","security":"Security Tools"},"footer":{"description":"Free online tools that respect your privacy. All processing happens in your browser.","quick_links":"Quick Links","legal":"Legal","follow_us":"Follow Us"}}');
+
+/***/ })
+
+};
+;
