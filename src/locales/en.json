@@ -7,7 +7,25 @@
     "contact": "Contact",
     "privacy_policy": "Privacy Policy",
     "terms_of_service": "Terms of Service",
-    "all_rights_reserved": "All rights reserved"
+    "all_rights_reserved": "All rights reserved",
+    "search_placeholder": "Search tools...",
+    "all_tools": "All Tools",
+    "view_all": "View All",
+    "popular_tools": "Popular Tools",
+    "browse_by_category": "Browse by Category",
+    "coming_soon": "Coming Soon",
+    "available": "Available",
+    "copy_link": "Copy Share Link",
+    "link_copied": "Link Copied!",
+    "planned_implementation": "Planned",
+    "client_side": "100% Client-side (Browser)",
+    "server_side": "Server-side processing",
+    "hybrid": "Client + Server hybrid",
+    "tools_count": "{count} tools",
+    "results_found": "{count} results",
+    "no_results": "No tools found",
+    "open_tool": "Open tool",
+    "browse_tools": "Browse tools"
   },
   "home": {
     "title": "Free Online Tools - No Registration Required",
@@ -18,6 +36,96 @@
     "popular_tools": "Popular Tools",
     "all_tools": "All Tools",
     "view_all": "View All"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "Password & Security",
+      "description": "Generate secure passwords, check strength, and manage security utilities"
+    },
+    "text": {
+      "title": "Text Tools",
+      "description": "Text manipulation, comparison, and formatting utilities"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "Format, validate, compare and convert structured data"
+    },
+    "random": {
+      "title": "Random / Fun",
+      "description": "Random generators, pickers, and fun utilities"
+    },
+    "image": {
+      "title": "Image Tools",
+      "description": "Image compression, conversion, and manipulation"
+    },
+    "pdf": {
+      "title": "PDF Tools",
+      "description": "PDF manipulation, merging, splitting, and conversion"
+    },
+    "dev": {
+      "title": "Dev Utilities",
+      "description": "Developer tools for code formatting, testing, and conversion"
+    },
+    "data": {
+      "title": "Encode/Decode",
+      "description": "Encoding, decoding, and data transformation tools"
+    },
+    "datetime": {
+      "title": "Date & Time",
+      "description": "Date calculations, timezone conversion, and calendar utilities"
+    },
+    "youtube": {
+      "title": "YouTube Tools",
+      "description": "Legal YouTube utilities for metadata, thumbnails, and embeds"
+    },
+    "file-convert": {
+      "title": "File Convert",
+      "description": "Convert files between different formats"
+    },
+    "math": {
+      "title": "Math & Calculator",
+      "description": "Mathematical calculations and equation solving"
+    },
+    "unit": {
+      "title": "Unit Converters",
+      "description": "Convert between different units of measurement"
+    },
+    "finance": {
+      "title": "Finance & Budget",
+      "description": "Financial calculators and budget planning tools"
+    },
+    "health": {
+      "title": "Health & Fitness",
+      "description": "Health and fitness calculation tools"
+    },
+    "seo": {
+      "title": "SEO & Analysis",
+      "description": "SEO analysis and website optimization tools"
+    },
+    "network": {
+      "title": "Network & IP",
+      "description": "Network diagnostics and IP utilities"
+    },
+    "language": {
+      "title": "Language & Translation",
+      "description": "Translation, spelling, and language utilities"
+    },
+    "audio": {
+      "title": "Audio Tools",
+      "description": "Audio processing and conversion tools"
+    },
+    "video": {
+      "title": "Video Tools",
+      "description": "Video processing and conversion tools"
+    },
+    "weather": {
+      "title": "Weather & Environment",
+      "description": "Weather forecasts and environmental information"
+    },
+    "crypto": {
+      "title": "Cryptocurrency",
+      "description": "Cryptocurrency tracking and calculation tools"
+    }
   },
   "tools": {
     "password_generator": {

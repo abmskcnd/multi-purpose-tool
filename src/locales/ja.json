@@ -7,7 +7,25 @@
     "contact": "お問い合わせ",
     "privacy_policy": "プライバシーポリシー",
     "terms_of_service": "利用規約",
-    "all_rights_reserved": "全著作権所有"
+    "all_rights_reserved": "全著作権所有",
+    "search_placeholder": "ツールを検索...",
+    "all_tools": "すべてのツール",
+    "view_all": "すべて表示",
+    "popular_tools": "人気ツール",
+    "browse_by_category": "カテゴリで探す",
+    "coming_soon": "近日公開",
+    "available": "利用可能",
+    "copy_link": "リンクをコピー",
+    "link_copied": "リンクをコピーしました！",
+    "planned_implementation": "実装予定",
+    "client_side": "100%クライアント側（ブラウザ）",
+    "server_side": "サーバー側処理",
+    "hybrid": "クライアント + サーバー混合",
+    "tools_count": "{count} ツール",
+    "results_found": "{count} 件の結果",
+    "no_results": "ツールが見つかりません",
+    "open_tool": "ツールを開く",
+    "browse_tools": "ツールを閲覧"
   },
   "home": {
     "title": "無料オンラインツール - 登録不要",
@@ -18,6 +36,96 @@
     "popular_tools": "人気ツール",
     "all_tools": "すべてのツール",
     "view_all": "すべて表示"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "パスワードとセキュリティ",
+      "description": "安全なパスワードの生成、強度チェック、セキュリティユーティリティ"
+    },
+    "text": {
+      "title": "テキストツール",
+      "description": "テキストの操作、比較、フォーマット"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "構造化データのフォーマット、検証、比較、変換"
+    },
+    "random": {
+      "title": "ランダム / 楽しい",
+      "description": "ランダムジェネレーター、ピッカー、楽しいユーティリティ"
+    },
+    "image": {
+      "title": "画像ツール",
+      "description": "画像の圧縮、変換、操作"
+    },
+    "pdf": {
+      "title": "PDFツール",
+      "description": "PDFの操作、結合、分割、変換"
+    },
+    "dev": {
+      "title": "開発ユーティリティ",
+      "description": "開発者ツール：コードフォーマット、テスト、変換"
+    },
+    "data": {
+      "title": "エンコード/デコード",
+      "description": "エンコード、デコード、データ変換ツール"
+    },
+    "datetime": {
+      "title": "日付と時間",
+      "description": "日付計算、タイムゾーン変換、カレンダーユーティリティ"
+    },
+    "youtube": {
+      "title": "YouTubeツール",
+      "description": "合法的なYouTubeユーティリティ：メタデータ、サムネイル、埋め込み"
+    },
+    "file-convert": {
+      "title": "ファイル変換",
+      "description": "異なるフォーマット間でファイルを変換"
+    },
+    "math": {
+      "title": "数学と計算機",
+      "description": "数学計算と方程式の解法"
+    },
+    "unit": {
+      "title": "単位変換器",
+      "description": "異なる測定単位間の変換"
+    },
+    "finance": {
+      "title": "財務と予算",
+      "description": "財務計算機と予算計画ツール"
+    },
+    "health": {
+      "title": "健康とフィットネス",
+      "description": "健康とフィットネスの計算ツール"
+    },
+    "seo": {
+      "title": "SEOと分析",
+      "description": "SEO分析とウェブサイト最適化ツール"
+    },
+    "network": {
+      "title": "ネットワークとIP",
+      "description": "ネットワーク診断とIPユーティリティ"
+    },
+    "language": {
+      "title": "言語と翻訳",
+      "description": "翻訳、スペルチェック、言語ユーティリティ"
+    },
+    "audio": {
+      "title": "オーディオツール",
+      "description": "オーディオの処理と変換"
+    },
+    "video": {
+      "title": "ビデオツール",
+      "description": "ビデオの処理と変換"
+    },
+    "weather": {
+      "title": "天気と環境",
+      "description": "天気予報と環境情報"
+    },
+    "crypto": {
+      "title": "暗号通貨",
+      "description": "暗号通貨の追跡と計算ツール"
+    }
   },
   "tools": {
     "password_generator": {

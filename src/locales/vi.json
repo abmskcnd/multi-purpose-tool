@@ -7,7 +7,25 @@
     "contact": "Liên hệ",
     "privacy_policy": "Chính sách bảo mật",
     "terms_of_service": "Điều khoản dịch vụ",
-    "all_rights_reserved": "Bảo lưu mọi quyền"
+    "all_rights_reserved": "Bảo lưu mọi quyền",
+    "search_placeholder": "Tìm kiếm công cụ...",
+    "all_tools": "Tất Cả Công Cụ",
+    "view_all": "Xem Tất Cả",
+    "popular_tools": "Công Cụ Phổ Biến",
+    "browse_by_category": "Duyệt Theo Danh Mục",
+    "coming_soon": "Sắp Ra Mắt",
+    "available": "Có Sẵn",
+    "copy_link": "Sao Chép Liên Kết",
+    "link_copied": "Đã Sao Chép!",
+    "planned_implementation": "Dự Kiến",
+    "client_side": "100% Phía Client (Trình duyệt)",
+    "server_side": "Xử lý phía Server",
+    "hybrid": "Kết hợp Client + Server",
+    "tools_count": "{count} công cụ",
+    "results_found": "{count} kết quả",
+    "no_results": "Không tìm thấy công cụ",
+    "open_tool": "Mở công cụ",
+    "browse_tools": "Xem công cụ"
   },
   "home": {
     "title": "Công Cụ Online Miễn Phí - Không Cần Đăng Ký",
@@ -18,6 +36,96 @@
     "popular_tools": "Công Cụ Phổ Biến",
     "all_tools": "Tất Cả Công Cụ",
     "view_all": "Xem Tất Cả"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "Mật Khẩu & Bảo Mật",
+      "description": "Tạo mật khẩu an toàn, kiểm tra độ mạnh và các tiện ích bảo mật"
+    },
+    "text": {
+      "title": "Công Cụ Văn Bản",
+      "description": "Xử lý, so sánh và định dạng văn bản"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "Định dạng, xác thực, so sánh và chuyển đổi dữ liệu có cấu trúc"
+    },
+    "random": {
+      "title": "Ngẫu Nhiên & Giải Trí",
+      "description": "Trình tạo ngẫu nhiên, bốc thăm và các tiện ích vui"
+    },
+    "image": {
+      "title": "Công Cụ Ảnh",
+      "description": "Nén ảnh, chuyển đổi và xử lý hình ảnh"
+    },
+    "pdf": {
+      "title": "Công Cụ PDF",
+      "description": "Xử lý PDF, ghép, tách và chuyển đổi"
+    },
+    "dev": {
+      "title": "Công Cụ Lập Trình",
+      "description": "Công cụ cho lập trình viên: định dạng code, test và chuyển đổi"
+    },
+    "data": {
+      "title": "Mã Hóa/Giải Mã",
+      "description": "Công cụ mã hóa, giải mã và chuyển đổi dữ liệu"
+    },
+    "datetime": {
+      "title": "Ngày & Giờ",
+      "description": "Tính toán ngày, chuyển đổi múi giờ và tiện ích lịch"
+    },
+    "youtube": {
+      "title": "Công Cụ YouTube",
+      "description": "Tiện ích YouTube hợp pháp: metadata, thumbnail và embed"
+    },
+    "file-convert": {
+      "title": "Chuyển Đổi File",
+      "description": "Chuyển đổi file giữa các định dạng khác nhau"
+    },
+    "math": {
+      "title": "Toán & Máy Tính",
+      "description": "Tính toán số học và giải phương trình"
+    },
+    "unit": {
+      "title": "Chuyển Đổi Đơn Vị",
+      "description": "Chuyển đổi giữa các đơn vị đo lường"
+    },
+    "finance": {
+      "title": "Tài Chính & Ngân Sách",
+      "description": "Máy tính tài chính và công cụ lập ngân sách"
+    },
+    "health": {
+      "title": "Sức Khỏe & Thể Dục",
+      "description": "Công cụ tính toán sức khỏe và thể dục"
+    },
+    "seo": {
+      "title": "SEO & Phân Tích",
+      "description": "Phân tích SEO và công cụ tối ưu website"
+    },
+    "network": {
+      "title": "Mạng & IP",
+      "description": "Chẩn đoán mạng và tiện ích IP"
+    },
+    "language": {
+      "title": "Ngôn Ngữ & Dịch Thuật",
+      "description": "Dịch thuật, kiểm tra chính tả và tiện ích ngôn ngữ"
+    },
+    "audio": {
+      "title": "Công Cụ Âm Thanh",
+      "description": "Xử lý và chuyển đổi âm thanh"
+    },
+    "video": {
+      "title": "Công Cụ Video",
+      "description": "Xử lý và chuyển đổi video"
+    },
+    "weather": {
+      "title": "Thời Tiết & Môi Trường",
+      "description": "Dự báo thời tiết và thông tin môi trường"
+    },
+    "crypto": {
+      "title": "Tiền Mã Hóa",
+      "description": "Theo dõi và tính toán tiền mã hóa"
+    }
   },
   "tools": {
     "password_generator": {
