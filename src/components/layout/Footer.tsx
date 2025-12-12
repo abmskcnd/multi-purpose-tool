@@ -1,12 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export function Footer() {
   const t = useTranslations('common');
   const footerT = useTranslations('footer');
-  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,7 +14,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href={`/${locale}`} className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <span className="text-2xl">🛠️</span>
               <span className="text-xl font-bold">{t('site_name')}</span>
             </Link>
@@ -29,22 +28,22 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold">{footerT('quick_links')}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href={`/${locale}`} className="hover:text-primary">
+                <Link href="/" className="hover:text-primary">
                   {t('home')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/tools`} className="hover:text-primary">
+                <Link href="/tools" className="hover:text-primary">
                   {t('tools')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/about`} className="hover:text-primary">
+                <Link href="/about" className="hover:text-primary">
                   {t('about')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/contact`} className="hover:text-primary">
+                <Link href="/contact" className="hover:text-primary">
                   {t('contact')}
                 </Link>
               </li>
@@ -56,12 +55,12 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-semibold">{footerT('legal')}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href={`/${locale}/privacy-policy`} className="hover:text-primary">
+                <Link href="/privacy-policy" className="hover:text-primary">
                   {t('privacy_policy')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/terms-of-service`} className="hover:text-primary">
+                <Link href="/terms-of-service" className="hover:text-primary">
                   {t('terms_of_service')}
                 </Link>
               </li>

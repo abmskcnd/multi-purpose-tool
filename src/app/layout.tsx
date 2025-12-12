@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '@/app/globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
     template: '%s | ToolHub',
-    default: 'ToolHub - Free Online Tools',
+    default: 'ToolHub - Công Cụ Online Miễn Phí',
   },
-  description: 'Free online tools for image conversion, PDF manipulation, password generation, and more. 100% client-side processing.',
-  keywords: ['online tools', 'free tools', 'image converter', 'pdf tools', 'password generator'],
+  description: 'Công cụ online miễn phí cho chuyển đổi ảnh, xử lý PDF, tạo mật khẩu và nhiều hơn nữa. Xử lý 100% phía client.',
+  keywords: ['công cụ online', 'free tools', 'chuyển đổi ảnh', 'pdf tools', 'tạo mật khẩu'],
   authors: [{ name: 'ToolHub Team' }],
   creator: 'ToolHub',
   publisher: 'ToolHub',
@@ -23,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'vi_VN',
     siteName: 'ToolHub',
   },
   twitter: {
@@ -37,8 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>{children}</body>
+    <html suppressHydrationWarning>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
