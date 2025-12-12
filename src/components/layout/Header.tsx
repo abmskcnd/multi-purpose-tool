@@ -1,18 +1,17 @@
 'use client';
 
-import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Header() {
   const t = useTranslations('common');
-  const locale = useLocale();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold text-primary">🛠️</span>
           <span className="text-xl font-bold">{t('site_name')}</span>
         </Link>
@@ -20,25 +19,25 @@ export function Header() {
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link 
-            href={`/${locale}`} 
+            href="/" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t('home')}
           </Link>
           <Link 
-            href={`/${locale}/tools`} 
+            href="/tools" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t('tools')}
           </Link>
           <Link 
-            href={`/${locale}/about`} 
+            href="/about" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t('about')}
           </Link>
           <Link 
-            href={`/${locale}/contact`} 
+            href="/contact" 
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             {t('contact')}
