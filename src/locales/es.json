@@ -7,7 +7,25 @@
     "contact": "Contacto",
     "privacy_policy": "Política de Privacidad",
     "terms_of_service": "Términos de Servicio",
-    "all_rights_reserved": "Todos los derechos reservados"
+    "all_rights_reserved": "Todos los derechos reservados",
+    "search_placeholder": "Buscar herramientas...",
+    "all_tools": "Todas las Herramientas",
+    "view_all": "Ver Todo",
+    "popular_tools": "Herramientas Populares",
+    "browse_by_category": "Explorar por Categoría",
+    "coming_soon": "Próximamente",
+    "available": "Disponible",
+    "copy_link": "Copiar Enlace",
+    "link_copied": "¡Enlace Copiado!",
+    "planned_implementation": "Planificado",
+    "client_side": "100% Lado del Cliente (Navegador)",
+    "server_side": "Procesamiento del Lado del Servidor",
+    "hybrid": "Híbrido Cliente + Servidor",
+    "tools_count": "{count} herramientas",
+    "results_found": "{count} resultados",
+    "no_results": "No se encontraron herramientas",
+    "open_tool": "Abrir herramienta",
+    "browse_tools": "Explorar herramientas"
   },
   "home": {
     "title": "Herramientas Online Gratis - Sin Registro",
@@ -18,6 +36,96 @@
     "popular_tools": "Herramientas Populares",
     "all_tools": "Todas las Herramientas",
     "view_all": "Ver Todo"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "Contraseñas y Seguridad",
+      "description": "Genera contraseñas seguras, verifica fortaleza y utilidades de seguridad"
+    },
+    "text": {
+      "title": "Herramientas de Texto",
+      "description": "Manipulación, comparación y formato de texto"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "Formatear, validar, comparar y convertir datos estructurados"
+    },
+    "random": {
+      "title": "Aleatorio / Diversión",
+      "description": "Generadores aleatorios, selectores y utilidades divertidas"
+    },
+    "image": {
+      "title": "Herramientas de Imagen",
+      "description": "Compresión, conversión y manipulación de imágenes"
+    },
+    "pdf": {
+      "title": "Herramientas PDF",
+      "description": "Manipulación de PDF, fusión, división y conversión"
+    },
+    "dev": {
+      "title": "Utilidades Dev",
+      "description": "Herramientas para desarrolladores: formato de código, pruebas y conversión"
+    },
+    "data": {
+      "title": "Codificar/Decodificar",
+      "description": "Herramientas de codificación, decodificación y transformación de datos"
+    },
+    "datetime": {
+      "title": "Fecha y Hora",
+      "description": "Cálculos de fecha, conversión de zona horaria y utilidades de calendario"
+    },
+    "youtube": {
+      "title": "Herramientas YouTube",
+      "description": "Utilidades legales de YouTube: metadatos, miniaturas e incrustaciones"
+    },
+    "file-convert": {
+      "title": "Conversión de Archivos",
+      "description": "Convertir archivos entre diferentes formatos"
+    },
+    "math": {
+      "title": "Matemáticas y Calculadora",
+      "description": "Cálculos matemáticos y resolución de ecuaciones"
+    },
+    "unit": {
+      "title": "Conversores de Unidades",
+      "description": "Convertir entre diferentes unidades de medida"
+    },
+    "finance": {
+      "title": "Finanzas y Presupuesto",
+      "description": "Calculadoras financieras y herramientas de presupuesto"
+    },
+    "health": {
+      "title": "Salud y Fitness",
+      "description": "Herramientas de cálculo de salud y fitness"
+    },
+    "seo": {
+      "title": "SEO y Análisis",
+      "description": "Análisis SEO y herramientas de optimización web"
+    },
+    "network": {
+      "title": "Red e IP",
+      "description": "Diagnósticos de red y utilidades IP"
+    },
+    "language": {
+      "title": "Idioma y Traducción",
+      "description": "Traducción, ortografía y utilidades de idioma"
+    },
+    "audio": {
+      "title": "Herramientas de Audio",
+      "description": "Procesamiento y conversión de audio"
+    },
+    "video": {
+      "title": "Herramientas de Video",
+      "description": "Procesamiento y conversión de video"
+    },
+    "weather": {
+      "title": "Clima y Ambiente",
+      "description": "Pronósticos del tiempo e información ambiental"
+    },
+    "crypto": {
+      "title": "Criptomonedas",
+      "description": "Seguimiento y cálculo de criptomonedas"
+    }
   },
   "tools": {
     "password_generator": {

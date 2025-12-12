@@ -7,7 +7,25 @@
     "contact": "联系我们",
     "privacy_policy": "隐私政策",
     "terms_of_service": "服务条款",
-    "all_rights_reserved": "版权所有"
+    "all_rights_reserved": "版权所有",
+    "search_placeholder": "搜索工具...",
+    "all_tools": "所有工具",
+    "view_all": "查看全部",
+    "popular_tools": "热门工具",
+    "browse_by_category": "按分类浏览",
+    "coming_soon": "即将推出",
+    "available": "可用",
+    "copy_link": "复制链接",
+    "link_copied": "链接已复制！",
+    "planned_implementation": "计划实现",
+    "client_side": "100% 客户端（浏览器）",
+    "server_side": "服务器端处理",
+    "hybrid": "客户端 + 服务器混合",
+    "tools_count": "{count} 个工具",
+    "results_found": "{count} 个结果",
+    "no_results": "未找到工具",
+    "open_tool": "打开工具",
+    "browse_tools": "浏览工具"
   },
   "home": {
     "title": "免费在线工具 - 无需注册",
@@ -18,6 +36,96 @@
     "popular_tools": "热门工具",
     "all_tools": "所有工具",
     "view_all": "查看全部"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "密码与安全",
+      "description": "生成安全密码、检查强度和安全工具"
+    },
+    "text": {
+      "title": "文本工具",
+      "description": "文本处理、比较和格式化工具"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "格式化、验证、比较和转换结构化数据"
+    },
+    "random": {
+      "title": "随机 / 趣味",
+      "description": "随机生成器、选择器和趣味工具"
+    },
+    "image": {
+      "title": "图像工具",
+      "description": "图像压缩、转换和处理"
+    },
+    "pdf": {
+      "title": "PDF工具",
+      "description": "PDF处理、合并、拆分和转换"
+    },
+    "dev": {
+      "title": "开发工具",
+      "description": "开发者工具：代码格式化、测试和转换"
+    },
+    "data": {
+      "title": "编码/解码",
+      "description": "编码、解码和数据转换工具"
+    },
+    "datetime": {
+      "title": "日期与时间",
+      "description": "日期计算、时区转换和日历工具"
+    },
+    "youtube": {
+      "title": "YouTube工具",
+      "description": "合法的YouTube工具：元数据、缩略图和嵌入"
+    },
+    "file-convert": {
+      "title": "文件转换",
+      "description": "在不同格式之间转换文件"
+    },
+    "math": {
+      "title": "数学与计算器",
+      "description": "数学计算和方程求解"
+    },
+    "unit": {
+      "title": "单位转换器",
+      "description": "在不同测量单位之间转换"
+    },
+    "finance": {
+      "title": "财务与预算",
+      "description": "财务计算器和预算规划工具"
+    },
+    "health": {
+      "title": "健康与健身",
+      "description": "健康和健身计算工具"
+    },
+    "seo": {
+      "title": "SEO与分析",
+      "description": "SEO分析和网站优化工具"
+    },
+    "network": {
+      "title": "网络与IP",
+      "description": "网络诊断和IP工具"
+    },
+    "language": {
+      "title": "语言与翻译",
+      "description": "翻译、拼写检查和语言工具"
+    },
+    "audio": {
+      "title": "音频工具",
+      "description": "音频处理和转换工具"
+    },
+    "video": {
+      "title": "视频工具",
+      "description": "视频处理和转换工具"
+    },
+    "weather": {
+      "title": "天气与环境",
+      "description": "天气预报和环境信息"
+    },
+    "crypto": {
+      "title": "加密货币",
+      "description": "加密货币追踪和计算工具"
+    }
   },
   "tools": {
     "password_generator": {
