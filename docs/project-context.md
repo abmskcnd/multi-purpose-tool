@@ -1,8 +1,8 @@
 # 📋 Project Context: Multi-Purpose Tool Platform
 
 **Document Owner:** BMAD Agent System  
-**Last Updated:** December 11, 2025  
-**Version:** 1.0.0  
+**Last Updated:** December 12, 2025  
+**Version:** 1.1.0  
 **Status:** ✅ Active - Single Source of Truth for All Agents
 
 ---
@@ -115,6 +115,30 @@
 3. **Lazy Loading** - Heavy libraries (ffmpeg 31MB) load on first use
 4. **Mobile-First** - Design for mobile, enhance for desktop
 5. **i18n-Native** - Built-in internationalization from day 1
+6. **src/ Folder Convention** - All source code in `src/` directory
+
+### Project Structure Overview
+
+```
+multi-purpose-tool/
+├── src/                    # All source code
+│   ├── app/               # Next.js App Router
+│   ├── components/        # React components
+│   │   ├── layout/       # Header, Footer, etc.
+│   │   ├── ui/           # Reusable UI primitives
+│   │   └── features/     # Tool implementations
+│   ├── config/           # Configuration files
+│   ├── hooks/            # Custom React hooks
+│   ├── i18n/             # i18n configuration
+│   ├── lib/              # Utilities & business logic
+│   ├── locales/          # Translation JSON files
+│   ├── store/            # Zustand state
+│   └── types/            # TypeScript definitions
+├── docs/                  # Documentation
+├── public/               # Static assets
+├── middleware.ts         # Next.js middleware
+└── [config files]        # tsconfig, tailwind, etc.
+```
 
 ### URL Structure
 
@@ -348,6 +372,6 @@ RICE = (Reach × Impact × Confidence) / Effort
 
 ---
 
-**Document Version:** 1.0.0  
-**Last Updated:** December 11, 2025  
+**Document Version:** 1.1.0  
+**Last Updated:** December 12, 2025  
 **Next Review:** Post-Launch (Q1 2026)

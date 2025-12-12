@@ -1,7 +1,7 @@
 # 📚 Architecture Documentation - Implementation Guide
 
-**Version:** 2.0.0  
-**Last Updated:** December 11, 2025  
+**Version:** 3.0.0  
+**Last Updated:** December 12, 2025  
 **Status:** ✅ Production Ready
 
 [← Back to Architecture Index](./README.md)
@@ -10,17 +10,43 @@
 
 ## 📖 About This Documentation
 
-Your complete technical documentation (4,800+ lines) has been reviewed and organized into this modular architecture system for easier navigation and maintenance.
+Your complete technical documentation has been reviewed and organized into this modular architecture system for easier navigation and maintenance.
 
-### ✅ What We've Created
+### ✅ Project Structure Update (v3.0.0)
 
-The architecture is now split into **20+ focused documents** instead of one massive file. Each document covers a specific architectural concern with:
+The project now uses a **`src/` folder convention**:
 
-- ✅ Clear scope and responsibility
-- ✅ Standalone readability 
-- ✅ Cross-references to related docs
-- ✅ Production-ready code samples
-- ✅ Best practices and patterns
+```
+multi-purpose-tool/
+├── src/                        # All source code
+│   ├── app/                   # Next.js App Router
+│   ├── components/            # React components
+│   │   ├── layout/           # Header, Footer, etc.
+│   │   ├── ui/               # Reusable UI primitives
+│   │   └── features/         # Tool implementations
+│   ├── config/               # Configuration files
+│   ├── hooks/                # Custom React hooks
+│   ├── i18n/                 # i18n configuration
+│   ├── lib/                  # Utilities & business logic
+│   ├── locales/              # Translation JSON files
+│   ├── store/                # Zustand state
+│   └── types/                # TypeScript definitions
+├── docs/                      # Documentation
+├── public/                   # Static assets
+├── middleware.ts             # Next.js middleware
+└── [config files]            # tsconfig, tailwind, etc.
+```
+
+### Import Alias
+
+All imports use `@/*` which resolves to `./src/*`:
+
+```typescript
+import { Header } from '@/components/layout';
+import { ToolCard } from '@/components/ui';
+import { useAnalytics } from '@/hooks';
+import { cn } from '@/lib/utils';
+```
 
 ---
 
