@@ -7,7 +7,47 @@
     "contact": "Liên hệ",
     "privacy_policy": "Chính sách bảo mật",
     "terms_of_service": "Điều khoản dịch vụ",
-    "all_rights_reserved": "Bảo lưu mọi quyền"
+    "all_rights_reserved": "Bảo lưu mọi quyền",
+    "search_placeholder": "Tìm kiếm công cụ...",
+    "all_tools": "Tất Cả Công Cụ",
+    "view_all": "Xem Tất Cả",
+    "popular_tools": "Công Cụ Phổ Biến",
+    "browse_by_category": "Duyệt Theo Danh Mục",
+    "coming_soon": "Sắp Ra Mắt",
+    "available": "Có Sẵn",
+    "copy_link": "Sao Chép Liên Kết",
+    "link_copied": "Đã Sao Chép!",
+    "planned_implementation": "Dự Kiến",
+    "client_side": "100% Phía Client (Trình duyệt)",
+    "server_side": "Xử lý phía Server",
+    "hybrid": "Kết hợp Client + Server",
+    "tools_count": "{count} công cụ",
+    "results_found": "{count} kết quả",
+    "no_results": "Không tìm thấy công cụ",
+    "open_tool": "Mở công cụ",
+    "browse_tools": "Xem công cụ",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "download": "Tải xuống",
+    "clear": "Xóa",
+    "output_placeholder": "Kết quả sẽ hiển thị ở đây...",
+    "share": "Chia sẻ",
+    "add_favorite": "Thêm vào yêu thích",
+    "remove_favorite": "Xóa khỏi yêu thích",
+    "frequently_asked_questions": "Câu Hỏi Thường Gặp",
+    "related_tools": "Công Cụ Liên Quan",
+    "tool_not_found": "Không Tìm Thấy Công Cụ",
+    "group_not_found": "Không Tìm Thấy Nhóm",
+    "coming_soon_badge": "Sắp Ra Mắt",
+    "tool_under_development": "Công cụ này đang được phát triển. Hãy quay lại sau!",
+    "part_of_group": "Thuộc nhóm {group}",
+    "tools_in_category": "{count} công cụ trong danh mục này",
+    "tools_in_category_plural": "{count} công cụ trong danh mục này",
+    "tool_pending_implementation": "Công cụ này được đánh dấu là hoạt động nhưng chưa được triển khai.",
+    "result": "kết quả",
+    "results": "kết quả",
+    "no_tools_found": "Không tìm thấy công cụ cho",
+    "more": "thêm"
   },
   "home": {
     "title": "Công Cụ Online Miễn Phí - Không Cần Đăng Ký",
@@ -19,18 +59,342 @@
     "all_tools": "Tất Cả Công Cụ",
     "view_all": "Xem Tất Cả"
   },
+  "toolGroups": {
+    "password": {
+      "title": "Mật Khẩu & Bảo Mật",
+      "description": "Tạo mật khẩu an toàn, kiểm tra độ mạnh và các tiện ích bảo mật"
+    },
+    "text": {
+      "title": "Công Cụ Văn Bản",
+      "description": "Xử lý, so sánh và định dạng văn bản"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "Định dạng, xác thực, so sánh và chuyển đổi dữ liệu có cấu trúc"
+    },
+    "random": {
+      "title": "Ngẫu Nhiên & Giải Trí",
+      "description": "Trình tạo ngẫu nhiên, bốc thăm và các tiện ích vui"
+    },
+    "image": {
+      "title": "Công Cụ Ảnh",
+      "description": "Nén ảnh, chuyển đổi và xử lý hình ảnh"
+    },
+    "pdf": {
+      "title": "Công Cụ PDF",
+      "description": "Xử lý PDF, ghép, tách và chuyển đổi"
+    },
+    "dev": {
+      "title": "Công Cụ Lập Trình",
+      "description": "Công cụ cho lập trình viên: định dạng code, test và chuyển đổi"
+    },
+    "data": {
+      "title": "Mã Hóa/Giải Mã",
+      "description": "Công cụ mã hóa, giải mã và chuyển đổi dữ liệu"
+    },
+    "datetime": {
+      "title": "Ngày & Giờ",
+      "description": "Tính toán ngày, chuyển đổi múi giờ và tiện ích lịch"
+    },
+    "youtube": {
+      "title": "Công Cụ YouTube",
+      "description": "Tiện ích YouTube hợp pháp: metadata, thumbnail và embed"
+    },
+    "file-convert": {
+      "title": "Chuyển Đổi File",
+      "description": "Chuyển đổi file giữa các định dạng khác nhau"
+    },
+    "math": {
+      "title": "Toán & Máy Tính",
+      "description": "Tính toán số học và giải phương trình"
+    },
+    "unit": {
+      "title": "Chuyển Đổi Đơn Vị",
+      "description": "Chuyển đổi giữa các đơn vị đo lường"
+    },
+    "finance": {
+      "title": "Tài Chính & Ngân Sách",
+      "description": "Máy tính tài chính và công cụ lập ngân sách"
+    },
+    "health": {
+      "title": "Sức Khỏe & Thể Dục",
+      "description": "Công cụ tính toán sức khỏe và thể dục"
+    },
+    "seo": {
+      "title": "SEO & Phân Tích",
+      "description": "Phân tích SEO và công cụ tối ưu website"
+    },
+    "network": {
+      "title": "Mạng & IP",
+      "description": "Chẩn đoán mạng và tiện ích IP"
+    },
+    "language": {
+      "title": "Ngôn Ngữ & Dịch Thuật",
+      "description": "Dịch thuật, kiểm tra chính tả và tiện ích ngôn ngữ"
+    },
+    "audio": {
+      "title": "Công Cụ Âm Thanh",
+      "description": "Xử lý và chuyển đổi âm thanh"
+    },
+    "video": {
+      "title": "Công Cụ Video",
+      "description": "Xử lý và chuyển đổi video"
+    },
+    "weather": {
+      "title": "Thời Tiết & Môi Trường",
+      "description": "Dự báo thời tiết và thông tin môi trường"
+    },
+    "crypto": {
+      "title": "Tiền Mã Hóa",
+      "description": "Theo dõi và tính toán tiền mã hóa"
+    }
+  },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "Tạo Mật Khẩu",
+        "description": "Tạo mật khẩu ngẫu nhiên, bảo mật với các quy tắc tùy chỉnh"
+      },
+      "strength-checker": {
+        "title": "Kiểm Tra Độ Mạnh Mật Khẩu",
+        "description": "Kiểm tra độ mạnh mật khẩu với điểm entropy và gợi ý"
+      },
+      "hash-encode": {
+        "title": "Công Cụ Hash / Mã Hóa",
+        "description": "Tạo hash SHA-256, MD5, HMAC và mã hóa Base64/URL"
+      },
+      "jwt-decoder": {
+        "title": "Giải Mã JWT (Chỉ Local)",
+        "description": "Giải mã JWT token cục bộ - xem header, payload và hạn sử dụng"
+      },
+      "uuid-nanoid": {
+        "title": "Tạo UUID / NanoID",
+        "description": "Tạo UUID và NanoID hàng loạt với nhiều định dạng"
+      },
+      "qr-generator": {
+        "title": "Tạo Mã QR",
+        "description": "Tạo mã QR cho text, URL, vCard với tải xuống PNG/SVG"
+      },
+      "passphrase-generator": {
+        "title": "Tạo Cụm Mật Khẩu",
+        "description": "Tạo cụm mật khẩu dạng từ dễ nhớ nhưng vẫn bảo mật"
+      },
+      "password-policy-checker": {
+        "title": "Kiểm Tra Chính Sách Mật Khẩu",
+        "description": "Kiểm tra mật khẩu theo quy tắc chính sách bảo mật doanh nghiệp"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "So Sánh Văn Bản",
+        "description": "So sánh hai văn bản và đánh dấu các phần thêm, xóa, thay đổi"
+      },
+      "case-converter": {
+        "title": "Chuyển Đổi Kiểu Chữ",
+        "description": "Chuyển đổi giữa camelCase, snake_case, kebab-case, PascalCase + bỏ dấu"
+      },
+      "regex-tester": {
+        "title": "Kiểm Tra Regex + Đánh Dấu",
+        "description": "Kiểm tra biểu thức chính quy với đánh dấu thời gian thực"
+      },
+      "cleaner": {
+        "title": "Dọn Dẹp Văn Bản",
+        "description": "Cắt bỏ, xóa khoảng trắng thừa, dòng trống, sắp xếp và loại bỏ trùng lặp"
+      },
+      "word-counter": {
+        "title": "Đếm Từ",
+        "description": "Đếm từ, ký tự, câu với ước tính thời gian đọc"
+      },
+      "markdown-preview": {
+        "title": "Xem Trước Markdown + Xuất HTML",
+        "description": "Trình soạn thảo markdown trực tiếp với xem trước và xuất HTML"
+      },
+      "slug-generator": {
+        "title": "Tạo Slug",
+        "description": "Tạo slug URL thân thiện SEO từ bất kỳ văn bản nào"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "Định Dạng / Thu Gọn / Xác Thực JSON",
+        "description": "Định dạng, thu gọn và xác thực JSON với tô sáng cú pháp"
+      },
+      "diff": {
+        "title": "So Sánh JSON",
+        "description": "So sánh tài liệu JSON với đánh dấu khác biệt theo đường dẫn"
+      },
+      "schema-generator": {
+        "title": "Tạo JSON Schema",
+        "description": "Tự động tạo JSON Schema từ dữ liệu JSON"
+      },
+      "convert": {
+        "title": "Chuyển Đổi JSON ↔ YAML / XML",
+        "description": "Chuyển đổi giữa các định dạng JSON, YAML và XML"
+      },
+      "jsonpath": {
+        "title": "Sân Chơi JSONPath / jq",
+        "description": "Truy vấn JSON với biểu thức JSONPath tương tác"
+      },
+      "json-to-csv": {
+        "title": "Chuyển JSON sang CSV",
+        "description": "Chuyển đổi mảng JSON sang định dạng CSV cho bảng tính"
+      },
+      "sort-keys": {
+        "title": "Sắp Xếp Khóa JSON",
+        "description": "Sắp xếp khóa JSON theo thứ tự bảng chữ cái"
+      },
+      "flatten-unflatten": {
+        "title": "Làm Phẳng / Mở Rộng JSON",
+        "description": "Chuyển đổi JSON lồng nhau sang/từ ký hiệu đường dẫn chấm"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "Vòng Quay / Bốc Thăm Ngẫu Nhiên",
+        "description": "Quay vòng để chọn ngẫu nhiên với hoạt ảnh và lịch sử"
+      },
+      "team-generator": {
+        "title": "Tạo Đội Ngẫu Nhiên",
+        "description": "Chia người thành các đội ngẫu nhiên với giới hạn kích thước"
+      },
+      "dice-lottery": {
+        "title": "Xúc Xắc / Xổ Số / Tên Ngẫu Nhiên",
+        "description": "Tung xúc xắc, tạo số xổ số, chọn tên ngẫu nhiên"
+      },
+      "countdown": {
+        "title": "Đếm Ngược / Hẹn Giờ Chia Sẻ",
+        "description": "Tạo bộ đếm ngược chia sẻ qua URL"
+      },
+      "random-lorem": {
+        "title": "Số Ngẫu Nhiên / Lorem Ipsum",
+        "description": "Tạo số ngẫu nhiên hoặc văn bản Lorem Ipsum"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "Nén Ảnh",
+        "description": "Nén ảnh mà vẫn giữ chất lượng"
+      },
+      "convert": {
+        "title": "Chuyển Đổi Định Dạng",
+        "description": "Chuyển đổi ảnh giữa PNG, JPG, WebP"
+      },
+      "crop-resize-rotate": {
+        "title": "Cắt / Đổi Kích Thước / Xoay",
+        "description": "Cắt, đổi kích thước và xoay ảnh chính xác"
+      },
+      "remove-bg": {
+        "title": "Xóa Nền (Tùy Chọn)",
+        "description": "Xóa nền ảnh bằng dịch vụ AI"
+      },
+      "qr-gen-scan": {
+        "title": "Tạo + Quét Mã QR",
+        "description": "Tạo và quét mã QR từ ảnh"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "Ghép / Tách PDF",
+        "description": "Ghép nhiều PDF thành một hoặc tách PDF thành các phần"
+      },
+      "extract-rotate": {
+        "title": "Trích Xuất / Xoay Trang",
+        "description": "Trích xuất các trang cụ thể hoặc xoay trang PDF"
+      },
+      "watermark": {
+        "title": "Thêm Số Trang / Watermark",
+        "description": "Thêm số trang hoặc watermark vào tài liệu PDF"
+      },
+      "compress": {
+        "title": "Nén (Cơ Bản)",
+        "description": "Giảm kích thước file PDF với nén cơ bản"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF sang Văn Bản / Ảnh",
+        "description": "Trích xuất văn bản hoặc ảnh từ tài liệu PDF"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "Trình Soạn Thảo / Định Dạng Code Online",
+        "description": "Soạn và định dạng code với tô sáng cú pháp (JS/TS/HTML/CSS/JSON)"
+      },
+      "lint-typecheck-light": {
+        "title": "Sân Chơi Lint / Type Check (Nhẹ)",
+        "description": "Lint và type check nhẹ trong sandbox trình duyệt"
+      },
+      "cron-builder": {
+        "title": "Xây Dựng Biểu Thức Cron",
+        "description": "Xây dựng và giải thích biểu thức cron trực quan"
+      },
+      "timestamp-converter": {
+        "title": "Chuyển Đổi Timestamp",
+        "description": "Chuyển đổi giữa Unix timestamp và ngày giờ đọc được"
+      },
+      "curl-converter": {
+        "title": "Chuyển cURL → Fetch / Axios",
+        "description": "Chuyển đổi lệnh cURL sang code JavaScript fetch hoặc Axios"
+      },
+      "gitignore-generator": {
+        "title": "Tạo Git Ignore",
+        "description": "Tạo file .gitignore cho các loại dự án khác nhau"
+      },
+      "api-tester": {
+        "title": "Kiểm Tra API",
+        "description": "Kiểm tra REST API trực tiếp từ trình duyệt (có tùy chọn CORS proxy)"
+      }
+    }
+  },
   "tools": {
     "password_generator": {
       "title": "Tạo Mật Khẩu",
       "description": "Tạo mật khẩu ngẫu nhiên, bảo mật ngay lập tức",
+      "meta_description": "Tạo mật khẩu mạnh, bảo mật với công cụ tạo mật khẩu miễn phí. Tùy chỉnh độ dài, loại ký tự và các tùy chọn bảo mật nâng cao.",
+      "generated_password": "Mật Khẩu Đã Tạo",
+      "click_generate": "Nhấn tạo để tạo mật khẩu",
+      "hide_password": "Ẩn mật khẩu",
+      "show_password": "Hiện mật khẩu",
+      "strength": "Độ mạnh",
+      "strength_weak": "Yếu",
+      "strength_fair": "Trung bình",
+      "strength_good": "Tốt",
+      "strength_strong": "Mạnh",
+      "entropy": "bits entropy",
+      "tip": "Mật khẩu mạnh cần 12+ ký tự với nhiều loại khác nhau",
       "generate": "Tạo Mật Khẩu",
+      "regenerate": "Tạo Lại",
       "copy": "Sao chép",
       "copied": "Đã sao chép!",
+      "options": "Tùy Chọn",
       "length": "Độ dài",
-      "include_uppercase": "Bao gồm chữ hoa",
-      "include_lowercase": "Bao gồm chữ thường",
-      "include_numbers": "Bao gồm số",
-      "include_symbols": "Bao gồm ký tự đặc biệt"
+      "characters": "ký tự",
+      "character_types": "Loại Ký Tự",
+      "uppercase": "Chữ hoa (A-Z)",
+      "lowercase": "Chữ thường (a-z)",
+      "numbers": "Số (0-9)",
+      "symbols": "Ký tự đặc biệt (!@#$...)",
+      "select_at_least_one": "Chọn ít nhất một loại ký tự",
+      "advanced_options": "Tùy Chọn Nâng Cao",
+      "exclude_ambiguous": "Loại Trừ Nhập Nhằng",
+      "exclude_ambiguous_desc": "Bỏ 0, O, l, 1, I",
+      "exclude_similar": "Loại Trừ Tương Tự",
+      "exclude_similar_desc": "Bỏ i, L, o, O, 0",
+      "custom_symbols": "Ký Tự Đặc Biệt Tùy Chỉnh",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "Số Tối Thiểu",
+      "min_symbols": "Ký Tự Đặc Biệt Tối Thiểu",
+      "reset_defaults": "Đặt Lại Mặc Định",
+      "recent_passwords": "Mật Khẩu Gần Đây",
+      "no_recent": "Chưa có mật khẩu",
+      "clear_history": "Xóa Lịch Sử",
+      "faq_title": "Câu Hỏi Thường Gặp",
+      "faq_q1": "Công cụ tạo mật khẩu này bảo mật như thế nào?",
+      "faq_a1": "Công cụ của chúng tôi sử dụng thuật toán sinh số ngẫu nhiên mã hóa an toàn (crypto.getRandomValues) để tạo mật khẩu thực sự ngẫu nhiên. Tất cả xử lý diễn ra trong trình duyệt - không có mật khẩu nào được gửi đến máy chủ.",
+      "faq_q2": "Điều gì tạo nên mật khẩu mạnh?",
+      "faq_a2": "Mật khẩu mạnh có ít nhất 12 ký tự và bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt. Tránh sử dụng thông tin cá nhân hoặc từ thông dụng.",
+      "faq_q3": "Tôi có nên dùng mật khẩu khác nhau cho mỗi tài khoản?",
+      "faq_a3": "Có! Sử dụng mật khẩu riêng biệt cho mỗi tài khoản đảm bảo nếu một mật khẩu bị lộ, các tài khoản khác vẫn an toàn. Hãy cân nhắc sử dụng trình quản lý mật khẩu.",
+      "related_title": "Công Cụ Liên Quan"
     },
     "qr_code_generator": {
       "title": "Tạo Mã QR",

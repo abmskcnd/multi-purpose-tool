@@ -1,4 +1,4 @@
-import { Header, Footer } from '@/components/layout';
+import { Header, Footer, ToolsSidebar } from '@/components/layout';
 
 export default function ToolsLayout({
   children,
@@ -8,7 +8,10 @@ export default function ToolsLayout({
   return (
     <>
       <Header />
-      <main className="flex-1">{children}</main>
+      <div className="flex flex-1">
+        <ToolsSidebar />
+        <main className="flex-1 overflow-y-auto">{children}</main>
+      </div>
       <Footer />
     </>
   );
