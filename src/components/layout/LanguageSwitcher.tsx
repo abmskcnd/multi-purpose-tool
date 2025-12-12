@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { locales } from '@/i18n/request';
+import { locales, defaultLocale } from '@/i18n/request';
 
 const localeNames: Record<string, string> = {
   en: '🇺🇸 English',
@@ -19,8 +19,26 @@ export function LanguageSwitcher() {
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
-    // Replace the locale in the current path
-    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    
+    // Get path without current locale prefix
+    // With 'as-needed', default locale has no prefix
+    let pathWithoutLocale = pathname;
+    
+    // Check if path starts with any locale prefix
+    for (const loc of locales) {
+      if (pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`) {
+        pathWithoutLocale = pathname.slice(`/${loc}`.length) || '/';
+        break;
+      }
+    }
+    
+    // Build new path
+    // Default locale: no prefix (e.g., /tools)
+    // Other locales: with prefix (e.g., /vi/tools)
+    const newPathname = newLocale === defaultLocale 
+      ? pathWithoutLocale 
+      : `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+    
     router.push(newPathname);
   };
 
