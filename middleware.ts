@@ -8,8 +8,10 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: defaultLocale,
 
-  // Prefix the default locale
-  localePrefix: 'always'
+  // Only add prefix for non-default locales
+  // / → English (no prefix)
+  // /vi → Vietnamese
+  localePrefix: 'as-needed'
 });
 
 export const config = {
