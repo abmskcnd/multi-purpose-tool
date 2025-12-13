@@ -403,7 +403,7 @@ Every tool MUST use the tracking hook:
 import { useToolTracking } from '@/hooks/useToolTracking';
 
 const {
-  trackView,      // Auto-called on mount
+  // trackView - Auto-called on mount, no need to call manually
   trackGenerate,  // Main action (generate, convert, etc.)
   trackCopy,      // Copy to clipboard
   trackDownload,  // Download file
@@ -413,15 +413,16 @@ const {
   trackError,     // Error occurred
   trackComplete,  // Task completed
 } = useToolTracking({
-  toolId: 'password-generator',
-  toolGroup: 'password',
+  toolId: 'password-generator',  // Required: tool identifier
+  groupId: 'password',           // Required: tool group
+  trackView: true,               // Optional: auto-track view (default: true)
 });
 ```
 
 ### Tracking Events
 
 ```tsx
-// Generate with metadata
+// Generate with metadata (auto-tracks duration)
 trackGenerate({
   length: 16,
   hasUppercase: true,
@@ -431,32 +432,62 @@ trackGenerate({
 // Copy
 trackCopy({ contentLength: output.length });
 
-// Configure
+// Configure (settings change)
 trackConfigure({
   setting: 'excludeAmbiguous',
   value: true,
 });
 
-// Error
-trackError(error, { context: 'generation' });
+// Error (requires error message)
+trackError('Invalid input', { context: 'generation' });
+
+// Complete (auto-tracks duration from mount)
+trackComplete({ result: 'success' });
 ```
 
-### Database Schema (Supabase)
+### Database Schema (Supabase) - Optimized for Free Tier
+
+> **Important**: Schema uses table partitioning for efficient storage management.
+> Drop old partitions to immediately release space (no VACUUM needed).
 
 ```sql
--- tool_actions table
+-- Partitioned table for tool actions (500MB limit optimization)
 CREATE TABLE tool_actions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  tool_id TEXT NOT NULL,
-  tool_group TEXT NOT NULL,
-  action_type TEXT NOT NULL, -- view, generate, copy, download, share, configure, reset, error, complete
-  metadata JSONB,
-  session_id TEXT,
-  user_agent TEXT,
-  locale TEXT,
-  timestamp TIMESTAMPTZ DEFAULT NOW()
-);
+    id UUID DEFAULT gen_random_uuid(),
+    created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
+    tool_id TEXT NOT NULL,
+    group_id TEXT NOT NULL,
+    action_type TEXT NOT NULL,  -- view, generate, copy, download, share, configure, reset, error, complete
+    session_id TEXT NOT NULL,
+    metadata JSONB,             -- Consolidated: {locale, duration_ms, action_data, user_agent, referrer}
+    PRIMARY KEY (id, created_at)
+) PARTITION BY RANGE (created_at);
+
+-- Monthly partitions (auto-created)
+CREATE TABLE tool_actions_2025_01 PARTITION OF tool_actions
+    FOR VALUES FROM ('2025-01-01') TO ('2025-02-01');
 ```
+
+### Partition Management Functions
+
+```sql
+-- Create next month's partition
+SELECT create_next_month_partition();
+
+-- Drop partitions older than N months (releases space IMMEDIATELY)
+SELECT drop_old_partitions(3);  -- Keep last 3 months
+
+-- Check partition sizes
+SELECT * FROM get_partition_sizes();
+```
+
+### Storage Optimization Tips
+
+1. **Minimal metadata**: Only store essential data in `action_data`
+2. **User agent only on views**: `user_agent` is only stored on 'view' action
+3. **Referrer only on views**: `referrer` is only stored when available on 'view'
+4. **Monthly cleanup**: Set up cron job to drop old partitions
+5. **Monitor usage**: Use `get_partition_sizes()` to track growth
 
 ### Google Analytics 4
 

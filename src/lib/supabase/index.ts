@@ -2,8 +2,7 @@ export { supabase, createServerSupabaseClient } from './client';
 export type {
   Database,
   ActionType,
+  TrackingMetadata,
   ToolAction,
   ToolActionInsert,
-  PageView,
-  PageViewInsert,
 } from './types';

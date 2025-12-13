@@ -1,7 +1,29 @@
 /**
  * Supabase Database Types
- * Auto-generated types for the database schema
+ * Optimized schema for Supabase Free Tier (500MB)
+ * Uses partitioned table with minimal columns
  */
+
+// Action types supported by tracking
+export type ActionType = 
+  | 'view' 
+  | 'generate' 
+  | 'copy' 
+  | 'download' 
+  | 'share' 
+  | 'configure' 
+  | 'reset' 
+  | 'error' 
+  | 'complete';
+
+// Metadata stored in JSONB column (consolidated to save space)
+export interface TrackingMetadata {
+  locale?: string;
+  duration_ms?: number;
+  action_data?: Record<string, unknown>;
+  user_agent?: string;
+  referrer?: string;
+}
 
 export interface Database {
   public: {
@@ -12,97 +34,51 @@ export interface Database {
           created_at: string;
           tool_id: string;
           group_id: string;
-          action_type: ActionType;
-          action_data: Record<string, unknown> | null;
+          action_type: string;
           session_id: string;
-          user_agent: string | null;
-          ip_address: string | null;
-          locale: string | null;
-          referrer: string | null;
-          duration_ms: number | null;
+          metadata: TrackingMetadata | null;
         };
         Insert: {
           id?: string;
           created_at?: string;
           tool_id: string;
           group_id: string;
-          action_type: ActionType;
-          action_data?: Record<string, unknown> | null;
+          action_type: string;
           session_id: string;
-          user_agent?: string | null;
-          ip_address?: string | null;
-          locale?: string | null;
-          referrer?: string | null;
-          duration_ms?: number | null;
+          metadata?: TrackingMetadata | null;
         };
         Update: {
           id?: string;
           created_at?: string;
           tool_id?: string;
           group_id?: string;
-          action_type?: ActionType;
-          action_data?: Record<string, unknown> | null;
+          action_type?: string;
           session_id?: string;
-          user_agent?: string | null;
-          ip_address?: string | null;
-          locale?: string | null;
-          referrer?: string | null;
-          duration_ms?: number | null;
-        };
-      };
-      page_views: {
-        Row: {
-          id: string;
-          created_at: string;
-          page_path: string;
-          session_id: string;
-          user_agent: string | null;
-          ip_address: string | null;
-          locale: string | null;
-          referrer: string | null;
-        };
-        Insert: {
-          id?: string;
-          created_at?: string;
-          page_path: string;
-          session_id: string;
-          user_agent?: string | null;
-          ip_address?: string | null;
-          locale?: string | null;
-          referrer?: string | null;
-        };
-        Update: {
-          id?: string;
-          created_at?: string;
-          page_path?: string;
-          session_id?: string;
-          user_agent?: string | null;
-          ip_address?: string | null;
-          locale?: string | null;
-          referrer?: string | null;
+          metadata?: TrackingMetadata | null;
         };
       };
     };
-    Views: Record<string, never>;
-    Functions: Record<string, never>;
-    Enums: {
-      action_type: ActionType;
+    Functions: {
+      create_next_month_partition: {
+        Args: Record<string, never>;
+        Returns: string;
+      };
+      drop_old_partitions: {
+        Args: { months_to_keep?: number };
+        Returns: string;
+      };
+      get_partition_sizes: {
+        Args: Record<string, never>;
+        Returns: Array<{
+          partition_name: string;
+          total_size: string;
+          row_count: number;
+        }>;
+      };
     };
   };
 }
 
-export type ActionType =
-  | 'view' // User views the tool
-  | 'generate' // User generates something (password, etc.)
-  | 'copy' // User copies result
-  | 'download' // User downloads result
-  | 'share' // User shares the tool
-  | 'configure' // User changes settings
-  | 'reset' // User resets the tool
-  | 'error' // An error occurred
-  | 'complete'; // User completes an action
-
+// Type aliases for convenience
 export type ToolAction = Database['public']['Tables']['tool_actions']['Row'];
 export type ToolActionInsert = Database['public']['Tables']['tool_actions']['Insert'];
-export type PageView = Database['public']['Tables']['page_views']['Row'];
-export type PageViewInsert = Database['public']['Tables']['page_views']['Insert'];
