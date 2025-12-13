@@ -1,11 +1,20 @@
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { Header, Footer } from '@/components/layout';
 import { ToolCard } from '@/components/ui';
 import { getPopularTools, getAllTools } from '@/config/tools.config';
+import { routing } from '@/i18n/routing';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+interface HomePageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: HomePageProps) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
 
   return {
@@ -14,10 +23,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function HomePage() {
-  const t = useTranslations('home');
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const commonT = useTranslations('common');
+export default async function HomePage({ params }: HomePageProps) {
+  const { locale } = await params;
+  
+  // Enable static rendering with correct locale
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('home');
   const popularTools = getPopularTools();
   const allTools = getAllTools();
 

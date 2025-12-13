@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 import type { ToolItem, ToolGroup, ImplementationType } from '@/config/tools.registry';
 
 interface ComingSoonProps {
@@ -8,20 +9,44 @@ interface ComingSoonProps {
   group: ToolGroup;
 }
 
-function getImplementationLabel(impl?: ImplementationType): string {
-  switch (impl) {
-    case 'client-side':
-      return '100% Client-side (Browser)';
-    case 'server-side':
-      return 'Server-side processing';
-    case 'hybrid':
-      return 'Client + Server hybrid';
-    default:
-      return 'Client-side (Browser)';
-  }
+function useImplementationLabel(t: ReturnType<typeof useTranslations>) {
+  return (impl?: ImplementationType): string => {
+    switch (impl) {
+      case 'client-side':
+        return t('client_side');
+      case 'server-side':
+        return t('server_side');
+      case 'hybrid':
+        return t('hybrid');
+      default:
+        return t('client_side');
+    }
+  };
 }
 
 export function ComingSoon({ tool, group }: ComingSoonProps) {
+  const t = useTranslations('common');
+  const tToolItems = useTranslations('toolItems');
+  const getImplementationLabel = useImplementationLabel(t);
+  
+  // Get translated title and description with fallback
+  const { toolTitle, toolDescription } = useMemo(() => {
+    let title = tool.title;
+    let description = tool.description;
+    try {
+      const translatedTitle = tToolItems(`${group.id}.${tool.id}.title`);
+      if (translatedTitle) title = translatedTitle;
+    } catch {
+      // Use fallback from registry
+    }
+    try {
+      const translatedDesc = tToolItems(`${group.id}.${tool.id}.description`);
+      if (translatedDesc) description = translatedDesc;
+    } catch {
+      // Use fallback from registry
+    }
+    return { toolTitle: title, toolDescription: description };
+  }, [tool, group.id, tToolItems]);
   const [copied, setCopied] = useState(false);
 
   const handleCopyLink = async () => {
@@ -48,7 +73,7 @@ export function ComingSoon({ tool, group }: ComingSoonProps) {
       <div className="text-6xl mb-4">{tool.icon || group.icon}</div>
 
       {/* Title */}
-      <h1 className="text-3xl font-bold mb-2">{tool.title}</h1>
+      <h1 className="text-3xl font-bold mb-2">{toolTitle}</h1>
 
       {/* Status Badge */}
       <div className="flex items-center gap-2 mb-4">
@@ -65,12 +90,12 @@ export function ComingSoon({ tool, group }: ComingSoonProps) {
               clipRule="evenodd"
             />
           </svg>
-          Coming Soon
+          {t('coming_soon_badge')}
         </span>
       </div>
 
       {/* Description */}
-      <p className="text-muted-foreground max-w-md mb-6">{tool.description}</p>
+      <p className="text-muted-foreground max-w-md mb-6">{toolDescription}</p>
 
       {/* Implementation Type */}
       <div className="text-sm text-muted-foreground mb-6">
@@ -89,7 +114,7 @@ export function ComingSoon({ tool, group }: ComingSoonProps) {
               d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
             />
           </svg>
-          Planned: {getImplementationLabel(tool.implementation)}
+          {t('planned_implementation')}: {getImplementationLabel(tool.implementation)}
         </span>
       </div>
 
@@ -135,7 +160,7 @@ export function ComingSoon({ tool, group }: ComingSoonProps) {
                 d="M5 13l4 4L19 7"
               />
             </svg>
-            Link Copied!
+            {t('link_copied')}
           </>
         ) : (
           <>
@@ -153,16 +178,16 @@ export function ComingSoon({ tool, group }: ComingSoonProps) {
                 d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
               />
             </svg>
-            Copy Share Link
+            {t('copy_link')}
           </>
         )}
       </button>
 
       {/* Additional Info */}
       <div className="mt-8 text-xs text-muted-foreground">
-        <p>This tool is under development. Check back soon!</p>
+        <p>{t('tool_under_development')}</p>
         <p className="mt-1">
-          Part of <span className="font-medium">{group.title}</span>
+          {t('part_of_group', { group: group.title })}
         </p>
       </div>
     </div>

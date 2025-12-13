@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { getAllGroupsSorted, getToolsSorted, searchTools, getPopularTools, getTotalToolCount } from '@/config/tools.registry';
 import { GroupToolCard } from '@/components/ui';
 
 export default function ToolsPage() {
+  const t = useTranslations('common');
+  const tToolGroups = useTranslations('toolGroups');
   const [searchQuery, setSearchQuery] = useState('');
 
   const groups = useMemo(() => getAllGroupsSorted(), []);
@@ -17,13 +20,22 @@ export default function ToolsPage() {
     return searchTools(searchQuery);
   }, [searchQuery]);
 
+  // Helper to get translated group title/description
+  const getGroupTranslation = (groupId: string, field: 'title' | 'description', fallback: string) => {
+    try {
+      return tToolGroups(`${groupId}.${field}`);
+    } catch {
+      return fallback;
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold">All Tools</h1>
+        <h1 className="text-3xl font-bold">{t('all_tools')}</h1>
         <p className="mt-2 text-muted-foreground">
-          Browse {totalTools}+ free online tools. All tools run in your browser - your data never leaves your device.
+          {t('tools_count', { count: totalTools })}+ - {t('browse_tools')}
         </p>
       </div>
 
@@ -46,7 +58,7 @@ export default function ToolsPage() {
           </svg>
           <input
             type="text"
-            placeholder="Search all tools..."
+            placeholder={t('search_placeholder')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full rounded-lg border bg-background py-3 pl-10 pr-4 placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -79,11 +91,11 @@ export default function ToolsPage() {
       {searchResults !== null ? (
         <div>
           <p className="mb-4 text-sm text-muted-foreground">
-            {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for &quot;{searchQuery}&quot;
+            {searchResults.length} {searchResults.length !== 1 ? t('results') : t('result')} - &quot;{searchQuery}&quot;
           </p>
           {searchResults.length === 0 ? (
             <div className="rounded-lg border bg-card p-8 text-center">
-              <p className="text-muted-foreground">No tools found. Try a different search term.</p>
+              <p className="text-muted-foreground">{t('no_results')}</p>
             </div>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -99,7 +111,7 @@ export default function ToolsPage() {
           <section className="mb-12">
             <h2 className="mb-4 flex items-center text-xl font-semibold">
               <span className="mr-2">⭐</span>
-              Popular Tools
+              {t('popular_tools')}
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {popularTools.map(({ group, tool }) => (
@@ -110,10 +122,12 @@ export default function ToolsPage() {
 
           {/* All Groups */}
           <section>
-            <h2 className="mb-6 text-xl font-semibold">Browse by Category</h2>
+            <h2 className="mb-6 text-xl font-semibold">{t('browse_by_category')}</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {groups.map((group) => {
                 const tools = getToolsSorted(group.id);
+                const groupTitle = getGroupTranslation(group.id, 'title', group.title);
+                const groupDescription = getGroupTranslation(group.id, 'description', group.description);
                 return (
                   <Link
                     key={group.id}
@@ -122,16 +136,16 @@ export default function ToolsPage() {
                   >
                     <span className="text-4xl">{group.icon}</span>
                     <h3 className="mt-4 font-semibold group-hover:text-primary">
-                      {group.title}
+                      {groupTitle}
                     </h3>
                     <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">
-                      {group.description}
+                      {groupDescription}
                     </p>
                     <p className="mt-3 text-xs text-muted-foreground">
-                      {tools.length} tool{tools.length !== 1 ? 's' : ''}
+                      {tools.length} {tools.length !== 1 ? t('results') : t('result')}
                     </p>
                     <div className="mt-4 flex items-center text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100">
-                      <span>Browse tools</span>
+                      <span>{t('browse_tools')}</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

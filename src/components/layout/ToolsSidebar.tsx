@@ -10,6 +10,7 @@ export function ToolsSidebar() {
   const pathname = usePathname();
   const t = useTranslations('toolGroups');
   const tCommon = useTranslations('common');
+  const tToolItems = useTranslations('toolItems');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
 
@@ -89,18 +90,27 @@ export function ToolsSidebar() {
           {searchResults !== null ? (
             <div className="space-y-1">
               <p className="px-2 py-1.5 text-xs font-medium text-muted-foreground">
-                {searchResults.length} {searchResults.length !== 1 ? 'results' : 'result'}
+                {searchResults.length} {searchResults.length !== 1 ? tCommon('results') : tCommon('result')}
               </p>
               {searchResults.length === 0 ? (
                 <div className="py-8 text-center">
                   <div className="text-3xl mb-2">🔍</div>
                   <p className="text-sm text-muted-foreground">
-                    No tools found for &quot;{searchQuery}&quot;
+                    {tCommon('no_tools_found')} &quot;{searchQuery}&quot;
                   </p>
                 </div>
               ) : (
                 <div className="space-y-0.5">
-                  {searchResults.slice(0, 15).map(({ group, tool }) => (
+                  {searchResults.slice(0, 15).map(({ group, tool }) => {
+                    // Get translated title with fallback
+                    let toolTitle = tool.title;
+                    try {
+                      const translated = tToolItems(`${group.id}.${tool.id}.title`);
+                      if (translated) toolTitle = translated;
+                    } catch {
+                      // Use fallback
+                    }
+                    return (
                     <Link
                       key={`${group.id}-${tool.id}`}
                       href={`/tools/${group.id}/${tool.id}`}
@@ -111,14 +121,15 @@ export function ToolsSidebar() {
                       </span>
                       <div className="min-w-0 flex-1">
                         <div className="truncate font-medium text-foreground/90 group-hover:text-foreground">
-                          {tool.title}
+                          {toolTitle}
                         </div>
                         <div className="truncate text-xs text-muted-foreground">
                           {t(`${group.id}.title`)}
                         </div>
                       </div>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -208,6 +219,14 @@ export function ToolsSidebar() {
                           {/* Tool Links */}
                           {tools.slice(0, 5).map((tool) => {
                             const isToolActive = currentTool === tool.id;
+                            // Get translated title with fallback
+                            let toolTitle = tool.title;
+                            try {
+                              const translated = tToolItems(`${group.id}.${tool.id}.title`);
+                              if (translated) toolTitle = translated;
+                            } catch {
+                              // Use fallback
+                            }
                             return (
                               <Link
                                 key={tool.id}
@@ -218,7 +237,7 @@ export function ToolsSidebar() {
                                     : 'text-muted-foreground hover:bg-accent hover:text-foreground'
                                 }`}
                               >
-                                <span className="truncate block">{tool.title}</span>
+                                <span className="truncate block">{toolTitle}</span>
                               </Link>
                             );
                           })}
@@ -229,7 +248,7 @@ export function ToolsSidebar() {
                               href={`/tools/${group.id}`}
                               className="flex items-center gap-1 px-2.5 py-1.5 text-xs text-primary/70 hover:text-primary transition-colors"
                             >
-                              <span>+{tools.length - 5} more</span>
+                              <span>+{tools.length - 5} {tCommon('more')}</span>
                               <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>

@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { getGroup, getToolsSorted, getAllGroupsSorted } from '@/config/tools.registry';
 import { Breadcrumbs, GroupToolCard } from '@/components/ui';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
 
 interface GroupPageProps {
   params: Promise<{
@@ -12,29 +14,56 @@ interface GroupPageProps {
 export async function generateMetadata({ params }: GroupPageProps) {
   const { group: groupId } = await params;
   const group = getGroup(groupId);
+  const t = await getTranslations('common');
+  const tToolGroups = await getTranslations('toolGroups');
 
   if (!group) {
     return {
-      title: 'Group Not Found',
+      title: t('group_not_found'),
     };
   }
 
+  // Try to get translated values, fallback to registry
+  let groupTitle = group.title;
+  let groupDescription = group.description;
+  
+  try {
+    groupTitle = tToolGroups(`${groupId}.title`);
+    groupDescription = tToolGroups(`${groupId}.description`);
+  } catch {
+    // Use fallback values from registry
+  }
+
   return {
-    title: `${group.title} | ToolHub`,
-    description: group.description,
+    title: `${groupTitle} | ToolHub`,
+    description: groupDescription,
   };
 }
 
 export function generateStaticParams() {
   const groups = getAllGroupsSorted();
-  return groups.map((group) => ({
-    group: group.id,
-  }));
+  const params: Array<{ locale: string; group: string }> = [];
+  
+  for (const locale of routing.locales) {
+    for (const group of groups) {
+      params.push({
+        locale,
+        group: group.id,
+      });
+    }
+  }
+  
+  return params;
 }
 
 export default async function GroupPage({ params }: GroupPageProps) {
-  const { group: groupId } = await params;
+  const { locale, group: groupId } = await params;
+  
+  // Enable static rendering with correct locale
+  setRequestLocale(locale);
   const group = getGroup(groupId);
+  const t = await getTranslations('common');
+  const tToolGroups = await getTranslations('toolGroups');
 
   if (!group) {
     notFound();
@@ -42,13 +71,24 @@ export default async function GroupPage({ params }: GroupPageProps) {
 
   const tools = getToolsSorted(groupId);
 
+  // Try to get translated values, fallback to registry
+  let groupTitle = group.title;
+  let groupDescription = group.description;
+  
+  try {
+    groupTitle = tToolGroups(`${groupId}.title`);
+    groupDescription = tToolGroups(`${groupId}.description`);
+  } catch {
+    // Use fallback values from registry
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Breadcrumbs */}
       <Breadcrumbs
         items={[
-          { label: 'Tools', href: '/tools' },
-          { label: group.title },
+          { label: t('tools'), href: '/tools' },
+          { label: groupTitle },
         ]}
       />
 
@@ -57,8 +97,8 @@ export default async function GroupPage({ params }: GroupPageProps) {
         <div className="flex items-center gap-4">
           <span className="text-5xl">{group.icon}</span>
           <div>
-            <h1 className="text-3xl font-bold">{group.title}</h1>
-            <p className="mt-2 text-muted-foreground">{group.description}</p>
+            <h1 className="text-3xl font-bold">{groupTitle}</h1>
+            <p className="mt-2 text-muted-foreground">{groupDescription}</p>
           </div>
         </div>
       </div>
@@ -66,7 +106,10 @@ export default async function GroupPage({ params }: GroupPageProps) {
       {/* Tool Count */}
       <div className="mb-6">
         <p className="text-sm text-muted-foreground">
-          {tools.length} tool{tools.length !== 1 ? 's' : ''} in this category
+          {tools.length === 1 
+            ? t('tools_in_category', { count: tools.length })
+            : t('tools_in_category_plural', { count: tools.length })
+          }
         </p>
       </div>
 

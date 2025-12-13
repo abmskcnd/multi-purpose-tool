@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import type { ToolItem, ToolGroup } from '@/config/tools.registry';
 
 interface GroupToolCardProps {
@@ -9,6 +10,29 @@ interface GroupToolCardProps {
 }
 
 export function GroupToolCard({ tool, group }: GroupToolCardProps) {
+  const t = useTranslations('common');
+  const tToolItems = useTranslations('toolItems');
+  
+  // Try to get translated title/description, fallback to registry values
+  const getToolTitle = () => {
+    try {
+      return tToolItems(`${group.id}.${tool.id}.title`);
+    } catch {
+      return tool.title;
+    }
+  };
+  
+  const getToolDescription = () => {
+    try {
+      return tToolItems(`${group.id}.${tool.id}.description`);
+    } catch {
+      return tool.description;
+    }
+  };
+
+  const toolTitle = getToolTitle();
+  const toolDescription = getToolDescription();
+
   return (
     <Link
       href={`/tools/${group.id}/${tool.id}`}
@@ -18,12 +42,12 @@ export function GroupToolCard({ tool, group }: GroupToolCardProps) {
       <div className="absolute right-3 top-3">
         {tool.status === 'coming-soon' && (
           <span className="rounded-full bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-500">
-            Coming Soon
+            {t('coming_soon')}
           </span>
         )}
         {tool.status === 'active' && (
           <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-500">
-            Available
+            {t('available')}
           </span>
         )}
       </div>
@@ -32,11 +56,11 @@ export function GroupToolCard({ tool, group }: GroupToolCardProps) {
       <span className="text-4xl">{tool.icon || group.icon}</span>
 
       {/* Title */}
-      <h3 className="mt-4 font-semibold group-hover:text-primary">{tool.title}</h3>
+      <h3 className="mt-4 font-semibold group-hover:text-primary">{toolTitle}</h3>
 
       {/* Description */}
       <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">
-        {tool.description}
+        {toolDescription}
       </p>
 
       {/* Implementation Badge */}
@@ -62,7 +86,7 @@ export function GroupToolCard({ tool, group }: GroupToolCardProps) {
 
       {/* Arrow indicator */}
       <div className="mt-4 flex items-center text-sm text-primary opacity-0 transition-opacity group-hover:opacity-100">
-        <span>Open tool</span>
+        <span>{t('open_tool')}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

@@ -25,7 +25,29 @@
     "results_found": "{count} resultados",
     "no_results": "No se encontraron herramientas",
     "open_tool": "Abrir herramienta",
-    "browse_tools": "Explorar herramientas"
+    "browse_tools": "Explorar herramientas",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "download": "Descargar",
+    "clear": "Limpiar",
+    "output_placeholder": "El resultado aparecerá aquí...",
+    "share": "Compartir",
+    "add_favorite": "Añadir a favoritos",
+    "remove_favorite": "Quitar de favoritos",
+    "frequently_asked_questions": "Preguntas Frecuentes",
+    "related_tools": "Herramientas Relacionadas",
+    "tool_not_found": "Herramienta No Encontrada",
+    "group_not_found": "Grupo No Encontrado",
+    "coming_soon_badge": "Próximamente",
+    "tool_under_development": "Esta herramienta está en desarrollo. ¡Vuelve pronto!",
+    "part_of_group": "Parte de {group}",
+    "tools_in_category": "{count} herramienta en esta categoría",
+    "tools_in_category_plural": "{count} herramientas en esta categoría",
+    "tool_pending_implementation": "Esta herramienta está marcada como activa pero la implementación está pendiente.",
+    "result": "resultado",
+    "results": "resultados",
+    "no_tools_found": "No se encontraron herramientas para",
+    "more": "más"
   },
   "home": {
     "title": "Herramientas Online Gratis - Sin Registro",
@@ -127,18 +149,252 @@
       "description": "Seguimiento y cálculo de criptomonedas"
     }
   },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "Generador de Contraseñas",
+        "description": "Genera contraseñas seguras y aleatorias con reglas personalizables"
+      },
+      "strength-checker": {
+        "title": "Verificador de Fortaleza de Contraseña",
+        "description": "Verifica la fortaleza de contraseñas con puntuación de entropía y consejos"
+      },
+      "hash-encode": {
+        "title": "Kit de Hash / Codificación",
+        "description": "Genera hashes SHA-256, MD5, HMAC y codificación Base64/URL"
+      },
+      "jwt-decoder": {
+        "title": "Decodificador JWT (Solo Local)",
+        "description": "Decodifica tokens JWT localmente - ver header, payload y expiración"
+      },
+      "uuid-nanoid": {
+        "title": "Generador de UUID / NanoID",
+        "description": "Genera UUIDs y NanoIDs en lote con varios formatos"
+      },
+      "qr-generator": {
+        "title": "Generador de Códigos QR",
+        "description": "Crea códigos QR para texto, URLs, vCards con descarga PNG/SVG"
+      },
+      "passphrase-generator": {
+        "title": "Generador de Frases de Contraseña",
+        "description": "Genera frases de contraseña basadas en palabras memorables pero seguras"
+      },
+      "password-policy-checker": {
+        "title": "Verificador de Política de Contraseñas",
+        "description": "Verifica contraseñas contra reglas de política de seguridad empresarial"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "Comparador de Texto / Diff",
+        "description": "Compara dos textos y resalta adiciones, eliminaciones y cambios"
+      },
+      "case-converter": {
+        "title": "Convertidor de Mayúsculas",
+        "description": "Convierte texto entre camelCase, snake_case, kebab-case, PascalCase + eliminar diacríticos"
+      },
+      "regex-tester": {
+        "title": "Probador de Regex + Resaltador",
+        "description": "Prueba expresiones regulares con resaltado en tiempo real y coincidencia de grupos"
+      },
+      "cleaner": {
+        "title": "Limpiador de Texto",
+        "description": "Recortar, eliminar espacios duplicados, líneas vacías, ordenar y únicos"
+      },
+      "word-counter": {
+        "title": "Contador de Palabras",
+        "description": "Cuenta palabras, caracteres, oraciones con estimación de tiempo de lectura"
+      },
+      "markdown-preview": {
+        "title": "Vista Previa de Markdown + Exportar HTML",
+        "description": "Editor markdown en vivo con vista previa y exportación HTML"
+      },
+      "slug-generator": {
+        "title": "Generador de Slug",
+        "description": "Genera slugs de URL amigables para SEO desde cualquier texto"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "Formateador / Minificador / Validador JSON",
+        "description": "Formatea, minifica y valida JSON con resaltado de sintaxis"
+      },
+      "diff": {
+        "title": "Comparador JSON / Diff",
+        "description": "Compara documentos JSON con resaltado de diferencias basado en rutas"
+      },
+      "schema-generator": {
+        "title": "Generador de JSON Schema",
+        "description": "Genera JSON Schema automáticamente desde datos JSON"
+      },
+      "convert": {
+        "title": "Convertidor JSON ↔ YAML / XML",
+        "description": "Convierte entre formatos JSON, YAML y XML"
+      },
+      "jsonpath": {
+        "title": "Playground JSONPath / jq",
+        "description": "Consulta JSON con expresiones JSONPath interactivamente"
+      },
+      "json-to-csv": {
+        "title": "Convertidor JSON a CSV",
+        "description": "Convierte arrays JSON a formato CSV para hojas de cálculo"
+      },
+      "sort-keys": {
+        "title": "Ordenar Claves JSON",
+        "description": "Ordena claves JSON alfabéticamente para salida estable"
+      },
+      "flatten-unflatten": {
+        "title": "Aplanar / Desaplanar JSON",
+        "description": "Convierte JSON anidado a/desde notación de ruta con puntos"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "Ruleta / Selector Aleatorio",
+        "description": "Gira una ruleta para elegir elementos aleatorios con animación e historial"
+      },
+      "team-generator": {
+        "title": "Generador de Equipos Aleatorios",
+        "description": "Divide personas en equipos aleatorios con restricciones de tamaño"
+      },
+      "dice-lottery": {
+        "title": "Dados / Lotería / Nombre Aleatorio",
+        "description": "Tirar dados, generar números de lotería, elegir nombres aleatorios"
+      },
+      "countdown": {
+        "title": "Cuenta Regresiva / Temporizador Compartible",
+        "description": "Crea temporizadores de cuenta regresiva compartibles vía URL"
+      },
+      "random-lorem": {
+        "title": "Número Aleatorio / Generador Lorem Ipsum",
+        "description": "Genera números aleatorios o texto de marcador Lorem Ipsum"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "Compresor de Imágenes",
+        "description": "Comprime imágenes manteniendo la calidad"
+      },
+      "convert": {
+        "title": "Convertir Formato",
+        "description": "Convierte imágenes entre formatos PNG, JPG, WebP"
+      },
+      "crop-resize-rotate": {
+        "title": "Recortar / Redimensionar / Rotar",
+        "description": "Recorta, redimensiona y rota imágenes con precisión"
+      },
+      "remove-bg": {
+        "title": "Eliminar Fondo (Opcional)",
+        "description": "Elimina fondos de imágenes usando servicio de IA"
+      },
+      "qr-gen-scan": {
+        "title": "Generador + Escáner de Códigos QR",
+        "description": "Genera y escanea códigos QR desde imágenes"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "Fusionar / Dividir PDF",
+        "description": "Fusiona múltiples PDFs en uno o divide un PDF en partes"
+      },
+      "extract-rotate": {
+        "title": "Extraer / Rotar Páginas",
+        "description": "Extrae páginas específicas o rota páginas de PDF"
+      },
+      "watermark": {
+        "title": "Añadir Números de Página / Marca de Agua",
+        "description": "Añade números de página o marcas de agua a documentos PDF"
+      },
+      "compress": {
+        "title": "Comprimir (Básico)",
+        "description": "Reduce el tamaño de archivos PDF con compresión básica"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF a Texto / Imágenes",
+        "description": "Extrae texto o imágenes de documentos PDF"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "Editor de Código Online / Formateador",
+        "description": "Edita y formatea código con resaltado de sintaxis (JS/TS/HTML/CSS/JSON)"
+      },
+      "lint-typecheck-light": {
+        "title": "Playground de Lint / Verificación de Tipos (Ligero)",
+        "description": "Lint ligero y verificación de tipos en sandbox del navegador"
+      },
+      "cron-builder": {
+        "title": "Constructor de Expresiones Cron",
+        "description": "Construye y explica expresiones cron visualmente"
+      },
+      "timestamp-converter": {
+        "title": "Convertidor de Timestamp",
+        "description": "Convierte entre timestamps Unix y fechas legibles"
+      },
+      "curl-converter": {
+        "title": "Convertidor cURL → Fetch / Axios",
+        "description": "Convierte comandos cURL a código JavaScript fetch o Axios"
+      },
+      "gitignore-generator": {
+        "title": "Generador de Git Ignore",
+        "description": "Genera archivos .gitignore para varios tipos de proyectos"
+      },
+      "api-tester": {
+        "title": "Probador de API",
+        "description": "Prueba APIs REST directamente desde el navegador (con opción de proxy CORS)"
+      }
+    }
+  },
   "tools": {
     "password_generator": {
       "title": "Generador de Contraseñas",
       "description": "Genera contraseñas seguras y aleatorias al instante",
+      "meta_description": "Crea contraseñas fuertes y seguras con nuestro generador gratuito. Personaliza longitud, tipos de caracteres y opciones avanzadas de seguridad.",
+      "generated_password": "Contraseña Generada",
+      "click_generate": "Haz clic en generar para crear una contraseña",
+      "hide_password": "Ocultar contraseña",
+      "show_password": "Mostrar contraseña",
+      "strength": "Fortaleza",
+      "strength_weak": "Débil",
+      "strength_fair": "Regular",
+      "strength_good": "Buena",
+      "strength_strong": "Fuerte",
+      "entropy": "bits de entropía",
+      "tip": "Las contraseñas fuertes usan 12+ caracteres con tipos mixtos",
       "generate": "Generar Contraseña",
+      "regenerate": "Regenerar",
       "copy": "Copiar",
       "copied": "¡Copiado!",
+      "options": "Opciones",
       "length": "Longitud",
-      "include_uppercase": "Incluir Mayúsculas",
-      "include_lowercase": "Incluir Minúsculas",
-      "include_numbers": "Incluir Números",
-      "include_symbols": "Incluir Símbolos"
+      "characters": "caracteres",
+      "character_types": "Tipos de Caracteres",
+      "uppercase": "Mayúsculas (A-Z)",
+      "lowercase": "Minúsculas (a-z)",
+      "numbers": "Números (0-9)",
+      "symbols": "Símbolos (!@#$...)",
+      "select_at_least_one": "Selecciona al menos un tipo de carácter",
+      "advanced_options": "Opciones Avanzadas",
+      "exclude_ambiguous": "Excluir Ambiguos",
+      "exclude_ambiguous_desc": "Quitar 0, O, l, 1, I",
+      "exclude_similar": "Excluir Similares",
+      "exclude_similar_desc": "Quitar i, L, o, O, 0",
+      "custom_symbols": "Símbolos Personalizados",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "Números Mínimos",
+      "min_symbols": "Símbolos Mínimos",
+      "reset_defaults": "Restablecer Valores",
+      "recent_passwords": "Contraseñas Recientes",
+      "no_recent": "Sin contraseñas recientes",
+      "clear_history": "Borrar Historial",
+      "faq_title": "Preguntas Frecuentes",
+      "faq_q1": "¿Qué tan seguro es este generador de contraseñas?",
+      "faq_a1": "Nuestro generador utiliza generación de números aleatorios criptográficamente seguros (crypto.getRandomValues) para crear contraseñas verdaderamente aleatorias. Todo el procesamiento ocurre en tu navegador - ninguna contraseña se envía a nuestros servidores.",
+      "faq_q2": "¿Qué hace que una contraseña sea fuerte?",
+      "faq_a2": "Una contraseña fuerte tiene al menos 12 caracteres e incluye mayúsculas, minúsculas, números y símbolos. Evita usar información personal o palabras comunes.",
+      "faq_q3": "¿Debo usar contraseñas diferentes para cada cuenta?",
+      "faq_a3": "¡Sí! Usar contraseñas únicas para cada cuenta asegura que si una se compromete, tus otras cuentas permanecen seguras. Considera usar un administrador de contraseñas.",
+      "related_title": "Herramientas Relacionadas"
     },
     "qr_code_generator": {
       "title": "Generador de Códigos QR",

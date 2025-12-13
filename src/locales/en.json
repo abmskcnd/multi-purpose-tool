@@ -25,7 +25,29 @@
     "results_found": "{count} results",
     "no_results": "No tools found",
     "open_tool": "Open tool",
-    "browse_tools": "Browse tools"
+    "browse_tools": "Browse tools",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "download": "Download",
+    "clear": "Clear",
+    "output_placeholder": "Output will appear here...",
+    "share": "Share",
+    "add_favorite": "Add to favorites",
+    "remove_favorite": "Remove from favorites",
+    "frequently_asked_questions": "Frequently Asked Questions",
+    "related_tools": "Related Tools",
+    "tool_not_found": "Tool Not Found",
+    "group_not_found": "Group Not Found",
+    "coming_soon_badge": "Coming Soon",
+    "tool_under_development": "This tool is under development. Check back soon!",
+    "part_of_group": "Part of {group}",
+    "tools_in_category": "{count} tool in this category",
+    "tools_in_category_plural": "{count} tools in this category",
+    "tool_pending_implementation": "This tool is marked as active but implementation is pending.",
+    "result": "result",
+    "results": "results",
+    "no_tools_found": "No tools found for",
+    "more": "more"
   },
   "home": {
     "title": "Free Online Tools - No Registration Required",
@@ -127,18 +149,252 @@
       "description": "Cryptocurrency tracking and calculation tools"
     }
   },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "Password Generator",
+        "description": "Generate secure, random passwords with customizable rules"
+      },
+      "strength-checker": {
+        "title": "Password Strength Checker",
+        "description": "Check password strength with entropy scoring and tips"
+      },
+      "hash-encode": {
+        "title": "Hash / Encode Toolkit",
+        "description": "Generate SHA-256, MD5, HMAC hashes and Base64/URL encoding"
+      },
+      "jwt-decoder": {
+        "title": "JWT Decoder (Local Only)",
+        "description": "Decode JWT tokens locally - view header, payload and expiration"
+      },
+      "uuid-nanoid": {
+        "title": "UUID / NanoID Generator",
+        "description": "Generate UUIDs and NanoIDs in batch with various formats"
+      },
+      "qr-generator": {
+        "title": "QR Code Generator",
+        "description": "Create QR codes for text, URLs, vCards with PNG/SVG download"
+      },
+      "passphrase-generator": {
+        "title": "Passphrase Generator",
+        "description": "Generate memorable word-based passphrases that are still secure"
+      },
+      "password-policy-checker": {
+        "title": "Password Policy Checker",
+        "description": "Check passwords against enterprise security policy rules"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "Text Diff / Compare",
+        "description": "Compare two texts and highlight additions, removals, and changes"
+      },
+      "case-converter": {
+        "title": "Case Converter",
+        "description": "Convert text between camelCase, snake_case, kebab-case, PascalCase + remove diacritics"
+      },
+      "regex-tester": {
+        "title": "Regex Tester + Highlighter",
+        "description": "Test regular expressions with real-time highlighting and group matching"
+      },
+      "cleaner": {
+        "title": "Text Cleaner",
+        "description": "Trim, remove duplicate spaces, empty lines, sort and unique lines"
+      },
+      "word-counter": {
+        "title": "Word Counter",
+        "description": "Count words, characters, sentences with reading time estimation"
+      },
+      "markdown-preview": {
+        "title": "Markdown Preview + Export HTML",
+        "description": "Live markdown editor with preview and HTML export"
+      },
+      "slug-generator": {
+        "title": "Slug Generator",
+        "description": "Generate SEO-friendly URL slugs from any text"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "JSON Formatter / Minify / Validator",
+        "description": "Format, minify and validate JSON with syntax highlighting"
+      },
+      "diff": {
+        "title": "JSON Diff / Compare",
+        "description": "Compare JSON documents with path-based diff highlighting"
+      },
+      "schema-generator": {
+        "title": "JSON Schema Generator",
+        "description": "Generate JSON Schema from JSON data automatically"
+      },
+      "convert": {
+        "title": "JSON ↔ YAML / XML Converter",
+        "description": "Convert between JSON, YAML, and XML formats"
+      },
+      "jsonpath": {
+        "title": "JSONPath / jq Playground",
+        "description": "Query JSON with JSONPath expressions interactively"
+      },
+      "json-to-csv": {
+        "title": "JSON to CSV Converter",
+        "description": "Convert JSON arrays to CSV format for spreadsheets"
+      },
+      "sort-keys": {
+        "title": "Sort JSON Keys",
+        "description": "Sort JSON keys alphabetically for stable output"
+      },
+      "flatten-unflatten": {
+        "title": "Flatten / Unflatten JSON",
+        "description": "Convert nested JSON to/from dot-path notation"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "Wheel Spinner / Random Picker",
+        "description": "Spin a wheel to pick random items with animation and history"
+      },
+      "team-generator": {
+        "title": "Random Team Generator",
+        "description": "Divide people into random teams with size constraints"
+      },
+      "dice-lottery": {
+        "title": "Dice / Lottery / Random Name",
+        "description": "Roll dice, generate lottery numbers, pick random names"
+      },
+      "countdown": {
+        "title": "Countdown / Timer Shareable",
+        "description": "Create shareable countdown timers via URL"
+      },
+      "random-lorem": {
+        "title": "Random Number / Lorem Ipsum Generator",
+        "description": "Generate random numbers or Lorem Ipsum placeholder text"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "Image Compressor",
+        "description": "Compress images while maintaining quality"
+      },
+      "convert": {
+        "title": "Convert Format",
+        "description": "Convert images between PNG, JPG, WebP formats"
+      },
+      "crop-resize-rotate": {
+        "title": "Crop / Resize / Rotate",
+        "description": "Crop, resize and rotate images with precision"
+      },
+      "remove-bg": {
+        "title": "Remove Background (Optional)",
+        "description": "Remove image backgrounds using AI service"
+      },
+      "qr-gen-scan": {
+        "title": "QR Code Generator + Scanner",
+        "description": "Generate and scan QR codes from images"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "PDF Merge / Split",
+        "description": "Merge multiple PDFs into one or split a PDF into parts"
+      },
+      "extract-rotate": {
+        "title": "Extract / Rotate Pages",
+        "description": "Extract specific pages or rotate PDF pages"
+      },
+      "watermark": {
+        "title": "Add Page Numbers / Watermark",
+        "description": "Add page numbers or watermarks to PDF documents"
+      },
+      "compress": {
+        "title": "Compress (Basic)",
+        "description": "Reduce PDF file size with basic compression"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF to Text / Images",
+        "description": "Extract text or images from PDF documents"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "Online Code Editor / Formatter",
+        "description": "Edit and format code with syntax highlighting (JS/TS/HTML/CSS/JSON)"
+      },
+      "lint-typecheck-light": {
+        "title": "Lint / Type Check Playground (Light)",
+        "description": "Light linting and type checking in browser sandbox"
+      },
+      "cron-builder": {
+        "title": "Cron Expression Builder",
+        "description": "Build and explain cron expressions visually"
+      },
+      "timestamp-converter": {
+        "title": "Timestamp Converter",
+        "description": "Convert between Unix timestamps and readable dates"
+      },
+      "curl-converter": {
+        "title": "cURL → Fetch / Axios Converter",
+        "description": "Convert cURL commands to JavaScript fetch or Axios code"
+      },
+      "gitignore-generator": {
+        "title": "Git Ignore Generator",
+        "description": "Generate .gitignore files for various project types"
+      },
+      "api-tester": {
+        "title": "API Tester",
+        "description": "Test REST APIs directly from browser (with CORS proxy option)"
+      }
+    }
+  },
   "tools": {
     "password_generator": {
       "title": "Password Generator",
       "description": "Generate secure, random passwords instantly",
+      "meta_description": "Create strong, secure passwords with our free online password generator. Customizable length, character types, and advanced security options.",
+      "generated_password": "Generated Password",
+      "click_generate": "Click generate to create a password",
+      "hide_password": "Hide password",
+      "show_password": "Show password",
+      "strength": "Strength",
+      "strength_weak": "Weak",
+      "strength_fair": "Fair",
+      "strength_good": "Good",
+      "strength_strong": "Strong",
+      "entropy": "bits entropy",
+      "tip": "Strong passwords use 12+ characters with mixed types",
       "generate": "Generate Password",
+      "regenerate": "Regenerate",
       "copy": "Copy",
       "copied": "Copied!",
+      "options": "Options",
       "length": "Length",
-      "include_uppercase": "Include Uppercase",
-      "include_lowercase": "Include Lowercase",
-      "include_numbers": "Include Numbers",
-      "include_symbols": "Include Symbols"
+      "characters": "characters",
+      "character_types": "Character Types",
+      "uppercase": "Uppercase (A-Z)",
+      "lowercase": "Lowercase (a-z)",
+      "numbers": "Numbers (0-9)",
+      "symbols": "Symbols (!@#$...)",
+      "select_at_least_one": "Select at least one character type",
+      "advanced_options": "Advanced Options",
+      "exclude_ambiguous": "Exclude Ambiguous",
+      "exclude_ambiguous_desc": "Remove 0, O, l, 1, I",
+      "exclude_similar": "Exclude Similar",
+      "exclude_similar_desc": "Remove i, L, o, O, 0",
+      "custom_symbols": "Custom Symbols",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "Min Numbers",
+      "min_symbols": "Min Symbols",
+      "reset_defaults": "Reset to Defaults",
+      "recent_passwords": "Recent Passwords",
+      "no_recent": "No recent passwords",
+      "clear_history": "Clear History",
+      "faq_title": "Frequently Asked Questions",
+      "faq_q1": "How secure is this password generator?",
+      "faq_a1": "Our generator uses cryptographically secure random number generation (crypto.getRandomValues) to create truly random passwords. All processing happens in your browser - no passwords are ever sent to our servers.",
+      "faq_q2": "What makes a strong password?",
+      "faq_a2": "A strong password is at least 12 characters long and includes a mix of uppercase letters, lowercase letters, numbers, and symbols. Avoid using personal information or common words.",
+      "faq_q3": "Should I use different passwords for each account?",
+      "faq_a3": "Yes! Using unique passwords for each account ensures that if one password is compromised, your other accounts remain secure. Consider using a password manager to keep track of them.",
+      "related_title": "Related Tools"
     },
     "qr_code_generator": {
       "title": "QR Code Generator",

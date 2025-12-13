@@ -25,7 +25,29 @@
     "results_found": "{count} 件の結果",
     "no_results": "ツールが見つかりません",
     "open_tool": "ツールを開く",
-    "browse_tools": "ツールを閲覧"
+    "browse_tools": "ツールを閲覧",
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "download": "ダウンロード",
+    "clear": "クリア",
+    "output_placeholder": "結果がここに表示されます...",
+    "share": "共有",
+    "add_favorite": "お気に入りに追加",
+    "remove_favorite": "お気に入りから削除",
+    "frequently_asked_questions": "よくある質問",
+    "related_tools": "関連ツール",
+    "tool_not_found": "ツールが見つかりません",
+    "group_not_found": "グループが見つかりません",
+    "coming_soon_badge": "近日公開",
+    "tool_under_development": "このツールは開発中です。また後で確認してください！",
+    "part_of_group": "{group} の一部",
+    "tools_in_category": "このカテゴリに {count} 個のツール",
+    "tools_in_category_plural": "このカテゴリに {count} 個のツール",
+    "tool_pending_implementation": "このツールはアクティブとしてマークされていますが、実装は保留中です。",
+    "result": "件の結果",
+    "results": "件の結果",
+    "no_tools_found": "ツールが見つかりません：",
+    "more": "件追加"
   },
   "home": {
     "title": "無料オンラインツール - 登録不要",
@@ -127,18 +149,252 @@
       "description": "暗号通貨の追跡と計算ツール"
     }
   },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "パスワードジェネレーター",
+        "description": "カスタマイズ可能なルールで安全なランダムパスワードを生成"
+      },
+      "strength-checker": {
+        "title": "パスワード強度チェッカー",
+        "description": "エントロピースコアとヒントでパスワード強度をチェック"
+      },
+      "hash-encode": {
+        "title": "ハッシュ / エンコードツールキット",
+        "description": "SHA-256、MD5、HMACハッシュとBase64/URLエンコードを生成"
+      },
+      "jwt-decoder": {
+        "title": "JWTデコーダー（ローカルのみ）",
+        "description": "JWTトークンをローカルでデコード - ヘッダー、ペイロード、有効期限を表示"
+      },
+      "uuid-nanoid": {
+        "title": "UUID / NanoIDジェネレーター",
+        "description": "様々な形式でUUIDとNanoIDを一括生成"
+      },
+      "qr-generator": {
+        "title": "QRコードジェネレーター",
+        "description": "テキスト、URL、vCard用のQRコードをPNG/SVGでダウンロード"
+      },
+      "passphrase-generator": {
+        "title": "パスフレーズジェネレーター",
+        "description": "安全でありながら覚えやすい単語ベースのパスフレーズを生成"
+      },
+      "password-policy-checker": {
+        "title": "パスワードポリシーチェッカー",
+        "description": "企業セキュリティポリシールールに対してパスワードをチェック"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "テキスト差分 / 比較",
+        "description": "2つのテキストを比較し、追加、削除、変更をハイライト"
+      },
+      "case-converter": {
+        "title": "ケースコンバーター",
+        "description": "camelCase、snake_case、kebab-case、PascalCase間の変換 + 発音記号除去"
+      },
+      "regex-tester": {
+        "title": "正規表現テスター + ハイライター",
+        "description": "リアルタイムハイライトとグループマッチングで正規表現をテスト"
+      },
+      "cleaner": {
+        "title": "テキストクリーナー",
+        "description": "トリム、重複スペース削除、空行削除、ソートと重複排除"
+      },
+      "word-counter": {
+        "title": "単語カウンター",
+        "description": "単語、文字、文の数をカウントし、読了時間を推定"
+      },
+      "markdown-preview": {
+        "title": "Markdownプレビュー + HTMLエクスポート",
+        "description": "プレビューとHTMLエクスポート機能付きライブMarkdownエディター"
+      },
+      "slug-generator": {
+        "title": "スラッグジェネレーター",
+        "description": "任意のテキストからSEOフレンドリーなURLスラッグを生成"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "JSONフォーマッター / 圧縮 / バリデーター",
+        "description": "シンタックスハイライト付きでJSONをフォーマット、圧縮、検証"
+      },
+      "diff": {
+        "title": "JSON差分 / 比較",
+        "description": "パスベースの差分ハイライトでJSONドキュメントを比較"
+      },
+      "schema-generator": {
+        "title": "JSONスキーマジェネレーター",
+        "description": "JSONデータから自動的にJSONスキーマを生成"
+      },
+      "convert": {
+        "title": "JSON ↔ YAML / XMLコンバーター",
+        "description": "JSON、YAML、XML形式間の変換"
+      },
+      "jsonpath": {
+        "title": "JSONPath / jqプレイグラウンド",
+        "description": "JSONPath式でインタラクティブにJSONをクエリ"
+      },
+      "json-to-csv": {
+        "title": "JSON to CSVコンバーター",
+        "description": "JSON配列をスプレッドシート用CSV形式に変換"
+      },
+      "sort-keys": {
+        "title": "JSONキーソート",
+        "description": "安定した出力のためにJSONキーをアルファベット順にソート"
+      },
+      "flatten-unflatten": {
+        "title": "JSONフラット化 / アンフラット化",
+        "description": "ネストされたJSONをドットパス記法に変換/復元"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "ルーレット / ランダムピッカー",
+        "description": "アニメーションと履歴付きでホイールを回してランダムに選択"
+      },
+      "team-generator": {
+        "title": "ランダムチームジェネレーター",
+        "description": "サイズ制約付きで人をランダムなチームに分割"
+      },
+      "dice-lottery": {
+        "title": "サイコロ / 宝くじ / ランダム名",
+        "description": "サイコロを振る、宝くじ番号生成、ランダムな名前選択"
+      },
+      "countdown": {
+        "title": "共有可能カウントダウン / タイマー",
+        "description": "URLで共有可能なカウントダウンタイマーを作成"
+      },
+      "random-lorem": {
+        "title": "乱数 / Lorem Ipsumジェネレーター",
+        "description": "乱数またはLorem Ipsumプレースホルダーテキストを生成"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "画像圧縮",
+        "description": "品質を維持しながら画像を圧縮"
+      },
+      "convert": {
+        "title": "フォーマット変換",
+        "description": "PNG、JPG、WebP間で画像を変換"
+      },
+      "crop-resize-rotate": {
+        "title": "切り抜き / リサイズ / 回転",
+        "description": "精密に画像を切り抜き、リサイズ、回転"
+      },
+      "remove-bg": {
+        "title": "背景除去（オプション）",
+        "description": "AIサービスを使用して画像の背景を除去"
+      },
+      "qr-gen-scan": {
+        "title": "QRコード生成 + スキャン",
+        "description": "画像からQRコードを生成およびスキャン"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "PDF結合 / 分割",
+        "description": "複数のPDFを1つに結合、またはPDFを分割"
+      },
+      "extract-rotate": {
+        "title": "ページ抽出 / 回転",
+        "description": "特定のページを抽出またはPDFページを回転"
+      },
+      "watermark": {
+        "title": "ページ番号 / 透かし追加",
+        "description": "PDFドキュメントにページ番号または透かしを追加"
+      },
+      "compress": {
+        "title": "圧縮（基本）",
+        "description": "基本圧縮でPDFファイルサイズを削減"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF to テキスト / 画像",
+        "description": "PDFドキュメントからテキストまたは画像を抽出"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "オンラインコードエディター / フォーマッター",
+        "description": "シンタックスハイライト付きでコードを編集・フォーマット（JS/TS/HTML/CSS/JSON）"
+      },
+      "lint-typecheck-light": {
+        "title": "Lint / 型チェックプレイグラウンド（ライト）",
+        "description": "ブラウザサンドボックスで軽量なリントと型チェック"
+      },
+      "cron-builder": {
+        "title": "Cron式ビルダー",
+        "description": "視覚的にcron式を構築・説明"
+      },
+      "timestamp-converter": {
+        "title": "タイムスタンプコンバーター",
+        "description": "Unixタイムスタンプと読みやすい日付の間で変換"
+      },
+      "curl-converter": {
+        "title": "cURL → Fetch / Axiosコンバーター",
+        "description": "cURLコマンドをJavaScript fetchまたはAxiosコードに変換"
+      },
+      "gitignore-generator": {
+        "title": "Git Ignoreジェネレーター",
+        "description": "様々なプロジェクトタイプ用の.gitignoreファイルを生成"
+      },
+      "api-tester": {
+        "title": "APIテスター",
+        "description": "ブラウザから直接REST APIをテスト（CORSプロキシオプション付き）"
+      }
+    }
+  },
   "tools": {
     "password_generator": {
       "title": "パスワードジェネレーター",
       "description": "安全でランダムなパスワードを即座に生成",
+      "meta_description": "無料のオンラインパスワードジェネレーターで強力で安全なパスワードを作成。長さ、文字タイプ、高度なセキュリティオプションをカスタマイズ可能。",
+      "generated_password": "生成されたパスワード",
+      "click_generate": "生成ボタンをクリックしてパスワードを作成",
+      "hide_password": "パスワードを隠す",
+      "show_password": "パスワードを表示",
+      "strength": "強度",
+      "strength_weak": "弱い",
+      "strength_fair": "普通",
+      "strength_good": "良い",
+      "strength_strong": "強い",
+      "entropy": "ビットエントロピー",
+      "tip": "強力なパスワードは12文字以上で複数の文字タイプを使用",
       "generate": "パスワードを生成",
+      "regenerate": "再生成",
       "copy": "コピー",
       "copied": "コピーしました！",
+      "options": "オプション",
       "length": "長さ",
-      "include_uppercase": "大文字を含む",
-      "include_lowercase": "小文字を含む",
-      "include_numbers": "数字を含む",
-      "include_symbols": "記号を含む"
+      "characters": "文字",
+      "character_types": "文字タイプ",
+      "uppercase": "大文字 (A-Z)",
+      "lowercase": "小文字 (a-z)",
+      "numbers": "数字 (0-9)",
+      "symbols": "記号 (!@#$...)",
+      "select_at_least_one": "少なくとも1つの文字タイプを選択してください",
+      "advanced_options": "高度なオプション",
+      "exclude_ambiguous": "紛らわしい文字を除外",
+      "exclude_ambiguous_desc": "0, O, l, 1, I を除去",
+      "exclude_similar": "類似文字を除外",
+      "exclude_similar_desc": "i, L, o, O, 0 を除去",
+      "custom_symbols": "カスタム記号",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "最小数字数",
+      "min_symbols": "最小記号数",
+      "reset_defaults": "デフォルトに戻す",
+      "recent_passwords": "最近のパスワード",
+      "no_recent": "パスワード履歴なし",
+      "clear_history": "履歴を消去",
+      "faq_title": "よくある質問",
+      "faq_q1": "このパスワードジェネレーターはどの程度安全ですか？",
+      "faq_a1": "当ジェネレーターは暗号学的に安全な乱数生成（crypto.getRandomValues）を使用して真にランダムなパスワードを作成します。すべての処理はブラウザ内で行われ、パスワードがサーバーに送信されることはありません。",
+      "faq_q2": "強力なパスワードの条件は何ですか？",
+      "faq_a2": "強力なパスワードは少なくとも12文字で、大文字、小文字、数字、記号を組み合わせたものです。個人情報や一般的な単語の使用は避けてください。",
+      "faq_q3": "アカウントごとに異なるパスワードを使用すべきですか？",
+      "faq_a3": "はい！各アカウントに固有のパスワードを使用することで、1つのパスワードが漏洩しても他のアカウントは安全です。パスワードマネージャーの使用をお勧めします。",
+      "related_title": "関連ツール"
     },
     "qr_code_generator": {
       "title": "QRコードジェネレーター",
