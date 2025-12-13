@@ -1,0 +1,928 @@
+{
+  "common": {
+    "site_name": "Vibetool",
+    "home": "首页",
+    "tools": "工具",
+    "about": "关于",
+    "contact": "联系我们",
+    "privacy_policy": "隐私政策",
+    "terms_of_service": "服务条款",
+    "all_rights_reserved": "版权所有",
+    "search_placeholder": "搜索工具...",
+    "all_tools": "所有工具",
+    "view_all": "查看全部",
+    "popular_tools": "热门工具",
+    "browse_by_category": "按分类浏览",
+    "coming_soon": "即将推出",
+    "available": "可用",
+    "copy_link": "复制链接",
+    "link_copied": "链接已复制！",
+    "planned_implementation": "计划实现",
+    "client_side": "100% 客户端（浏览器）",
+    "server_side": "服务器端处理",
+    "hybrid": "客户端 + 服务器混合",
+    "tools_count": "{count} 个工具",
+    "results_found": "{count} 个结果",
+    "no_results": "未找到工具",
+    "open_tool": "打开工具",
+    "browse_tools": "浏览工具",
+    "copy": "复制",
+    "copied": "已复制！",
+    "download": "下载",
+    "clear": "清除",
+    "output_placeholder": "结果将显示在这里...",
+    "share": "分享",
+    "add_favorite": "添加到收藏",
+    "remove_favorite": "从收藏中移除",
+    "frequently_asked_questions": "常见问题",
+    "related_tools": "相关工具",
+    "tool_not_found": "未找到工具",
+    "group_not_found": "未找到分组",
+    "coming_soon_badge": "即将推出",
+    "tool_under_development": "此工具正在开发中，请稍后再来！",
+    "part_of_group": "属于 {group}",
+    "tools_in_category": "此分类中有 {count} 个工具",
+    "tools_in_category_plural": "此分类中有 {count} 个工具",
+    "tool_pending_implementation": "此工具已标记为活动状态，但实现正在等待中。",
+    "result": "个结果",
+    "results": "个结果",
+    "loading": "加载中",
+    "no_tools_found": "未找到工具：",
+    "more": "更多",
+    "categories": "分类",
+    "filters": "筛选",
+    "sort_by": "排序方式",
+    "all_categories": "所有分类",
+    "all_status": "所有状态",
+    "all_types": "所有类型",
+    "category": "分类",
+    "filter": "筛选",
+    "sort": "排序",
+    "clear_all": "清除全部",
+    "clear_filters": "清除筛选",
+    "try_different_search": "请尝试调整搜索或筛选条件",
+    "for": "为",
+    "free": "免费",
+    "navigation": "导航",
+    "close_menu": "关闭菜单",
+    "open_menu": "打开菜单",
+    "get_started": "开始使用",
+    "expand_sidebar": "展开侧边栏",
+    "collapse_sidebar": "收起侧边栏",
+    "status": "状态",
+    "type": "类型",
+    "tags": "标签",
+    "client_side_short": "客户端",
+    "server_side_short": "服务器",
+    "hybrid_short": "混合",
+    "no_tools_in_category": "此分类中没有工具",
+    "try_different_filter": "请尝试其他筛选条件或浏览所有工具",
+    "reset_filters": "重置筛选",
+    "loading_tools": "加载工具中...",
+    "error_loading": "加载错误",
+    "retry": "重试",
+    "search_tools": "搜索工具...",
+    "menu": "菜单",
+    "close": "关闭",
+    "github": "GitHub",
+    "docs": "文档",
+    "explore_tools": "探索工具"
+  },
+  "home": {
+    "title": "免费在线工具 - 无需注册",
+    "description": "100+ 免费在线工具，用于图像转换、PDF处理、密码生成等。100% 客户端处理 - 您的文件永不离开设备。",
+    "hero_title": "使用 VibeTool 增强您的工作流程",
+    "hero_subtitle": "发现为现代创作者和开发者精选的最佳工具。今天就找到您的下一个生产力助手。",
+    "search_placeholder": "搜索工具...",
+    "popular_tools": "热门工具",
+    "all_tools": "所有工具",
+    "view_all": "查看全部",
+    "new_tools_badge": "每周添加新工具",
+    "get_started": "开始使用",
+    "browse_all": "浏览全部",
+    "quick_picks": "快速选择",
+    "editors_choice": "编辑推荐",
+    "editors_choice_subtitle": "本周精选工具",
+    "view_details": "查看详情",
+    "most_popular": "最受欢迎",
+    "newest": "最新",
+    "a_to_z": "A 到 Z",
+    "show_more_tools": "显示更多工具",
+    "free": "免费",
+    "featured": "推荐",
+    "categories_subtitle": "找到适合您需求的完美工具",
+    "coming_soon_title": "即将推出",
+    "coming_soon_subtitle": "我们正在开发的新工具",
+    "cta_title": "准备好提高生产力了吗？",
+    "cta_subtitle": "探索我们的100+免费工具集，让您的工作更轻松",
+    "explore_all_tools": "探索所有工具",
+    "popular_subtitle": "社区最常用的工具",
+    "hero_badge": "100+免费工具",
+    "hero_stats_tools": "工具",
+    "hero_stats_categories": "分类",
+    "hero_stats_users": "用户",
+    "features_title": "为什么选择VibeTool？",
+    "features_subtitle": "所有工具免费使用，无需注册，数据永远不会离开您的设备",
+    "feature_fast": "超快速度",
+    "feature_fast_desc": "所有处理都在浏览器中完成，无需等待",
+    "feature_private": "隐私安全",
+    "feature_private_desc": "您的数据永远不会离开您的设备",
+    "feature_free": "完全免费",
+    "feature_free_desc": "所有功能免费使用",
+    "new_tools": "新工具",
+    "coming_soon_tools": "即将推出"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "密码与安全",
+      "description": "生成安全密码、检查强度和安全工具"
+    },
+    "text": {
+      "title": "文本工具",
+      "description": "文本处理、比较和格式化工具"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "格式化、验证、比较和转换结构化数据"
+    },
+    "random": {
+      "title": "随机 / 趣味",
+      "description": "随机生成器、选择器和趣味工具"
+    },
+    "image": {
+      "title": "图像工具",
+      "description": "图像压缩、转换和处理"
+    },
+    "pdf": {
+      "title": "PDF工具",
+      "description": "PDF处理、合并、拆分和转换"
+    },
+    "dev": {
+      "title": "开发工具",
+      "description": "开发者工具：代码格式化、测试和转换"
+    },
+    "data": {
+      "title": "编码/解码",
+      "description": "编码、解码和数据转换工具"
+    },
+    "datetime": {
+      "title": "日期与时间",
+      "description": "日期计算、时区转换和日历工具"
+    },
+    "youtube": {
+      "title": "YouTube工具",
+      "description": "合法的YouTube工具：元数据、缩略图和嵌入"
+    },
+    "file-convert": {
+      "title": "文件转换",
+      "description": "在不同格式之间转换文件"
+    },
+    "math": {
+      "title": "数学与计算器",
+      "description": "数学计算和方程求解"
+    },
+    "unit": {
+      "title": "单位转换器",
+      "description": "在不同测量单位之间转换"
+    },
+    "finance": {
+      "title": "财务与预算",
+      "description": "财务计算器和预算规划工具"
+    },
+    "health": {
+      "title": "健康与健身",
+      "description": "健康和健身计算工具"
+    },
+    "seo": {
+      "title": "SEO与分析",
+      "description": "SEO分析和网站优化工具"
+    },
+    "network": {
+      "title": "网络与IP",
+      "description": "网络诊断和IP工具"
+    },
+    "language": {
+      "title": "语言与翻译",
+      "description": "翻译、拼写检查和语言工具"
+    },
+    "audio": {
+      "title": "音频工具",
+      "description": "音频处理和转换工具"
+    },
+    "video": {
+      "title": "视频工具",
+      "description": "视频处理和转换工具"
+    },
+    "weather": {
+      "title": "天气与环境",
+      "description": "天气预报和环境信息"
+    },
+    "crypto": {
+      "title": "加密货币",
+      "description": "加密货币追踪和计算工具"
+    }
+  },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "密码生成器",
+        "description": "使用可自定义规则生成安全的随机密码"
+      },
+      "strength-checker": {
+        "title": "密码强度检查器",
+        "description": "使用熵值评分和提示检查密码强度"
+      },
+      "hash-encode": {
+        "title": "哈希 / 编码工具包",
+        "description": "生成SHA-256、MD5、HMAC哈希和Base64/URL编码"
+      },
+      "jwt-decoder": {
+        "title": "JWT解码器（仅本地）",
+        "description": "本地解码JWT令牌 - 查看header、payload和过期时间"
+      },
+      "uuid-nanoid": {
+        "title": "UUID / NanoID生成器",
+        "description": "批量生成各种格式的UUID和NanoID"
+      },
+      "qr-generator": {
+        "title": "二维码生成器",
+        "description": "为文本、URL、vCard创建二维码，支持PNG/SVG下载"
+      },
+      "passphrase-generator": {
+        "title": "口令短语生成器",
+        "description": "生成易记但仍安全的基于单词的口令短语"
+      },
+      "password-policy-checker": {
+        "title": "密码策略检查器",
+        "description": "根据企业安全策略规则检查密码"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "文本差异 / 比较",
+        "description": "比较两段文本并高亮显示添加、删除和更改"
+      },
+      "case-converter": {
+        "title": "大小写转换器",
+        "description": "在camelCase、snake_case、kebab-case、PascalCase之间转换 + 移除变音符"
+      },
+      "regex-tester": {
+        "title": "正则表达式测试器 + 高亮",
+        "description": "实时高亮和分组匹配测试正则表达式"
+      },
+      "cleaner": {
+        "title": "文本清理器",
+        "description": "修剪、删除重复空格、空行、排序和去重"
+      },
+      "word-counter": {
+        "title": "字数统计",
+        "description": "统计单词、字符、句子数量并估算阅读时间"
+      },
+      "markdown-preview": {
+        "title": "Markdown预览 + HTML导出",
+        "description": "带预览和HTML导出的实时Markdown编辑器"
+      },
+      "slug-generator": {
+        "title": "Slug生成器",
+        "description": "从任意文本生成SEO友好的URL slug"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "JSON格式化 / 压缩 / 验证",
+        "description": "带语法高亮的JSON格式化、压缩和验证"
+      },
+      "diff": {
+        "title": "JSON差异 / 比较",
+        "description": "基于路径的差异高亮比较JSON文档"
+      },
+      "schema-generator": {
+        "title": "JSON Schema生成器",
+        "description": "从JSON数据自动生成JSON Schema"
+      },
+      "convert": {
+        "title": "JSON ↔ YAML / XML转换器",
+        "description": "在JSON、YAML和XML格式之间转换"
+      },
+      "jsonpath": {
+        "title": "JSONPath / jq演练场",
+        "description": "使用JSONPath表达式交互式查询JSON"
+      },
+      "json-to-csv": {
+        "title": "JSON转CSV转换器",
+        "description": "将JSON数组转换为电子表格CSV格式"
+      },
+      "sort-keys": {
+        "title": "JSON键排序",
+        "description": "按字母顺序排序JSON键以获得稳定输出"
+      },
+      "flatten-unflatten": {
+        "title": "JSON扁平化 / 展开",
+        "description": "将嵌套JSON转换为点路径表示法或反向操作"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "转盘 / 随机选择器",
+        "description": "转动转盘随机选择项目，带动画和历史记录"
+      },
+      "team-generator": {
+        "title": "随机分组生成器",
+        "description": "将人员随机分成带大小限制的团队"
+      },
+      "dice-lottery": {
+        "title": "骰子 / 彩票 / 随机名字",
+        "description": "掷骰子、生成彩票号码、随机选择名字"
+      },
+      "countdown": {
+        "title": "可分享倒计时 / 计时器",
+        "description": "通过URL创建可分享的倒计时计时器"
+      },
+      "random-lorem": {
+        "title": "随机数 / Lorem Ipsum生成器",
+        "description": "生成随机数或Lorem Ipsum占位文本"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "图片压缩",
+        "description": "压缩图片同时保持质量"
+      },
+      "convert": {
+        "title": "格式转换",
+        "description": "在PNG、JPG、WebP格式之间转换图片"
+      },
+      "crop-resize-rotate": {
+        "title": "裁剪 / 调整大小 / 旋转",
+        "description": "精确裁剪、调整大小和旋转图片"
+      },
+      "remove-bg": {
+        "title": "移除背景（可选）",
+        "description": "使用AI服务移除图片背景"
+      },
+      "qr-gen-scan": {
+        "title": "二维码生成 + 扫描",
+        "description": "从图片生成和扫描二维码"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "PDF合并 / 拆分",
+        "description": "将多个PDF合并为一个或将PDF拆分成多个部分"
+      },
+      "extract-rotate": {
+        "title": "提取 / 旋转页面",
+        "description": "提取特定页面或旋转PDF页面"
+      },
+      "watermark": {
+        "title": "添加页码 / 水印",
+        "description": "为PDF文档添加页码或水印"
+      },
+      "compress": {
+        "title": "压缩（基础）",
+        "description": "使用基础压缩减小PDF文件大小"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF转文本 / 图片",
+        "description": "从PDF文档提取文本或图片"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "在线代码编辑器 / 格式化",
+        "description": "带语法高亮的代码编辑和格式化（JS/TS/HTML/CSS/JSON）"
+      },
+      "lint-typecheck-light": {
+        "title": "Lint / 类型检查演练场（轻量）",
+        "description": "在浏览器沙箱中进行轻量级lint和类型检查"
+      },
+      "cron-builder": {
+        "title": "Cron表达式构建器",
+        "description": "可视化构建和解释cron表达式"
+      },
+      "timestamp-converter": {
+        "title": "时间戳转换器",
+        "description": "在Unix时间戳和可读日期之间转换"
+      },
+      "curl-converter": {
+        "title": "cURL → Fetch / Axios转换器",
+        "description": "将cURL命令转换为JavaScript fetch或Axios代码"
+      },
+      "gitignore-generator": {
+        "title": "Git Ignore生成器",
+        "description": "为各种项目类型生成.gitignore文件"
+      },
+      "api-tester": {
+        "title": "API测试器",
+        "description": "直接从浏览器测试REST API（带CORS代理选项）"      },
+      "json-to-ts": {
+        "title": "JSON转TypeScript",
+        "description": "从JSON数据生成TypeScript接口"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPI转类型",
+        "description": "从OpenAPI规范生成TypeScript类型"      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "天气预报",
+        "description": "获取任何位置的天气预报"
+      },
+      "aqi": {
+        "title": "空气质量指数",
+        "description": "检查地点的空气质量指数"
+      },
+      "sunrise-sunset": {
+        "title": "日出日落计算器",
+        "description": "计算任何日期和地点的日出日落时间"
+      },
+      "uv-index": {
+        "title": "紫外线指数检查器",
+        "description": "检查紫外线指数和防晒建议"
+      },
+      "carbon-footprint": {
+        "title": "碳足迹估算器",
+        "description": "估算活动产生的碳足迹"
+      },
+      "tide": {
+        "title": "潮汐预测器",
+        "description": "检查沿海地区的潮汐时间和高度"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "加密货币价格追踪",
+        "description": "实时追踪加密货币价格"
+      },
+      "portfolio": {
+        "title": "投资组合计算器",
+        "description": "计算加密货币投资组合价值"
+      },
+      "mining-profit": {
+        "title": "挖矿收益计算",
+        "description": "计算加密货币挖矿收益"
+      },
+      "wallet-validator": {
+        "title": "钱包地址验证",
+        "description": "验证加密货币钱包地址"
+      },
+      "fee-estimator": {
+        "title": "手续费估算",
+        "description": "估算加密货币交易手续费"
+      },
+      "crypto-converter": {
+        "title": "加密货币转换",
+        "description": "在不同加密货币之间转换"
+      },
+      "market-cap-ranker": {
+        "title": "市值排行榜",
+        "description": "按市值查看加密货币排名"
+      }    },
+    "finance": {
+      "currency": {
+        "title": "货币转换器",
+        "description": "使用实时汇率在货币之间转换"
+      },
+      "loan-emi": {
+        "title": "贷款/EMI计算器",
+        "description": "计算贷款EMI、利息和摊销"
+      },
+      "budget-planner": {
+        "title": "预算规划器",
+        "description": "使用图表规划和可视化您的预算"
+      },
+      "investment": {
+        "title": "投资计算器",
+        "description": "计算复利和投资回报"
+      },
+      "tax-estimator": {
+        "title": "税务估算器",
+        "description": "估算税款（仅供参考，非税务建议）"
+      },
+      "tip-calculator": {
+        "title": "小费计算器",
+        "description": "计算小费并在群组中分摊账单"
+      },
+      "savings-goal": {
+        "title": "储蓄目标追踪器",
+        "description": "跟踪储蓄目标的进度"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "视频压缩器",
+        "description": "压缩视频文件以减小大小"
+      },
+      "format-converter": {
+        "title": "格式转换器",
+        "description": "在不同格式之间转换视频"
+      },
+      "frame-extractor": {
+        "title": "帧提取器",
+        "description": "从视频中提取帧/截图"
+      },
+      "subtitle-generator": {
+        "title": "字幕生成器",
+        "description": "使用语音转文本生成字幕"
+      },
+      "video-merger": {
+        "title": "视频合并器",
+        "description": "将多个视频文件合并为一个"
+      },
+      "gif-maker": {
+        "title": "GIF制作器",
+        "description": "从视频片段创建GIF"
+      },
+      "resolution-changer": {
+        "title": "分辨率更改器",
+        "description": "更改视频分辨率和纵横比"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Base64编码/解码",
+        "description": "编码或解码Base64字符串，支持Unicode"
+      },
+      "url-parser": {
+        "title": "URL解析器",
+        "description": "解析和分析URL组件"
+      },
+      "csv-json": {
+        "title": "CSV ↔ JSON转换器",
+        "description": "在CSV和JSON格式之间转换"
+      },
+      "number-base": {
+        "title": "进制转换器",
+        "description": "在二进制、八进制、十进制、十六进制之间转换"
+      },
+      "color-tools": {
+        "title": "颜色工具",
+        "description": "在HEX、RGB、HSL之间转换颜色并生成调色板"
+      },
+      "file-hash": {
+        "title": "文件哈希校验",
+        "description": "计算文件的SHA-256哈希值进行验证"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "日期差计算器",
+        "description": "计算两个日期之间的差值"
+      },
+      "timezone-converter": {
+        "title": "时区转换器",
+        "description": "在不同时区之间转换时间（支持夏令时）"
+      },
+      "age-calculator": {
+        "title": "年龄计算器",
+        "description": "从出生日期计算精确年龄"
+      },
+      "ics-planner": {
+        "title": "日历事件规划 / ICS导出",
+        "description": "创建日历事件并导出为ICS文件"
+      },
+      "lunar-converter": {
+        "title": "农历转换器",
+        "description": "在农历和公历日期之间转换"
+      },
+      "weekday-finder": {
+        "title": "星期查询",
+        "description": "查询任意日期是星期几"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "YouTube链接解析器",
+        "description": "从YouTube链接提取视频ID、播放列表ID和规范URL"
+      },
+      "metadata": {
+        "title": "元数据查看器 (oEmbed)",
+        "description": "查看YouTube视频标题、频道、日期和缩略图"
+      },
+      "thumbnails": {
+        "title": "缩略图下载器",
+        "description": "下载各种分辨率的YouTube视频缩略图"
+      },
+      "chapters": {
+        "title": "时间戳/章节构建器",
+        "description": "为视频描述创建格式化的时间戳章节"
+      },
+      "embed-generator": {
+        "title": "嵌入播放器生成器",
+        "description": "生成带自定义选项的YouTube嵌入iframe代码"
+      },
+      "transcript-helper": {
+        "title": "字幕助手（可选）",
+        "description": "帮助格式化和处理YouTube字幕"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "将Markdown文档转换为PDF或DOCX格式"
+      },
+      "image-to-pdf": {
+        "title": "图片 → PDF",
+        "description": "将图片转换为PDF文档"
+      },
+      "pdf-to-text": {
+        "title": "PDF → 文本",
+        "description": "从PDF文档提取文本（非OCR）"
+      },
+      "office-lite-export": {
+        "title": "Office-Lite导出",
+        "description": "将简单文本/JSON导出为DOCX/PPTX格式"
+      },
+      "unit-converter": {
+        "title": "单位转换器（额外）",
+        "description": "在各种单位之间转换，支持货币"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "基础计算器",
+        "description": "用于基本算术运算的简单计算器"
+      },
+      "scientific-calculator": {
+        "title": "科学计算器",
+        "description": "带科学函数的高级计算器"
+      },
+      "equation-solver": {
+        "title": "方程求解器",
+        "description": "逐步求解代数方程"
+      },
+      "graph-plotter": {
+        "title": "函数绘图器",
+        "description": "绘制数学函数和方程图形"
+      },
+      "matrix-calculator": {
+        "title": "矩阵计算器",
+        "description": "执行矩阵运算如乘法和求逆"
+      },
+      "prime-tools": {
+        "title": "素数检验/生成器",
+        "description": "检查数字是否为素数或生成素数序列"
+      },
+      "fraction-simplifier": {
+        "title": "分数化简器",
+        "description": "将分数化简为最简形式"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "长度转换器",
+        "description": "在米、英尺、英寸、千米、英里之间转换"
+      },
+      "weight": {
+        "title": "重量转换器",
+        "description": "在千克、磅、盎司、克之间转换"
+      },
+      "volume": {
+        "title": "体积转换器",
+        "description": "在升、加仑、杯、毫升之间转换"
+      },
+      "temperature": {
+        "title": "温度转换器",
+        "description": "在摄氏度、华氏度、开尔文之间转换"
+      },
+      "area": {
+        "title": "面积转换器",
+        "description": "在平方米、英亩、公顷、平方英尺之间转换"
+      },
+      "speed": {
+        "title": "速度转换器",
+        "description": "在km/h、mph、m/s、节之间转换"
+      },
+      "energy": {
+        "title": "能量转换器",
+        "description": "在焦耳、卡路里、BTU、千瓦时之间转换"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "BMI计算器",
+        "description": "根据身高体重计算身体质量指数"
+      },
+      "calories-burn": {
+        "title": "卡路里消耗估算",
+        "description": "根据活动和时长估算卡路里消耗"
+      },
+      "body-fat": {
+        "title": "体脂率计算",
+        "description": "使用海军方法估算体脂百分比"
+      },
+      "water-intake": {
+        "title": "饮水量计算器",
+        "description": "计算每日推荐饮水量"
+      },
+      "sleep-cycle": {
+        "title": "睡眠周期计算器",
+        "description": "根据睡眠周期计算最佳睡眠和起床时间"
+      },
+      "heart-rate-zone": {
+        "title": "心率区间",
+        "description": "计算运动时的目标心率区间"
+      },
+      "pregnancy-due-date": {
+        "title": "预产期计算",
+        "description": "根据末次月经估算预产期"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "关键词密度分析器",
+        "description": "分析文本或URL中的关键词密度"
+      },
+      "meta-tag-generator": {
+        "title": "Meta标签生成器",
+        "description": "为页面生成SEO优化的meta标签"
+      },
+      "site-speed": {
+        "title": "网站速度测试",
+        "description": "测试网站加载速度和性能"
+      },
+      "broken-link-checker": {
+        "title": "死链检查器",
+        "description": "检查网页上的死链接"
+      },
+      "sitemap-generator": {
+        "title": "Sitemap生成器",
+        "description": "为网站生成XML站点地图"
+      },
+      "robots-tester": {
+        "title": "Robots.txt测试器",
+        "description": "测试和验证robots.txt文件"
+      },
+      "mobile-friendly": {
+        "title": "移动端友好检查",
+        "description": "检查网页是否适配移动设备"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "IP地址查询",
+        "description": "查询IP地址的地理位置和详情"
+      },
+      "ping": {
+        "title": "Ping工具",
+        "description": "测量到URL或IP地址的延迟"
+      },
+      "whois": {
+        "title": "WHOIS查询",
+        "description": "查询域名注册信息"
+      },
+      "dns-resolver": {
+        "title": "DNS解析器",
+        "description": "将域名解析为IP地址"
+      },
+      "port-checker": {
+        "title": "端口扫描器（基础）",
+        "description": "检查特定端口是否开放（范围有限）"
+      },
+      "subnet-calculator": {
+        "title": "子网计算器",
+        "description": "计算子网范围、CIDR表示法和IP运算"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "文本翻译",
+        "description": "在不同语言之间翻译文本"
+      },
+      "spell-checker": {
+        "title": "拼写检查器",
+        "description": "多语言拼写检查"
+      },
+      "grammar-checker": {
+        "title": "语法检查器",
+        "description": "检查语法和写作风格"
+      },
+      "synonym-finder": {
+        "title": "同义词查找器",
+        "description": "查找同义词和相关词汇"
+      },
+      "language-detector": {
+        "title": "语言检测器",
+        "description": "自动检测文本语言"
+      },
+      "morse": {
+        "title": "摩尔斯电码转换器",
+        "description": "在文本和摩尔斯电码之间转换"
+      },
+      "braille": {
+        "title": "盲文转换器",
+        "description": "在文本和盲文符号之间转换"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "音频转换器",
+        "description": "在不同格式之间转换音频文件"
+      },
+      "volume-normalizer": {
+        "title": "音量标准化",
+        "description": "标准化音频音量级别"
+      },
+      "bpm-detector": {
+        "title": "BPM检测器",
+        "description": "检测音频文件中的每分钟节拍数"
+      },
+      "audio-cutter": {
+        "title": "音频剪切器",
+        "description": "剪切和修剪音频文件"
+      },
+      "tts": {
+        "title": "文字转语音",
+        "description": "将文本转换为语音音频"
+      },
+      "sfx-generator": {
+        "title": "音效生成器",
+        "description": "生成简单的音效和音调"
+      }
+    }
+  },
+  "tools": {
+    "password_generator": {
+      "title": "密码生成器",
+      "description": "即时生成安全随机密码",
+      "meta_description": "使用我们的免费在线密码生成器创建强大、安全的密码。可自定义长度、字符类型和高级安全选项。",
+      "generated_password": "已生成的密码",
+      "click_generate": "点击生成按钮创建密码",
+      "hide_password": "隐藏密码",
+      "show_password": "显示密码",
+      "strength": "强度",
+      "strength_weak": "弱",
+      "strength_fair": "一般",
+      "strength_good": "良好",
+      "strength_strong": "强",
+      "entropy": "位熵",
+      "tip": "强密码使用12+字符并混合多种类型",
+      "generate": "生成密码",
+      "regenerate": "重新生成",
+      "copy": "复制",
+      "copied": "已复制！",
+      "options": "选项",
+      "length": "长度",
+      "characters": "字符",
+      "character_types": "字符类型",
+      "uppercase": "大写字母 (A-Z)",
+      "lowercase": "小写字母 (a-z)",
+      "numbers": "数字 (0-9)",
+      "symbols": "符号 (!@#$...)",
+      "select_at_least_one": "请至少选择一种字符类型",
+      "advanced_options": "高级选项",
+      "exclude_ambiguous": "排除易混淆字符",
+      "exclude_ambiguous_desc": "移除 0, O, l, 1, I",
+      "exclude_similar": "排除相似字符",
+      "exclude_similar_desc": "移除 i, L, o, O, 0",
+      "custom_symbols": "自定义符号",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "最少数字",
+      "min_symbols": "最少符号",
+      "reset_defaults": "重置默认",
+      "recent_passwords": "最近的密码",
+      "no_recent": "暂无密码记录",
+      "clear_history": "清除历史",
+      "faq_title": "常见问题",
+      "faq_q1": "这个密码生成器有多安全？",
+      "faq_a1": "我们的生成器使用加密安全随机数生成（crypto.getRandomValues）来创建真正随机的密码。所有处理都在您的浏览器中进行 - 密码永远不会发送到我们的服务器。",
+      "faq_q2": "什么样的密码才算强密码？",
+      "faq_a2": "强密码至少有12个字符，包含大写字母、小写字母、数字和符号的组合。避免使用个人信息或常见词语。",
+      "faq_q3": "每个账户都应该使用不同的密码吗？",
+      "faq_a3": "是的！为每个账户使用唯一的密码可以确保如果一个密码泄露，其他账户仍然安全。建议使用密码管理器来管理它们。",
+      "related_title": "相关工具"
+    },
+    "qr_code_generator": {
+      "title": "二维码生成器",
+      "description": "为任何文本或URL创建二维码",
+      "enter_text": "输入文本或URL",
+      "download": "下载二维码"
+    },
+    "image_converter": {
+      "title": "图像转换器",
+      "description": "在格式之间转换图像（JPG、PNG、WebP、AVIF）",
+      "select_file": "选择图像",
+      "convert": "转换",
+      "download": "下载"
+    }
+  },
+  "categories": {
+    "image": "图像工具",
+    "pdf": "PDF工具",
+    "text": "文本工具",
+    "developer": "开发者工具",
+    "security": "安全工具"
+  },
+  "footer": {
+    "description": "尊重您隐私的免费在线工具。所有处理都在您的浏览器中进行。",
+    "quick_links": "快速链接",
+    "legal": "法律信息",
+    "follow_us": "关注我们",
+    "stay_updated": "获取更新",
+    "newsletter_description": "当我们发布新工具时获取通知",
+    "email_placeholder": "输入您的邮箱",
+    "subscribe": "订阅",
+    "made_with": "用爱制作",
+    "by_team": "Vibetool团队"
+  }
+}

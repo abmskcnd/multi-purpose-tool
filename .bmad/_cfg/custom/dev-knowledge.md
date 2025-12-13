@@ -1,8 +1,8 @@
 # 💻 Developer Agent Knowledge Base: Multi-Purpose Tool Platform
 
 **Agent:** Amelia (Developer)  
-**Last Updated:** December 11, 2025  
-**Domain:** Code Implementation, Testing, Performance
+**Last Updated:** December 13, 2025  
+**Domain:** Code Implementation, Testing, Performance, Project Standards
 
 ---
 
@@ -261,5 +261,427 @@ npm run test:e2e     → Run E2E tests
 
 ---
 
-**Version:** 1.0.0  
-**Agent:** Developer (Amelia)
+## 📐 PROJECT CODING STANDARDS
+
+> **CRITICAL**: These standards MUST be followed for ALL code implementation
+
+### Tech Stack Details
+
+| Category | Technology | Version | Config |
+|----------|------------|---------|--------|
+| Framework | Next.js (App Router) | 14.x | next.config.js |
+| Language | TypeScript | 5.x | tsconfig.json (strict mode) |
+| Styling | Tailwind CSS | 3.x | tailwind.config.js |
+| i18n | next-intl | 4.x | i18n/routing.ts |
+| State | Zustand | 5.x | store/ |
+| Package Manager | Yarn | 1.x | yarn.lock |
+
+---
+
+### 🏗️ Tool Implementation Architecture
+
+**⚠️ CRITICAL RULE: Tool Implementation Location**
+
+```
+✅ CORRECT - NEW ARCHITECTURE:
+src/features/tools/[group-id]/[tool-id]/
+├── index.ts                    # REQUIRED: Re-export default
+├── [ToolName].tsx              # REQUIRED: Main component with 'use client'
+├── hooks/                      # OPTIONAL: Tool-specific hooks
+│   └── use[ToolName].ts
+└── utils/                      # OPTIONAL: Pure utility functions
+    └── [utilName].ts
+
+❌ WRONG - DEPRECATED:
+src/components/features/        # Legacy, DO NOT USE
+src/app/                        # Routes only, NO business logic
+```
+
+**Step-by-Step Tool Creation:**
+
+```bash
+# 1. Create Tool Folder
+mkdir -p src/features/tools/[group]/[tool]
+
+# 2. Create Component with this template:
+```
+
+```tsx
+// src/features/tools/[group]/[tool]/[ToolName].tsx
+'use client';
+
+import { useState, useCallback, useMemo } from 'react';
+import {
+  ToolCardContainer,
+  ToolSection,
+  ToolButton,
+} from '../../_shared/components';
+
+interface ToolState {
+  // Define state interface
+}
+
+const DEFAULT_STATE: ToolState = {
+  // Default values
+};
+
+export default function ToolName() {
+  const [state, setState] = useState<ToolState>(DEFAULT_STATE);
+
+  const handleAction = useCallback(() => {
+    // Implementation
+  }, [/* dependencies */]);
+
+  return (
+    <div className="space-y-6">
+      <ToolCardContainer className="p-6">
+        <ToolSection title="Input">
+          {/* Input controls */}
+        </ToolSection>
+        
+        <div className="mt-6">
+          <ToolButton onClick={handleAction}>
+            Execute
+          </ToolButton>
+        </div>
+      </ToolCardContainer>
+
+      {/* Output section */}
+    </div>
+  );
+}
+```
+
+```bash
+# 3. Create index.ts
+echo "export { default } from './ToolName';" > index.ts
+
+# 4. Register in tool-components.tsx
+# Add to TOOL_COMPONENTS object:
+'group/tool': dynamic(
+  () => import('@/features/tools/group/tool'),
+  { loading: () => <ToolLoading />, ssr: false }
+),
+
+# 5. Update status in tools.registry.ts
+# Change from 'coming-soon' to 'active'
+```
+
+---
+
+### 💻 TypeScript Standards
+
+```typescript
+// ✅ DO: Use explicit types for function parameters
+interface ToolProps {
+  initialValue?: string;
+  onComplete: (result: string) => void;
+}
+
+function MyTool({ initialValue = '', onComplete }: ToolProps) {}
+
+// ✅ DO: Use type inference for simple cases
+const [value, setValue] = useState(''); // string is inferred
+const count = 42; // number is inferred
+
+// ✅ DO: Use const assertions for literal types
+const STATUS = ['active', 'pending', 'completed'] as const;
+type Status = typeof STATUS[number];
+
+// ✅ DO: Use unknown instead of any
+const data: unknown = fetchData();
+if (isValidData(data)) {
+  // data is now properly typed
+}
+
+// ❌ DON'T: Use any type
+const data: any = fetchData(); // BAD - avoid any
+
+// ❌ DON'T: Use @ts-ignore or @ts-expect-error
+// @ts-ignore
+someBuggyCode(); // BAD - fix the type issue instead
+```
+
+---
+
+### ⚛️ React Patterns
+
+```tsx
+// ✅ DO: Always use functional components
+export default function MyTool() {
+  const [state, setState] = useState(initialState);
+  
+  // ✅ DO: Memoize callbacks to prevent re-renders
+  const handleClick = useCallback(() => {
+    setState(prev => ({ ...prev, value: newValue }));
+  }, [dependencies]);
+  
+  // ✅ DO: Memoize expensive computations
+  const computed = useMemo(() => {
+    return expensiveCalculation(state);
+  }, [state]);
+  
+  // ✅ DO: Destructure props in function signature
+  return <div>{/* UI */}</div>;
+}
+
+// ✅ DO: Always add 'use client' for interactive components
+'use client';
+
+// ❌ DON'T: Use class components
+class MyComponent extends React.Component {} // BAD - use functions
+```
+
+---
+
+### 📦 Import Order (Enforced)
+
+```typescript
+// 1. React/Next.js imports
+import { useState, useCallback, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+// 2. Third-party library imports
+import { useTranslations } from 'next-intl';
+import clsx from 'clsx';
+
+// 3. Internal imports (absolute paths with @/)
+import { Link } from '@/i18n/navigation';
+import { ToolCardContainer } from '@/features/tools/_shared/components';
+import { copyToClipboard } from '@/features/tools/_shared/utils';
+
+// 4. Relative imports
+import { localHelper } from './utils';
+import styles from './styles.module.css';
+
+// 5. Types (at the end)
+import type { ToolProps } from './types';
+import type { FC } from 'react';
+```
+
+---
+
+### 🎨 Tailwind CSS Standards
+
+```tsx
+// ✅ DO: Use semantic color tokens (supports dark mode)
+<p className="text-foreground">          // Primary text
+<p className="text-muted-foreground">    // Secondary text
+<div className="bg-card border-border">  // Card background
+<button className="bg-primary text-primary-foreground"> // Primary button
+
+// ✅ DO: Use standard spacing
+<div className="gap-2">   // 8px - Tight spacing
+<div className="gap-4">   // 16px - Standard spacing
+<div className="gap-6">   // 24px - Section spacing
+<div className="p-6">     // Card padding
+
+// ✅ DO: Support dark mode explicitly
+<div className="bg-white dark:bg-zinc-900">
+<p className="text-zinc-900 dark:text-zinc-100">
+
+// ✅ DO: Use responsive prefixes
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+// ❌ DON'T: Use arbitrary values unless absolutely necessary
+<div className="w-[347px]"> // BAD - use w-80, w-96, etc.
+```
+
+**Color Token Reference:**
+
+| Token | Light Mode | Dark Mode | Usage |
+|-------|-----------|-----------|-------|
+| `bg-background` | white | zinc-950 | Page background |
+| `bg-card` | white | zinc-900 | Card/panel |
+| `bg-muted` | zinc-100 | zinc-800 | Subtle bg |
+| `text-foreground` | zinc-900 | zinc-50 | Primary text |
+| `text-muted-foreground` | zinc-500 | zinc-400 | Secondary text |
+| `border-border` | zinc-200 | zinc-800 | Borders |
+
+---
+
+### 🌍 i18n Implementation
+
+```tsx
+// ✅ DO: Use next-intl for translations
+'use client';
+
+import { useTranslations } from 'next-intl';
+
+export default function MyComponent() {
+  const t = useTranslations('tools.password_generator');
+  const tCommon = useTranslations('common');
+  
+  return (
+    <div>
+      <h1>{t('title')}</h1>
+      <button>{tCommon('copy')}</button>
+    </div>
+  );
+}
+
+// ✅ DO: Use Link from i18n/navigation (auto locale handling)
+import { Link } from '@/i18n/navigation';
+<Link href="/tools">Tools</Link>  // Auto-adds locale prefix
+
+// ❌ DON'T: Use next/link directly
+import Link from 'next/link';
+<Link href="/vi/tools">Tools</Link>  // BAD - manual locale
+```
+
+**Translation File Structure:**
+
+```json
+// src/locales/en.json
+{
+  "common": {
+    "copy": "Copy",
+    "download": "Download",
+    "clear": "Clear"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "Password & Security Tools"
+    }
+  },
+  "tools": {
+    "password_generator": {
+      "title": "Password Generator",
+      "length": "Length",
+      "generate": "Generate Password"
+    }
+  }
+}
+```
+
+---
+
+### 📝 File Naming Conventions
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Components | PascalCase.tsx | `PasswordGenerator.tsx` |
+| Hooks | camelCase (use prefix) | `usePasswordGenerator.ts` |
+| Utils | camelCase | `generatePassword.ts` |
+| Folders | kebab-case | `password-generator/` |
+| Types | PascalCase | `ToolProps`, `ToolState` |
+| Constants | UPPER_SNAKE_CASE | `MAX_PASSWORD_LENGTH` |
+
+---
+
+### 🔄 Common Patterns
+
+**1. Copy to Clipboard:**
+
+```tsx
+import { copyToClipboard } from '@/features/tools/_shared/utils';
+
+const handleCopy = async () => {
+  const success = await copyToClipboard(text);
+  if (success) {
+    // Show success toast/feedback
+  }
+};
+```
+
+**2. File Download:**
+
+```tsx
+import { downloadAsFile } from '@/features/tools/_shared/utils';
+
+const handleDownload = () => {
+  downloadAsFile(content, 'output.txt', 'text/plain');
+};
+```
+
+**3. Tool Output with Actions:**
+
+```tsx
+import { ToolOutput } from '@/features/tools/_shared/components';
+
+<ToolOutput
+  value={output}
+  onCopy={handleCopy}
+  onDownload={handleDownload}
+  onClear={handleClear}
+  label="Result"
+/>
+```
+
+---
+
+### 🔧 Git Commit Standards
+
+**Format:** `<type>(<scope>): <subject>`
+
+**Types:**
+- `feat` - New feature
+- `fix` - Bug fix
+- `docs` - Documentation only
+- `style` - Code style (no logic change)
+- `refactor` - Code refactoring
+- `perf` - Performance improvement
+- `test` - Adding tests
+- `chore` - Maintenance
+
+**Examples:**
+
+```bash
+feat(tools): add password generator with strength indicator
+fix(i18n): resolve locale routing issue in breadcrumbs
+refactor(tools): migrate to isolated module architecture
+docs: update tool implementation guide
+```
+
+---
+
+### ✅ Pre-Commit Checklist
+
+**BEFORE submitting ANY code, verify:**
+
+- [ ] Component has `'use client'` directive if interactive
+- [ ] Uses `Link` from `@/i18n/navigation` (NOT next/link)
+- [ ] TypeScript has no errors (`yarn type-check`)
+- [ ] ESLint passes (`yarn lint`)
+- [ ] Build succeeds (`yarn build`)
+- [ ] Added translations to all locale files if needed
+- [ ] Updated tool status in `tools.registry.ts`
+- [ ] Registered component in `tool-components.tsx`
+- [ ] Commit message follows convention
+- [ ] Branch name follows pattern
+
+---
+
+### 📋 Shared Components Reference
+
+**Available from `@/features/tools/_shared/components`:**
+
+```tsx
+import {
+  ToolCardContainer,   // Card wrapper with consistent styling
+  ToolSection,         // Section with title and optional description
+  ToolButton,          // Styled button component
+  ToolTextarea,        // Textarea with character count
+  ToolOutput,          // Output display with copy/download actions
+  CopyButton,          // Copy to clipboard button
+  ToolLoading,         // Loading skeleton
+} from '@/features/tools/_shared/components';
+```
+
+**Available from `@/features/tools/_shared/utils`:**
+
+```tsx
+import {
+  copyToClipboard,     // Copy text to clipboard
+  downloadAsFile,      // Download content as file
+  formatFileSize,      // Format bytes to human readable
+  validateFileType,    // Validate file MIME type
+} from '@/features/tools/_shared/utils';
+```
+
+---
+
+**Version:** 2.0.0  
+**Agent:** Developer (Amelia)  
+**Last Standards Update:** December 13, 2025

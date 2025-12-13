@@ -1,0 +1,901 @@
+{
+  "common": {
+    "site_name": "Vibetool",
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About",
+    "contact": "Contact",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "all_rights_reserved": "All rights reserved",
+    "search_placeholder": "Search tools...",
+    "all_tools": "All Tools",
+    "view_all": "View All",
+    "popular_tools": "Popular Tools",
+    "browse_by_category": "Browse by Category",
+    "coming_soon": "Coming Soon",
+    "available": "Available",
+    "copy_link": "Copy Share Link",
+    "link_copied": "Link Copied!",
+    "planned_implementation": "Planned",
+    "client_side": "100% Client-side (Browser)",
+    "server_side": "Server-side processing",
+    "hybrid": "Client + Server hybrid",
+    "client_side_short": "Client",
+    "server_side_short": "Server",
+    "hybrid_short": "Hybrid",
+    "tools_count": "{count} tools",
+    "results_found": "{count} results",
+    "no_results": "No tools found",
+    "open_tool": "Open tool",
+    "browse_tools": "Browse tools",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "download": "Download",
+    "clear": "Clear",
+    "output_placeholder": "Output will appear here...",
+    "share": "Share",
+    "add_favorite": "Add to favorites",
+    "remove_favorite": "Remove from favorites",
+    "frequently_asked_questions": "Frequently Asked Questions",
+    "related_tools": "Related Tools",
+    "tool_not_found": "Tool Not Found",
+    "group_not_found": "Group Not Found",
+    "coming_soon_badge": "Coming Soon",
+    "tool_under_development": "This tool is under development. Check back soon!",
+    "part_of_group": "Part of {group}",
+    "tools_in_category": "{count} tool in this category",
+    "tools_in_category_plural": "{count} tools in this category",
+    "tool_pending_implementation": "This tool is marked as active but implementation is pending.",
+    "result": "result",
+    "results": "results",
+    "no_tools_found": "No tools found for",
+    "more": "more",
+    "categories": "Categories",
+    "filters": "Filters",
+    "sort_by": "Sort by",
+    "all_categories": "All Categories",
+    "all_status": "All Status",
+    "all_types": "All Types",
+    "category": "Category",
+    "loading": "Loading",
+    "status": "Status",
+    "type": "Type",
+    "clear_all": "Clear all",
+    "clear_filters": "Clear filters",
+    "try_different_search": "Try adjusting your search or filters",
+    "for": "for",
+    "free": "Free",
+    "navigation": "Navigation",
+    "close_menu": "Close menu",
+    "open_menu": "Open menu",
+    "get_started": "Get Started",
+    "expand_sidebar": "Expand sidebar",
+    "collapse_sidebar": "Collapse sidebar"
+  },
+  "home": {
+    "title": "Free Online Tools - No Registration Required",
+    "description": "100+ free online tools for image conversion, PDF manipulation, password generation, and more. 100% client-side processing - your files never leave your device.",
+    "hero_title": "Supercharge your workflow with VibeTool",
+    "hero_subtitle": "Discover the best tools curated for modern creators and developers. Find your next productivity booster today.",
+    "search_placeholder": "Search tools...",
+    "popular_tools": "Popular Tools",
+    "popular_subtitle": "Most used tools by our community",
+    "all_tools": "All Tools",
+    "view_all": "View All",
+    "new_tools_badge": "New tools added weekly",
+    "get_started": "Get Started",
+    "browse_all": "Browse All",
+    "quick_picks": "Quick Picks",
+    "editors_choice": "Editor's Choice",
+    "editors_choice_subtitle": "Hand-picked tools for this week",
+    "view_details": "View Details",
+    "most_popular": "Most Popular",
+    "newest": "Newest",
+    "a_to_z": "A to Z",
+    "show_more_tools": "Show More Tools",
+    "free": "Free",
+    "featured": "Featured",
+    "categories_subtitle": "Find the perfect tool for your needs",
+    "coming_soon_title": "Coming Soon",
+    "coming_soon_subtitle": "Exciting new tools we're working on",
+    "cta_title": "Ready to boost your productivity?",
+    "cta_subtitle": "Explore our collection of 100+ free tools designed to make your work easier",
+    "explore_all_tools": "Explore All Tools"
+  },
+  "footer": {
+    "description": "A comprehensive collection of free online tools for developers, designers, and creators. 100% client-side processing for maximum privacy.",
+    "quick_links": "Quick Links",
+    "legal": "Legal",
+    "follow_us": "Follow Us",
+    "stay_updated": "Stay Updated",
+    "newsletter_description": "Get notified when we launch new tools",
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "made_with": "Made with",
+    "by_team": "by the Vibetool Team"
+  },
+  "toolGroups": {
+    "password": {
+      "title": "Password & Security",
+      "description": "Generate secure passwords, check strength, and manage security utilities"
+    },
+    "text": {
+      "title": "Text Tools",
+      "description": "Text manipulation, comparison, and formatting utilities"
+    },
+    "json": {
+      "title": "JSON / YAML / XML",
+      "description": "Format, validate, compare and convert structured data"
+    },
+    "random": {
+      "title": "Random / Fun",
+      "description": "Random generators, pickers, and fun utilities"
+    },
+    "image": {
+      "title": "Image Tools",
+      "description": "Image compression, conversion, and manipulation"
+    },
+    "pdf": {
+      "title": "PDF Tools",
+      "description": "PDF manipulation, merging, splitting, and conversion"
+    },
+    "dev": {
+      "title": "Dev Utilities",
+      "description": "Developer tools for code formatting, testing, and conversion"
+    },
+    "data": {
+      "title": "Encode/Decode",
+      "description": "Encoding, decoding, and data transformation tools"
+    },
+    "datetime": {
+      "title": "Date & Time",
+      "description": "Date calculations, timezone conversion, and calendar utilities"
+    },
+    "youtube": {
+      "title": "YouTube Tools",
+      "description": "Legal YouTube utilities for metadata, thumbnails, and embeds"
+    },
+    "file-convert": {
+      "title": "File Convert",
+      "description": "Convert files between different formats"
+    },
+    "math": {
+      "title": "Math & Calculator",
+      "description": "Mathematical calculations and equation solving"
+    },
+    "unit": {
+      "title": "Unit Converters",
+      "description": "Convert between different units of measurement"
+    },
+    "finance": {
+      "title": "Finance & Budget",
+      "description": "Financial calculators and budget planning tools"
+    },
+    "health": {
+      "title": "Health & Fitness",
+      "description": "Health and fitness calculation tools"
+    },
+    "seo": {
+      "title": "SEO & Analysis",
+      "description": "SEO analysis and website optimization tools"
+    },
+    "network": {
+      "title": "Network & IP",
+      "description": "Network diagnostics and IP utilities"
+    },
+    "language": {
+      "title": "Language & Translation",
+      "description": "Translation, spelling, and language utilities"
+    },
+    "audio": {
+      "title": "Audio Tools",
+      "description": "Audio processing and conversion tools"
+    },
+    "video": {
+      "title": "Video Tools",
+      "description": "Video processing and conversion tools"
+    },
+    "weather": {
+      "title": "Weather & Environment",
+      "description": "Weather forecasts and environmental information"
+    },
+    "crypto": {
+      "title": "Cryptocurrency",
+      "description": "Cryptocurrency tracking and calculation tools"
+    }
+  },
+  "toolItems": {
+    "password": {
+      "generator": {
+        "title": "Password Generator",
+        "description": "Generate secure, random passwords with customizable rules"
+      },
+      "strength-checker": {
+        "title": "Password Strength Checker",
+        "description": "Check password strength with entropy scoring and tips"
+      },
+      "hash-encode": {
+        "title": "Hash / Encode Toolkit",
+        "description": "Generate SHA-256, MD5, HMAC hashes and Base64/URL encoding"
+      },
+      "jwt-decoder": {
+        "title": "JWT Decoder (Local Only)",
+        "description": "Decode JWT tokens locally - view header, payload and expiration"
+      },
+      "uuid-nanoid": {
+        "title": "UUID / NanoID Generator",
+        "description": "Generate UUIDs and NanoIDs in batch with various formats"
+      },
+      "qr-generator": {
+        "title": "QR Code Generator",
+        "description": "Create QR codes for text, URLs, vCards with PNG/SVG download"
+      },
+      "passphrase-generator": {
+        "title": "Passphrase Generator",
+        "description": "Generate memorable word-based passphrases that are still secure"
+      },
+      "password-policy-checker": {
+        "title": "Password Policy Checker",
+        "description": "Check passwords against enterprise security policy rules"
+      }
+    },
+    "text": {
+      "diff": {
+        "title": "Text Diff / Compare",
+        "description": "Compare two texts and highlight additions, removals, and changes"
+      },
+      "case-converter": {
+        "title": "Case Converter",
+        "description": "Convert text between camelCase, snake_case, kebab-case, PascalCase + remove diacritics"
+      },
+      "regex-tester": {
+        "title": "Regex Tester + Highlighter",
+        "description": "Test regular expressions with real-time highlighting and group matching"
+      },
+      "cleaner": {
+        "title": "Text Cleaner",
+        "description": "Trim, remove duplicate spaces, empty lines, sort and unique lines"
+      },
+      "word-counter": {
+        "title": "Word Counter",
+        "description": "Count words, characters, sentences with reading time estimation"
+      },
+      "markdown-preview": {
+        "title": "Markdown Preview + Export HTML",
+        "description": "Live markdown editor with preview and HTML export"
+      },
+      "slug-generator": {
+        "title": "Slug Generator",
+        "description": "Generate SEO-friendly URL slugs from any text"
+      }
+    },
+    "json": {
+      "format-validate": {
+        "title": "JSON Formatter / Minify / Validator",
+        "description": "Format, minify and validate JSON with syntax highlighting"
+      },
+      "diff": {
+        "title": "JSON Diff / Compare",
+        "description": "Compare JSON documents with path-based diff highlighting"
+      },
+      "schema-generator": {
+        "title": "JSON Schema Generator",
+        "description": "Generate JSON Schema from JSON data automatically"
+      },
+      "convert": {
+        "title": "JSON ↔ YAML / XML Converter",
+        "description": "Convert between JSON, YAML, and XML formats"
+      },
+      "jsonpath": {
+        "title": "JSONPath / jq Playground",
+        "description": "Query JSON with JSONPath expressions interactively"
+      },
+      "json-to-csv": {
+        "title": "JSON to CSV Converter",
+        "description": "Convert JSON arrays to CSV format for spreadsheets"
+      },
+      "sort-keys": {
+        "title": "Sort JSON Keys",
+        "description": "Sort JSON keys alphabetically for stable output"
+      },
+      "flatten-unflatten": {
+        "title": "Flatten / Unflatten JSON",
+        "description": "Convert nested JSON to/from dot-path notation"
+      }
+    },
+    "random": {
+      "wheel": {
+        "title": "Wheel Spinner / Random Picker",
+        "description": "Spin a wheel to pick random items with animation and history"
+      },
+      "team-generator": {
+        "title": "Random Team Generator",
+        "description": "Divide people into random teams with size constraints"
+      },
+      "dice-lottery": {
+        "title": "Dice / Lottery / Random Name",
+        "description": "Roll dice, generate lottery numbers, pick random names"
+      },
+      "countdown": {
+        "title": "Countdown / Timer Shareable",
+        "description": "Create shareable countdown timers via URL"
+      },
+      "random-lorem": {
+        "title": "Random Number / Lorem Ipsum Generator",
+        "description": "Generate random numbers or Lorem Ipsum placeholder text"
+      }
+    },
+    "image": {
+      "compress": {
+        "title": "Image Compressor",
+        "description": "Compress images while maintaining quality"
+      },
+      "convert": {
+        "title": "Convert Format",
+        "description": "Convert images between PNG, JPG, WebP formats"
+      },
+      "crop-resize-rotate": {
+        "title": "Crop / Resize / Rotate",
+        "description": "Crop, resize and rotate images with precision"
+      },
+      "remove-bg": {
+        "title": "Remove Background (Optional)",
+        "description": "Remove image backgrounds using AI service"
+      },
+      "qr-gen-scan": {
+        "title": "QR Code Generator + Scanner",
+        "description": "Generate and scan QR codes from images"
+      }
+    },
+    "pdf": {
+      "merge-split": {
+        "title": "PDF Merge / Split",
+        "description": "Merge multiple PDFs into one or split a PDF into parts"
+      },
+      "extract-rotate": {
+        "title": "Extract / Rotate Pages",
+        "description": "Extract specific pages or rotate PDF pages"
+      },
+      "watermark": {
+        "title": "Add Page Numbers / Watermark",
+        "description": "Add page numbers or watermarks to PDF documents"
+      },
+      "compress": {
+        "title": "Compress (Basic)",
+        "description": "Reduce PDF file size with basic compression"
+      },
+      "pdf-to-text-images": {
+        "title": "PDF to Text / Images",
+        "description": "Extract text or images from PDF documents"
+      }
+    },
+    "dev": {
+      "code-editor-formatter": {
+        "title": "Online Code Editor / Formatter",
+        "description": "Edit and format code with syntax highlighting (JS/TS/HTML/CSS/JSON)"
+      },
+      "lint-typecheck-light": {
+        "title": "Lint / Type Check Playground (Light)",
+        "description": "Light linting and type checking in browser sandbox"
+      },
+      "cron-builder": {
+        "title": "Cron Expression Builder",
+        "description": "Build and explain cron expressions visually"
+      },
+      "timestamp-converter": {
+        "title": "Timestamp Converter",
+        "description": "Convert between Unix timestamps and readable dates"
+      },
+      "curl-converter": {
+        "title": "cURL → Fetch / Axios Converter",
+        "description": "Convert cURL commands to JavaScript fetch or Axios code"
+      },
+      "gitignore-generator": {
+        "title": "Git Ignore Generator",
+        "description": "Generate .gitignore files for various project types"
+      },
+      "api-tester": {
+        "title": "API Tester",
+        "description": "Test REST APIs directly from browser (with CORS proxy option)"
+      },
+      "json-to-ts": {
+        "title": "JSON to TypeScript",
+        "description": "Generate TypeScript interfaces from JSON data"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPI to Types",
+        "description": "Generate TypeScript types from OpenAPI specifications"
+      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "Weather Forecast",
+        "description": "Get weather forecasts for any location"
+      },
+      "aqi": {
+        "title": "Air Quality Index",
+        "description": "Check air quality index for locations"
+      },
+      "sunrise-sunset": {
+        "title": "Sunrise/Sunset Calculator",
+        "description": "Calculate sunrise and sunset times for any date and location"
+      },
+      "uv-index": {
+        "title": "UV Index Checker",
+        "description": "Check UV index and sun protection recommendations"
+      },
+      "carbon-footprint": {
+        "title": "Carbon Footprint Estimator",
+        "description": "Estimate carbon footprint from activities"
+      },
+      "tide": {
+        "title": "Tide Predictor",
+        "description": "Check tide times and heights for coastal locations"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "Crypto Price Tracker",
+        "description": "Track real-time cryptocurrency prices"
+      },
+      "portfolio": {
+        "title": "Portfolio Calculator",
+        "description": "Calculate cryptocurrency portfolio value"
+      },
+      "mining-profit": {
+        "title": "Mining Profitability",
+        "description": "Calculate cryptocurrency mining profitability"
+      },
+      "wallet-validator": {
+        "title": "Wallet Address Validator",
+        "description": "Validate cryptocurrency wallet addresses"
+      },
+      "fee-estimator": {
+        "title": "Fee Estimator",
+        "description": "Estimate cryptocurrency transaction fees"
+      },
+      "crypto-converter": {
+        "title": "Crypto Converter",
+        "description": "Convert between cryptocurrencies"
+      },
+      "market-cap-ranker": {
+        "title": "Market Cap Ranker",
+        "description": "View cryptocurrencies ranked by market cap"
+      }    },
+    "finance": {
+      "currency": {
+        "title": "Currency Converter",
+        "description": "Convert between currencies with real-time rates"
+      },
+      "loan-emi": {
+        "title": "Loan/EMI Calculator",
+        "description": "Calculate loan EMI, interest, and amortization"
+      },
+      "budget-planner": {
+        "title": "Budget Planner",
+        "description": "Plan and visualize your budget with charts"
+      },
+      "investment": {
+        "title": "Investment Calculator",
+        "description": "Calculate compound interest and investment returns"
+      },
+      "tax-estimator": {
+        "title": "Tax Estimator",
+        "description": "Estimate taxes (for reference only, not tax advice)"
+      },
+      "tip-calculator": {
+        "title": "Tip Calculator",
+        "description": "Calculate tips and split bills among groups"
+      },
+      "savings-goal": {
+        "title": "Savings Goal Tracker",
+        "description": "Track progress toward savings goals"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "Video Compressor",
+        "description": "Compress video files to reduce size"
+      },
+      "format-converter": {
+        "title": "Format Converter",
+        "description": "Convert videos between different formats"
+      },
+      "frame-extractor": {
+        "title": "Frame Extractor",
+        "description": "Extract frames/screenshots from videos"
+      },
+      "subtitle-generator": {
+        "title": "Subtitle Generator",
+        "description": "Generate subtitles using speech-to-text"
+      },
+      "video-merger": {
+        "title": "Video Merger",
+        "description": "Merge multiple video files into one"
+      },
+      "gif-maker": {
+        "title": "GIF Maker",
+        "description": "Create GIFs from video clips"
+      },
+      "resolution-changer": {
+        "title": "Resolution Changer",
+        "description": "Change video resolution and aspect ratio"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Base64 Encode/Decode",
+        "description": "Encode or decode Base64 strings with Unicode support"
+      },
+      "url-parser": {
+        "title": "URL Parser",
+        "description": "Parse and analyze URL components"
+      },
+      "csv-json": {
+        "title": "CSV ↔ JSON Converter",
+        "description": "Convert between CSV and JSON formats"
+      },
+      "number-base": {
+        "title": "Number Base Converter",
+        "description": "Convert numbers between binary, octal, decimal, hexadecimal"
+      },
+      "color-tools": {
+        "title": "Color Tools",
+        "description": "Convert colors between HEX, RGB, HSL and generate palettes"
+      },
+      "file-hash": {
+        "title": "File Hash Checker",
+        "description": "Calculate SHA-256 hash of files for verification"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "Date Difference Calculator",
+        "description": "Calculate the difference between two dates"
+      },
+      "timezone-converter": {
+        "title": "Timezone Converter",
+        "description": "Convert times between different timezones (DST aware)"
+      },
+      "age-calculator": {
+        "title": "Age Calculator",
+        "description": "Calculate exact age from birth date"
+      },
+      "ics-planner": {
+        "title": "Calendar Event Planner / ICS Export",
+        "description": "Create calendar events and export as ICS files"
+      },
+      "lunar-converter": {
+        "title": "Lunar Calendar Converter",
+        "description": "Convert between lunar and solar calendar dates"
+      },
+      "weekday-finder": {
+        "title": "Weekday Finder",
+        "description": "Find what day of the week any date falls on"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "YouTube Link Parser",
+        "description": "Extract video ID, playlist ID and canonical URLs from YouTube links"
+      },
+      "metadata": {
+        "title": "Metadata Viewer (oEmbed)",
+        "description": "View YouTube video title, channel, date, and thumbnails"
+      },
+      "thumbnails": {
+        "title": "Thumbnail Downloader",
+        "description": "Download YouTube video thumbnails in various resolutions"
+      },
+      "chapters": {
+        "title": "Timestamp / Chapters Builder",
+        "description": "Build formatted timestamp chapters for video descriptions"
+      },
+      "embed-generator": {
+        "title": "Embed Player Generator",
+        "description": "Generate YouTube embed iframe code with customization options"
+      },
+      "transcript-helper": {
+        "title": "Transcript Helper (Optional)",
+        "description": "Help format and work with YouTube transcripts"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "Convert Markdown documents to PDF or DOCX format"
+      },
+      "image-to-pdf": {
+        "title": "Image → PDF",
+        "description": "Convert images to PDF documents"
+      },
+      "pdf-to-text": {
+        "title": "PDF → Text",
+        "description": "Extract text from PDF documents (non-OCR)"
+      },
+      "office-lite-export": {
+        "title": "Office-Lite Export",
+        "description": "Export simple text/JSON to DOCX/PPTX formats"
+      },
+      "unit-converter": {
+        "title": "Unit Converter (Bonus)",
+        "description": "Convert between various units with currency support"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "Basic Calculator",
+        "description": "Simple calculator for basic arithmetic operations"
+      },
+      "scientific-calculator": {
+        "title": "Scientific Calculator",
+        "description": "Advanced calculator with scientific functions"
+      },
+      "equation-solver": {
+        "title": "Equation Solver",
+        "description": "Solve algebraic equations step by step"
+      },
+      "graph-plotter": {
+        "title": "Graph Plotter",
+        "description": "Plot mathematical functions and equations"
+      },
+      "matrix-calculator": {
+        "title": "Matrix Calculator",
+        "description": "Perform matrix operations like multiplication and inverse"
+      },
+      "prime-tools": {
+        "title": "Prime Number Checker/Generator",
+        "description": "Check if numbers are prime or generate prime sequences"
+      },
+      "fraction-simplifier": {
+        "title": "Fraction Simplifier",
+        "description": "Simplify fractions to their lowest terms"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "Length Converter",
+        "description": "Convert between meters, feet, inches, kilometers, miles"
+      },
+      "weight": {
+        "title": "Weight Converter",
+        "description": "Convert between kilograms, pounds, ounces, grams"
+      },
+      "volume": {
+        "title": "Volume Converter",
+        "description": "Convert between liters, gallons, cups, milliliters"
+      },
+      "temperature": {
+        "title": "Temperature Converter",
+        "description": "Convert between Celsius, Fahrenheit, Kelvin"
+      },
+      "area": {
+        "title": "Area Converter",
+        "description": "Convert between square meters, acres, hectares, square feet"
+      },
+      "speed": {
+        "title": "Speed Converter",
+        "description": "Convert between km/h, mph, m/s, knots"
+      },
+      "energy": {
+        "title": "Energy Converter",
+        "description": "Convert between joules, calories, BTU, kilowatt-hours"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "BMI Calculator",
+        "description": "Calculate Body Mass Index from height and weight"
+      },
+      "calories-burn": {
+        "title": "Calorie Burn Estimator",
+        "description": "Estimate calories burned based on activity and duration"
+      },
+      "body-fat": {
+        "title": "Body Fat Percentage",
+        "description": "Estimate body fat percentage using Navy method"
+      },
+      "water-intake": {
+        "title": "Water Intake Calculator",
+        "description": "Calculate recommended daily water intake"
+      },
+      "sleep-cycle": {
+        "title": "Sleep Cycle Calculator",
+        "description": "Calculate optimal sleep and wake times based on sleep cycles"
+      },
+      "heart-rate-zone": {
+        "title": "Heart Rate Zone",
+        "description": "Calculate target heart rate zones for exercise"
+      },
+      "pregnancy-due-date": {
+        "title": "Pregnancy Due Date",
+        "description": "Estimate pregnancy due date from last period"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "Keyword Density Analyzer",
+        "description": "Analyze keyword density in text or from URL"
+      },
+      "meta-tag-generator": {
+        "title": "Meta Tag Generator",
+        "description": "Generate SEO-optimized meta tags for your pages"
+      },
+      "site-speed": {
+        "title": "Site Speed Tester",
+        "description": "Test website loading speed and performance"
+      },
+      "broken-link-checker": {
+        "title": "Broken Link Checker",
+        "description": "Check for broken links on a webpage"
+      },
+      "sitemap-generator": {
+        "title": "Sitemap Generator",
+        "description": "Generate XML sitemaps for websites"
+      },
+      "robots-tester": {
+        "title": "Robots.txt Tester",
+        "description": "Test and validate robots.txt files"
+      },
+      "mobile-friendly": {
+        "title": "Mobile-Friendly Checker",
+        "description": "Check if a webpage is mobile-friendly"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "IP Address Lookup",
+        "description": "Look up IP address geolocation and details"
+      },
+      "ping": {
+        "title": "Ping Tool",
+        "description": "Measure latency to a URL or IP address"
+      },
+      "whois": {
+        "title": "WHOIS Lookup",
+        "description": "Look up domain registration information"
+      },
+      "dns-resolver": {
+        "title": "DNS Resolver",
+        "description": "Resolve domain names to IP addresses"
+      },
+      "port-checker": {
+        "title": "Port Scanner (Basic)",
+        "description": "Check if specific ports are open (limited scope)"
+      },
+      "subnet-calculator": {
+        "title": "Subnet Calculator",
+        "description": "Calculate subnet ranges, CIDR notation, and IP math"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "Text Translator",
+        "description": "Translate text between languages"
+      },
+      "spell-checker": {
+        "title": "Spell Checker",
+        "description": "Check spelling in multiple languages"
+      },
+      "grammar-checker": {
+        "title": "Grammar Checker",
+        "description": "Check grammar and writing style"
+      },
+      "synonym-finder": {
+        "title": "Synonym Finder",
+        "description": "Find synonyms and related words"
+      },
+      "language-detector": {
+        "title": "Language Detector",
+        "description": "Detect the language of text automatically"
+      },
+      "morse": {
+        "title": "Morse Code Converter",
+        "description": "Convert text to/from Morse code"
+      },
+      "braille": {
+        "title": "Braille Converter",
+        "description": "Convert text to/from Braille notation"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "Audio Converter",
+        "description": "Convert audio files between formats"
+      },
+      "volume-normalizer": {
+        "title": "Volume Normalizer",
+        "description": "Normalize audio volume levels"
+      },
+      "bpm-detector": {
+        "title": "BPM Detector",
+        "description": "Detect beats per minute in audio files"
+      },
+      "audio-cutter": {
+        "title": "Audio Cutter",
+        "description": "Cut and trim audio files"
+      },
+      "tts": {
+        "title": "Text to Speech",
+        "description": "Convert text to spoken audio"
+      },
+      "sfx-generator": {
+        "title": "Sound Effect Generator",
+        "description": "Generate simple sound effects and tones"
+      }
+    }
+  },
+  "tools": {
+    "password_generator": {
+      "title": "Password Generator",
+      "description": "Generate secure, random passwords instantly",
+      "meta_description": "Create strong, secure passwords with our free online password generator. Customizable length, character types, and advanced security options.",
+      "generated_password": "Generated Password",
+      "click_generate": "Click generate to create a password",
+      "hide_password": "Hide password",
+      "show_password": "Show password",
+      "strength": "Strength",
+      "strength_weak": "Weak",
+      "strength_fair": "Fair",
+      "strength_good": "Good",
+      "strength_strong": "Strong",
+      "entropy": "bits entropy",
+      "tip": "Strong passwords use 12+ characters with mixed types",
+      "generate": "Generate Password",
+      "regenerate": "Regenerate",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "options": "Options",
+      "length": "Length",
+      "characters": "characters",
+      "character_types": "Character Types",
+      "uppercase": "Uppercase (A-Z)",
+      "lowercase": "Lowercase (a-z)",
+      "numbers": "Numbers (0-9)",
+      "symbols": "Symbols (!@#$...)",
+      "select_at_least_one": "Select at least one character type",
+      "advanced_options": "Advanced Options",
+      "exclude_ambiguous": "Exclude Ambiguous",
+      "exclude_ambiguous_desc": "Remove 0, O, l, 1, I",
+      "exclude_similar": "Exclude Similar",
+      "exclude_similar_desc": "Remove i, L, o, O, 0",
+      "custom_symbols": "Custom Symbols",
+      "custom_symbols_placeholder": "!@#$%^&*",
+      "min_numbers": "Min Numbers",
+      "min_symbols": "Min Symbols",
+      "reset_defaults": "Reset to Defaults",
+      "recent_passwords": "Recent Passwords",
+      "no_recent": "No recent passwords",
+      "clear_history": "Clear History",
+      "faq_title": "Frequently Asked Questions",
+      "faq_q1": "How secure is this password generator?",
+      "faq_a1": "Our generator uses cryptographically secure random number generation (crypto.getRandomValues) to create truly random passwords. All processing happens in your browser - no passwords are ever sent to our servers.",
+      "faq_q2": "What makes a strong password?",
+      "faq_a2": "A strong password is at least 12 characters long and includes a mix of uppercase letters, lowercase letters, numbers, and symbols. Avoid using personal information or common words.",
+      "faq_q3": "Should I use different passwords for each account?",
+      "faq_a3": "Yes! Using unique passwords for each account ensures that if one password is compromised, your other accounts remain secure. Consider using a password manager to keep track of them.",
+      "related_title": "Related Tools"
+    },
+    "qr_code_generator": {
+      "title": "QR Code Generator",
+      "description": "Create QR codes for any text or URL",
+      "enter_text": "Enter text or URL",
+      "download": "Download QR Code"
+    },
+    "image_converter": {
+      "title": "Image Converter",
+      "description": "Convert images between formats (JPG, PNG, WebP, AVIF)",
+      "select_file": "Select Image",
+      "convert": "Convert",
+      "download": "Download"
+    }
+  },
+  "categories": {
+    "image": "Image Tools",
+    "pdf": "PDF Tools",
+    "text": "Text Utilities",
+    "developer": "Developer Tools",
+    "security": "Security Tools"
+  }
+}
