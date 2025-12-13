@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ToolHub - Free Online Tools',
-    short_name: 'ToolHub',
+    name: 'Vibetool - Free Online Tools',
+    short_name: 'Vibetool',
     description: 'Free online tools for image conversion, PDF manipulation, password generation, and more.',
     start_url: '/',
     display: 'standalone',

@@ -11,7 +11,7 @@
  * 4. Update the status from 'coming-soon' to 'active'
  */
 
-export type ToolStatus = 'coming-soon' | 'active' | 'deprecated';
+export type ToolStatus = 'coming-soon' | 'active' | 'deprecated' | 'new' | 'beta';
 export type ImplementationType = 'client-side' | 'server-side' | 'hybrid';
 
 export interface ToolItem {
@@ -23,6 +23,7 @@ export interface ToolItem {
   implementation?: ImplementationType;
   icon?: string;
   keywords?: string[];
+  tags?: string[]; // Display tags like 'secure', 'fast', etc.
   warning?: string; // For tools with special notices
 }
 

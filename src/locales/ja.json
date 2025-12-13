@@ -1,6 +1,6 @@
 {
   "common": {
-    "site_name": "ToolHub",
+    "site_name": "Vibetool",
     "home": "ホーム",
     "tools": "ツール",
     "about": "について",
@@ -46,18 +46,91 @@
     "tool_pending_implementation": "このツールはアクティブとしてマークされていますが、実装は保留中です。",
     "result": "件の結果",
     "results": "件の結果",
+    "loading": "読み込み中",
     "no_tools_found": "ツールが見つかりません：",
-    "more": "件追加"
+    "more": "件追加",
+    "categories": "カテゴリ",
+    "filters": "フィルター",
+    "sort_by": "並び替え",
+    "all_categories": "すべてのカテゴリ",
+    "all_status": "すべてのステータス",
+    "all_types": "すべてのタイプ",
+    "category": "カテゴリ",
+    "filter": "フィルター",
+    "sort": "並び替え",
+    "clear_all": "すべてクリア",
+    "clear_filters": "フィルターをクリア",
+    "try_different_search": "検索やフィルターを調整してください",
+    "for": "：",
+    "free": "無料",
+    "navigation": "ナビゲーション",
+    "close_menu": "メニューを閉じる",
+    "open_menu": "メニューを開く",
+    "get_started": "始める",
+    "expand_sidebar": "サイドバーを展開",
+    "collapse_sidebar": "サイドバーを折りたたむ",
+    "status": "ステータス",
+    "type": "タイプ",
+    "tags": "タグ",
+    "client_side_short": "クライアント",
+    "server_side_short": "サーバー",
+    "hybrid_short": "ハイブリッド",
+    "no_tools_in_category": "このカテゴリにツールがありません",
+    "try_different_filter": "別のフィルターを試すか、すべてのツールを閲覧してください",
+    "reset_filters": "フィルターをリセット",
+    "loading_tools": "ツールを読み込み中...",
+    "error_loading": "読み込みエラー",
+    "retry": "再試行",
+    "search_tools": "ツールを検索...",
+    "menu": "メニュー",
+    "close": "閉じる",
+    "github": "GitHub",
+    "docs": "ドキュメント",
+    "explore_tools": "ツールを探索"
   },
   "home": {
     "title": "無料オンラインツール - 登録不要",
     "description": "画像変換、PDF操作、パスワード生成など、100以上の無料オンラインツール。100%クライアント側処理 - ファイルがデバイスから離れることはありません。",
-    "hero_title": "パワフルなツール、ゼロの摩擦",
-    "hero_subtitle": "ブラウザ内で完全に動作する無料オンラインユーティリティ。登録不要、サーバーへのアップロード不要。",
+    "hero_title": "VibeTool でワークフローを強化",
+    "hero_subtitle": "モダンなクリエイターと開発者のために厳選された最高のツールを発見。今日あなたの次の生産性ブースターを見つけよう。",
     "search_placeholder": "ツールを検索...",
     "popular_tools": "人気ツール",
     "all_tools": "すべてのツール",
-    "view_all": "すべて表示"
+    "view_all": "すべて表示",
+    "new_tools_badge": "毎週新しいツールを追加",
+    "get_started": "始める",
+    "browse_all": "すべてを閲覧",
+    "quick_picks": "クイックピック",
+    "editors_choice": "エディターのおすすめ",
+    "editors_choice_subtitle": "今週の厳選ツール",
+    "view_details": "詳細を見る",
+    "most_popular": "最も人気",
+    "newest": "最新",
+    "a_to_z": "A から Z",
+    "show_more_tools": "もっとツールを見る",
+    "free": "無料",
+    "featured": "おすすめ",
+    "categories_subtitle": "あなたのニーズに合ったツールを見つけよう",
+    "coming_soon_title": "近日公開",
+    "coming_soon_subtitle": "開発中の新しいツール",
+    "cta_title": "生産性を上げる準備はできましたか？",
+    "cta_subtitle": "作業を楽にする100以上の無料ツールを探索しよう",
+    "explore_all_tools": "すべてのツールを探索",
+    "popular_subtitle": "コミュニティで最も使われているツール",
+    "hero_badge": "100以上の無料ツール",
+    "hero_stats_tools": "ツール",
+    "hero_stats_categories": "カテゴリ",
+    "hero_stats_users": "ユーザー",
+    "features_title": "なぜVibeToolを選ぶのか",
+    "features_subtitle": "すべてのツールが無料で、登録不要、データは端末から出ません",
+    "feature_fast": "超高速",
+    "feature_fast_desc": "すべてブラウザ内で処理。待ち時間なし",
+    "feature_private": "プライベート",
+    "feature_private_desc": "データは端末から離れません",
+    "feature_free": "完全無料",
+    "feature_free_desc": "すべての機能が無料で利用可能",
+    "new_tools": "新着ツール",
+    "coming_soon_tools": "近日公開"
   },
   "toolGroups": {
     "password": {
@@ -342,6 +415,432 @@
       "api-tester": {
         "title": "APIテスター",
         "description": "ブラウザから直接REST APIをテスト（CORSプロキシオプション付き）"
+      },
+      "json-to-ts": {
+        "title": "JSONからTypeScript",
+        "description": "JSONデータからTypeScriptインターフェースを生成"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPIから型",
+        "description": "OpenAPI仕様からTypeScript型を生成"
+      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "天気予報",
+        "description": "任意の場所の天気予報を取得"
+      },
+      "aqi": {
+        "title": "空気質指数",
+        "description": "場所の空気質指数をチェック"
+      },
+      "sunrise-sunset": {
+        "title": "日の出日の入り計算機",
+        "description": "任意の日付と場所の日の出と日の入り時刻を計算"
+      },
+      "uv-index": {
+        "title": "UV指数チェッカー",
+        "description": "UV指数と日焼け対策の推奨事項をチェック"
+      },
+      "carbon-footprint": {
+        "title": "カーボンフットプリント推定器",
+        "description": "活動からのカーボンフットプリントを推定"
+      },
+      "tide": {
+        "title": "潮汐予測器",
+        "description": "沿岸地域の潮汐時間と高さをチェック"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "暗号通貨価格トラッカー",
+        "description": "リアルタイムの暗号通貨価格を追跡"
+      },
+      "portfolio": {
+        "title": "ポートフォリオ計算機",
+        "description": "暗号通貨ポートフォリオの価値を計算"
+      },
+      "mining-profit": {
+        "title": "マイニング収益性",
+        "description": "暗号通貨マイニングの収益性を計算"
+      },
+      "wallet-validator": {
+        "title": "ウォレットアドレス検証",
+        "description": "暗号通貨ウォレットアドレスを検証"
+      },
+      "fee-estimator": {
+        "title": "手数料見積もり",
+        "description": "暗号通貨取引の手数料を見積もり"
+      },
+      "crypto-converter": {
+        "title": "暗号通貨コンバーター",
+        "description": "暗号通貨間の変換"
+      },
+      "market-cap-ranker": {
+        "title": "時価総額ランキング",
+        "description": "時価総額でランク付けされた暗号通貨を表示"
+      }
+    },
+    "finance": {
+      "currency": {
+        "title": "通貨コンバーター",
+        "description": "リアルタイムレートで通貨間を変換"
+      },
+      "loan-emi": {
+        "title": "ローン/EMI計算機",
+        "description": "ローンEMI、利息、償却を計算"
+      },
+      "budget-planner": {
+        "title": "予算プランナー",
+        "description": "チャートで予算を計画し視覚化"
+      },
+      "investment": {
+        "title": "投資計算機",
+        "description": "複利と投資収益を計算"
+      },
+      "tax-estimator": {
+        "title": "税金見積もりツール",
+        "description": "税金を見積もり（参考のみ、税務アドバイスではありません）"
+      },
+      "tip-calculator": {
+        "title": "チップ計算機",
+        "description": "チップを計算しグループで請求書を分割"
+      },
+      "savings-goal": {
+        "title": "貯蓄目標トラッカー",
+        "description": "貯蓄目標への進捗を追跡"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "ビデオ圧縮ツール",
+        "description": "ビデオファイルを圧縮してサイズを削減"
+      },
+      "format-converter": {
+        "title": "フォーマットコンバーター",
+        "description": "異なるフォーマット間でビデオを変換"
+      },
+      "frame-extractor": {
+        "title": "フレーム抽出ツール",
+        "description": "ビデオからフレーム/スクリーンショットを抽出"
+      },
+      "subtitle-generator": {
+        "title": "字幕生成ツール",
+        "description": "音声テキスト変換を使用して字幕を生成"
+      },
+      "video-merger": {
+        "title": "ビデオ結合ツール",
+        "description": "複数のビデオファイルを1つに結合"
+      },
+      "gif-maker": {
+        "title": "GIF作成ツール",
+        "description": "ビデオクリップからGIFを作成"
+      },
+      "resolution-changer": {
+        "title": "解像度変更ツール",
+        "description": "ビデオの解像度とアスペクト比を変更"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Base64エンコード/デコード",
+        "description": "Unicode対応でBase64文字列をエンコード・デコード"
+      },
+      "url-parser": {
+        "title": "URLパーサー",
+        "description": "URLコンポーネントを解析・分析"
+      },
+      "csv-json": {
+        "title": "CSV ↔ JSONコンバーター",
+        "description": "CSVとJSON形式間の変換"
+      },
+      "number-base": {
+        "title": "基数変換器",
+        "description": "2進数、8進数、10進数、16進数間で数値を変換"
+      },
+      "color-tools": {
+        "title": "カラーツール",
+        "description": "HEX、RGB、HSL間で色を変換し、パレットを生成"
+      },
+      "file-hash": {
+        "title": "ファイルハッシュチェッカー",
+        "description": "検証用にファイルのSHA-256ハッシュを計算"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "日付差計算機",
+        "description": "2つの日付間の差を計算"
+      },
+      "timezone-converter": {
+        "title": "タイムゾーンコンバーター",
+        "description": "異なるタイムゾーン間で時間を変換（夏時間対応）"
+      },
+      "age-calculator": {
+        "title": "年齢計算機",
+        "description": "生年月日から正確な年齢を計算"
+      },
+      "ics-planner": {
+        "title": "カレンダーイベントプランナー / ICSエクスポート",
+        "description": "カレンダーイベントを作成しICSファイルとしてエクスポート"
+      },
+      "lunar-converter": {
+        "title": "旧暦カレンダー変換",
+        "description": "旧暦と新暦の日付間で変換"
+      },
+      "weekday-finder": {
+        "title": "曜日検索",
+        "description": "任意の日付が何曜日かを検索"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "YouTubeリンクパーサー",
+        "description": "YouTubeリンクからビデオID、プレイリストID、正規URLを抽出"
+      },
+      "metadata": {
+        "title": "メタデータビューアー (oEmbed)",
+        "description": "YouTubeビデオのタイトル、チャンネル、日付、サムネイルを表示"
+      },
+      "thumbnails": {
+        "title": "サムネイルダウンローダー",
+        "description": "様々な解像度でYouTubeビデオサムネイルをダウンロード"
+      },
+      "chapters": {
+        "title": "タイムスタンプ / チャプタービルダー",
+        "description": "ビデオ説明用のフォーマット済みタイムスタンプチャプターを作成"
+      },
+      "embed-generator": {
+        "title": "埋め込みプレーヤー生成",
+        "description": "カスタマイズオプション付きでYouTube埋め込みiframeコードを生成"
+      },
+      "transcript-helper": {
+        "title": "字幕ヘルパー（オプション）",
+        "description": "YouTube字幕のフォーマットと作業を支援"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "MarkdownドキュメントをPDFまたはDOCX形式に変換"
+      },
+      "image-to-pdf": {
+        "title": "画像 → PDF",
+        "description": "画像をPDFドキュメントに変換"
+      },
+      "pdf-to-text": {
+        "title": "PDF → テキスト",
+        "description": "PDFドキュメントからテキストを抽出（非OCR）"
+      },
+      "office-lite-export": {
+        "title": "Office-Liteエクスポート",
+        "description": "シンプルなテキスト/JSONをDOCX/PPTX形式にエクスポート"
+      },
+      "unit-converter": {
+        "title": "単位変換器（ボーナス）",
+        "description": "通貨対応で様々な単位間を変換"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "基本計算機",
+        "description": "基本的な算術演算用のシンプルな計算機"
+      },
+      "scientific-calculator": {
+        "title": "関数電卓",
+        "description": "科学関数を備えた高度な計算機"
+      },
+      "equation-solver": {
+        "title": "方程式ソルバー",
+        "description": "代数方程式をステップバイステップで解く"
+      },
+      "graph-plotter": {
+        "title": "グラフプロッター",
+        "description": "数学関数と方程式をプロット"
+      },
+      "matrix-calculator": {
+        "title": "行列計算機",
+        "description": "乗算や逆行列などの行列演算を実行"
+      },
+      "prime-tools": {
+        "title": "素数チェッカー/生成器",
+        "description": "数が素数かどうかをチェックまたは素数列を生成"
+      },
+      "fraction-simplifier": {
+        "title": "分数約分器",
+        "description": "分数を最簡分数に約分"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "長さ変換器",
+        "description": "メートル、フィート、インチ、キロメートル、マイル間で変換"
+      },
+      "weight": {
+        "title": "重さ変換器",
+        "description": "キログラム、ポンド、オンス、グラム間で変換"
+      },
+      "volume": {
+        "title": "体積変換器",
+        "description": "リットル、ガロン、カップ、ミリリットル間で変換"
+      },
+      "temperature": {
+        "title": "温度変換器",
+        "description": "摂氏、華氏、ケルビン間で変換"
+      },
+      "area": {
+        "title": "面積変換器",
+        "description": "平方メートル、エーカー、ヘクタール、平方フィート間で変換"
+      },
+      "speed": {
+        "title": "速度変換器",
+        "description": "km/h、mph、m/s、ノット間で変換"
+      },
+      "energy": {
+        "title": "エネルギー変換器",
+        "description": "ジュール、カロリー、BTU、キロワット時間で変換"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "BMI計算機",
+        "description": "身長と体重からボディマス指数を計算"
+      },
+      "calories-burn": {
+        "title": "消費カロリー推定器",
+        "description": "活動と時間に基づいて消費カロリーを推定"
+      },
+      "body-fat": {
+        "title": "体脂肪率",
+        "description": "海軍方式を使用して体脂肪率を推定"
+      },
+      "water-intake": {
+        "title": "水分摂取量計算機",
+        "description": "推奨される1日の水分摂取量を計算"
+      },
+      "sleep-cycle": {
+        "title": "睡眠サイクル計算機",
+        "description": "睡眠サイクルに基づいて最適な就寝・起床時間を計算"
+      },
+      "heart-rate-zone": {
+        "title": "心拍数ゾーン",
+        "description": "運動時の目標心拍数ゾーンを計算"
+      },
+      "pregnancy-due-date": {
+        "title": "出産予定日",
+        "description": "最終月経から出産予定日を推定"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "キーワード密度アナライザー",
+        "description": "テキストまたはURLからキーワード密度を分析"
+      },
+      "meta-tag-generator": {
+        "title": "メタタグ生成器",
+        "description": "SEO最適化されたメタタグを生成"
+      },
+      "site-speed": {
+        "title": "サイト速度テスター",
+        "description": "ウェブサイトの読み込み速度とパフォーマンスをテスト"
+      },
+      "broken-link-checker": {
+        "title": "リンク切れチェッカー",
+        "description": "ウェブページのリンク切れをチェック"
+      },
+      "sitemap-generator": {
+        "title": "サイトマップ生成器",
+        "description": "ウェブサイト用のXMLサイトマップを生成"
+      },
+      "robots-tester": {
+        "title": "Robots.txtテスター",
+        "description": "robots.txtファイルをテスト・検証"
+      },
+      "mobile-friendly": {
+        "title": "モバイルフレンドリーチェッカー",
+        "description": "ウェブページがモバイルフレンドリーかチェック"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "IPアドレス検索",
+        "description": "IPアドレスの地理的位置と詳細を検索"
+      },
+      "ping": {
+        "title": "Pingツール",
+        "description": "URLまたはIPアドレスへのレイテンシを測定"
+      },
+      "whois": {
+        "title": "WHOIS検索",
+        "description": "ドメイン登録情報を検索"
+      },
+      "dns-resolver": {
+        "title": "DNSリゾルバー",
+        "description": "ドメイン名をIPアドレスに解決"
+      },
+      "port-checker": {
+        "title": "ポートスキャナー（基本）",
+        "description": "特定のポートが開いているかチェック（範囲限定）"
+      },
+      "subnet-calculator": {
+        "title": "サブネット計算機",
+        "description": "サブネット範囲、CIDR表記、IP計算を実行"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "テキスト翻訳",
+        "description": "言語間でテキストを翻訳"
+      },
+      "spell-checker": {
+        "title": "スペルチェッカー",
+        "description": "複数言語でスペルをチェック"
+      },
+      "grammar-checker": {
+        "title": "文法チェッカー",
+        "description": "文法と文体をチェック"
+      },
+      "synonym-finder": {
+        "title": "類義語検索",
+        "description": "類義語と関連語を検索"
+      },
+      "language-detector": {
+        "title": "言語検出器",
+        "description": "テキストの言語を自動検出"
+      },
+      "morse": {
+        "title": "モールス信号コンバーター",
+        "description": "テキストをモールス信号に変換/逆変換"
+      },
+      "braille": {
+        "title": "点字コンバーター",
+        "description": "テキストを点字表記に変換/逆変換"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "オーディオコンバーター",
+        "description": "異なるフォーマット間でオーディオファイルを変換"
+      },
+      "volume-normalizer": {
+        "title": "音量ノーマライザー",
+        "description": "オーディオの音量レベルを正規化"
+      },
+      "bpm-detector": {
+        "title": "BPM検出器",
+        "description": "オーディオファイルのBPM（1分あたりの拍数）を検出"
+      },
+      "audio-cutter": {
+        "title": "オーディオカッター",
+        "description": "オーディオファイルをカット・トリミング"
+      },
+      "tts": {
+        "title": "テキスト読み上げ",
+        "description": "テキストを音声に変換"
+      },
+      "sfx-generator": {
+        "title": "効果音生成器",
+        "description": "シンプルな効果音とトーンを生成"
       }
     }
   },
@@ -421,6 +920,12 @@
     "description": "プライバシーを尊重する無料オンラインツール。すべての処理はブラウザ内で行われます。",
     "quick_links": "クイックリンク",
     "legal": "法的情報",
-    "follow_us": "フォローする"
+    "follow_us": "フォローする",
+    "stay_updated": "最新情報を受け取る",
+    "newsletter_description": "新しいツールがリリースされたら通知を受け取る",
+    "email_placeholder": "メールアドレスを入力",
+    "subscribe": "購読",
+    "made_with": "愛を込めて作りました",
+    "by_team": "Vibetoolチーム"
   }
 }

@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { Header, Footer, ToolsSidebar } from '@/components/layout';
 
 export default function ToolsLayout({
@@ -5,12 +8,17 @@ export default function ToolsLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
   return (
     <>
       <Header />
       <div className="flex flex-1">
-        <ToolsSidebar />
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <ToolsSidebar 
+          isCollapsed={isSidebarCollapsed}
+          onToggleCollapse={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+        />
+        <main className="flex-1 overflow-hidden">{children}</main>
       </div>
       <Footer />
     </>

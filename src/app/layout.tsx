@@ -6,14 +6,14 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | ToolHub',
-    default: 'ToolHub - Công Cụ Online Miễn Phí',
+    template: '%s | Vibetool',
+    default: 'Vibetool - Công Cụ Online Miễn Phí',
   },
   description: 'Công cụ online miễn phí cho chuyển đổi ảnh, xử lý PDF, tạo mật khẩu và nhiều hơn nữa. Xử lý 100% phía client.',
   keywords: ['công cụ online', 'free tools', 'chuyển đổi ảnh', 'pdf tools', 'tạo mật khẩu'],
-  authors: [{ name: 'ToolHub Team' }],
-  creator: 'ToolHub',
-  publisher: 'ToolHub',
+  authors: [{ name: 'Vibetool Team' }],
+  creator: 'Vibetool',
+  publisher: 'Vibetool',
   robots: {
     index: true,
     follow: true,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    siteName: 'ToolHub',
+    siteName: 'Vibetool',
   },
   twitter: {
     card: 'summary_large_image',

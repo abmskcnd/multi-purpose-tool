@@ -1,6 +1,6 @@
 {
   "common": {
-    "site_name": "ToolHub",
+    "site_name": "Vibetool",
     "home": "Inicio",
     "tools": "Herramientas",
     "about": "Acerca de",
@@ -46,18 +46,93 @@
     "tool_pending_implementation": "Esta herramienta está marcada como activa pero la implementación está pendiente.",
     "result": "resultado",
     "results": "resultados",
+    "loading": "Cargando",
     "no_tools_found": "No se encontraron herramientas para",
-    "more": "más"
+    "more": "más",
+    "categories": "Categorías",
+    "filters": "Filtros",
+    "sort_by": "Ordenar por",
+    "all_categories": "Todas las Categorías",
+    "all_status": "Todos los Estados",
+    "all_types": "Todos los Tipos",
+    "category": "Categoría",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "sort_by": "Ordenar por",
+    "clear_all": "Limpiar todo",
+    "clear_filters": "Limpiar filtros",
+    "try_different_search": "Intenta ajustar tu búsqueda o filtros",
+    "for": "para",
+    "free": "Gratis",
+    "navigation": "Navegación",
+    "close_menu": "Cerrar menú",
+    "open_menu": "Abrir menú",
+    "get_started": "Comenzar",
+    "status": "Estado",
+    "type": "Tipo",
+    "tags": "Etiquetas",
+    "client_side_short": "Cliente",
+    "server_side_short": "Servidor",
+    "hybrid_short": "Híbrido",
+    "no_tools_in_category": "No hay herramientas en esta categoría",
+    "try_different_filter": "Prueba un filtro diferente o explora todas las herramientas",
+    "reset_filters": "Restablecer filtros",
+    "loading_tools": "Cargando herramientas...",
+    "error_loading": "Error al cargar",
+    "retry": "Reintentar",
+    "search_tools": "Buscar herramientas...",
+    "categories": "Categorías",
+    "expand_sidebar": "Expandir barra lateral",
+    "collapse_sidebar": "Contraer barra lateral",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "github": "GitHub",
+    "docs": "Documentación",
+    "explore_tools": "Explorar Herramientas"
   },
   "home": {
     "title": "Herramientas Online Gratis - Sin Registro",
     "description": "100+ herramientas online gratis para conversión de imágenes, manipulación de PDF, generación de contraseñas y más. Procesamiento 100% del lado del cliente.",
-    "hero_title": "Herramientas Poderosas, Cero Fricción",
-    "hero_subtitle": "Utilidades online gratuitas que funcionan completamente en tu navegador. Sin registro, sin subidas a servidores.",
+    "hero_title": "Potencia tu flujo de trabajo con VibeTool",
+    "hero_subtitle": "Descubre las mejores herramientas seleccionadas para creadores y desarrolladores modernos. Encuentra tu próximo potenciador de productividad hoy.",
     "search_placeholder": "Buscar herramientas...",
     "popular_tools": "Herramientas Populares",
     "all_tools": "Todas las Herramientas",
-    "view_all": "Ver Todo"
+    "view_all": "Ver Todo",
+    "new_tools_badge": "Nuevas herramientas añadidas semanalmente",
+    "get_started": "Comenzar",
+    "browse_all": "Explorar Todo",
+    "quick_picks": "Selecciones Rápidas",
+    "editors_choice": "Elección del Editor",
+    "editors_choice_subtitle": "Herramientas seleccionadas para esta semana",
+    "view_details": "Ver Detalles",
+    "most_popular": "Más Popular",
+    "newest": "Más Reciente",
+    "a_to_z": "A a Z",
+    "show_more_tools": "Mostrar Más Herramientas",
+    "free": "Gratis",
+    "featured": "Destacado",
+    "categories_subtitle": "Encuentra la herramienta perfecta para tus necesidades",
+    "coming_soon_title": "Próximamente",
+    "coming_soon_subtitle": "Nuevas herramientas emocionantes en las que estamos trabajando",
+    "cta_title": "¿Listo para aumentar tu productividad?",
+    "cta_subtitle": "Explora nuestra colección de más de 100 herramientas gratuitas diseñadas para facilitar tu trabajo",
+    "explore_all_tools": "Explorar Todas las Herramientas",
+    "popular_subtitle": "Las herramientas más usadas por nuestra comunidad",
+    "hero_badge": "Más de 100 herramientas gratis",
+    "hero_stats_tools": "Herramientas",
+    "hero_stats_categories": "Categorías",
+    "hero_stats_users": "Usuarios",
+    "features_title": "¿Por qué VibeTool?",
+    "features_subtitle": "Todas las herramientas son gratis, sin registro, y tus datos nunca salen de tu dispositivo",
+    "feature_fast": "Súper Rápido",
+    "feature_fast_desc": "Todo se procesa en tu navegador. Sin esperas",
+    "feature_private": "Privado",
+    "feature_private_desc": "Tus datos nunca salen de tu dispositivo",
+    "feature_free": "100% Gratis",
+    "feature_free_desc": "Todas las funciones disponibles sin costo",
+    "new_tools": "Nuevas Herramientas",
+    "coming_soon_tools": "Próximamente"
   },
   "toolGroups": {
     "password": {
@@ -341,7 +416,431 @@
       },
       "api-tester": {
         "title": "Probador de API",
-        "description": "Prueba APIs REST directamente desde el navegador (con opción de proxy CORS)"
+        "description": "Prueba APIs REST directamente desde el navegador (con opción de proxy CORS)"      },
+      "json-to-ts": {
+        "title": "JSON a TypeScript",
+        "description": "Generar interfaces TypeScript a partir de datos JSON"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPI a Tipos",
+        "description": "Generar tipos TypeScript a partir de especificaciones OpenAPI"      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "Pronóstico del Tiempo",
+        "description": "Obtén pronósticos del tiempo para cualquier ubicación"
+      },
+      "aqi": {
+        "title": "Índice de Calidad del Aire",
+        "description": "Consulta el índice de calidad del aire para ubicaciones"
+      },
+      "sunrise-sunset": {
+        "title": "Calculadora de Amanecer/Atardecer",
+        "description": "Calcula las horas de amanecer y atardecer para cualquier fecha y ubicación"
+      },
+      "uv-index": {
+        "title": "Verificador de Índice UV",
+        "description": "Verifica el índice UV y recomendaciones de protección solar"
+      },
+      "carbon-footprint": {
+        "title": "Estimador de Huella de Carbono",
+        "description": "Estima la huella de carbono de las actividades"
+      },
+      "tide": {
+        "title": "Predictor de Mareas",
+        "description": "Consulta horarios y alturas de mareas para ubicaciones costeras"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "Rastreador de Precios Crypto",
+        "description": "Rastrea precios de criptomonedas en tiempo real"
+      },
+      "portfolio": {
+        "title": "Calculadora de Portafolio",
+        "description": "Calcula el valor del portafolio de criptomonedas"
+      },
+      "mining-profit": {
+        "title": "Rentabilidad de Minería",
+        "description": "Calcula la rentabilidad de minería de criptomonedas"
+      },
+      "wallet-validator": {
+        "title": "Validador de Dirección de Billetera",
+        "description": "Valida direcciones de billeteras de criptomonedas"
+      },
+      "fee-estimator": {
+        "title": "Estimador de Comisiones",
+        "description": "Estima las comisiones de transacciones de criptomonedas"
+      },
+      "crypto-converter": {
+        "title": "Convertidor de Crypto",
+        "description": "Convierte entre criptomonedas"
+      },
+      "market-cap-ranker": {
+        "title": "Ranking por Capitalización",
+        "description": "Ve criptomonedas ordenadas por capitalización de mercado"
+      }
+    },
+    "finance": {
+      "currency": {
+        "title": "Convertidor de Moneda",
+        "description": "Convierte entre monedas con tasas en tiempo real"
+      },
+      "loan-emi": {
+        "title": "Calculadora de Préstamo/EMI",
+        "description": "Calcula EMI de préstamo, interés y amortización"
+      },
+      "budget-planner": {
+        "title": "Planificador de Presupuesto",
+        "description": "Planifica y visualiza tu presupuesto con gráficos"
+      },
+      "investment": {
+        "title": "Calculadora de Inversión",
+        "description": "Calcula interés compuesto y retornos de inversión"
+      },
+      "tax-estimator": {
+        "title": "Estimador de Impuestos",
+        "description": "Estima impuestos (solo referencia, no asesoría fiscal)"
+      },
+      "tip-calculator": {
+        "title": "Calculadora de Propinas",
+        "description": "Calcula propinas y divide cuentas entre grupos"
+      },
+      "savings-goal": {
+        "title": "Rastreador de Meta de Ahorro",
+        "description": "Rastrea el progreso hacia metas de ahorro"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "Compresor de Video",
+        "description": "Comprime archivos de video para reducir tamaño"
+      },
+      "format-converter": {
+        "title": "Convertidor de Formato",
+        "description": "Convierte videos entre diferentes formatos"
+      },
+      "frame-extractor": {
+        "title": "Extractor de Fotogramas",
+        "description": "Extrae fotogramas/capturas de pantalla de videos"
+      },
+      "subtitle-generator": {
+        "title": "Generador de Subtítulos",
+        "description": "Genera subtítulos usando voz a texto"
+      },
+      "video-merger": {
+        "title": "Fusionador de Video",
+        "description": "Fusiona múltiples archivos de video en uno"
+      },
+      "gif-maker": {
+        "title": "Creador de GIF",
+        "description": "Crea GIFs desde clips de video"
+      },
+      "resolution-changer": {
+        "title": "Cambiador de Resolución",
+        "description": "Cambia la resolución y relación de aspecto del video"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Codificar/Decodificar Base64",
+        "description": "Codifica o decodifica cadenas Base64 con soporte Unicode"
+      },
+      "url-parser": {
+        "title": "Analizador de URL",
+        "description": "Analiza y extrae componentes de URL"
+      },
+      "csv-json": {
+        "title": "Convertidor CSV ↔ JSON",
+        "description": "Convierte entre formatos CSV y JSON"
+      },
+      "number-base": {
+        "title": "Convertidor de Base Numérica",
+        "description": "Convierte números entre binario, octal, decimal, hexadecimal"
+      },
+      "color-tools": {
+        "title": "Herramientas de Color",
+        "description": "Convierte colores entre HEX, RGB, HSL y genera paletas"
+      },
+      "file-hash": {
+        "title": "Verificador de Hash de Archivo",
+        "description": "Calcula hash SHA-256 de archivos para verificación"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "Calculadora de Diferencia de Fechas",
+        "description": "Calcula la diferencia entre dos fechas"
+      },
+      "timezone-converter": {
+        "title": "Convertidor de Zona Horaria",
+        "description": "Convierte horas entre diferentes zonas horarias (DST)"
+      },
+      "age-calculator": {
+        "title": "Calculadora de Edad",
+        "description": "Calcula la edad exacta desde la fecha de nacimiento"
+      },
+      "ics-planner": {
+        "title": "Planificador de Eventos / Exportar ICS",
+        "description": "Crea eventos de calendario y exporta como archivos ICS"
+      },
+      "lunar-converter": {
+        "title": "Convertidor de Calendario Lunar",
+        "description": "Convierte entre fechas del calendario lunar y solar"
+      },
+      "weekday-finder": {
+        "title": "Buscador de Día de la Semana",
+        "description": "Encuentra qué día de la semana cae cualquier fecha"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "Analizador de Enlaces YouTube",
+        "description": "Extrae ID de video, ID de playlist y URLs canónicas de enlaces YouTube"
+      },
+      "metadata": {
+        "title": "Visor de Metadatos (oEmbed)",
+        "description": "Ve título, canal, fecha y miniaturas de videos YouTube"
+      },
+      "thumbnails": {
+        "title": "Descargador de Miniaturas",
+        "description": "Descarga miniaturas de videos YouTube en varias resoluciones"
+      },
+      "chapters": {
+        "title": "Constructor de Timestamps / Capítulos",
+        "description": "Crea capítulos con timestamps formateados para descripciones"
+      },
+      "embed-generator": {
+        "title": "Generador de Reproductor Embebido",
+        "description": "Genera código iframe de YouTube con opciones de personalización"
+      },
+      "transcript-helper": {
+        "title": "Ayudante de Transcripción (Opcional)",
+        "description": "Ayuda a formatear y trabajar con transcripciones de YouTube"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "Convierte documentos Markdown a formato PDF o DOCX"
+      },
+      "image-to-pdf": {
+        "title": "Imagen → PDF",
+        "description": "Convierte imágenes a documentos PDF"
+      },
+      "pdf-to-text": {
+        "title": "PDF → Texto",
+        "description": "Extrae texto de documentos PDF (sin OCR)"
+      },
+      "office-lite-export": {
+        "title": "Exportación Office-Lite",
+        "description": "Exporta texto/JSON simple a formatos DOCX/PPTX"
+      },
+      "unit-converter": {
+        "title": "Convertidor de Unidades (Bonus)",
+        "description": "Convierte entre varias unidades con soporte de moneda"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "Calculadora Básica",
+        "description": "Calculadora simple para operaciones aritméticas básicas"
+      },
+      "scientific-calculator": {
+        "title": "Calculadora Científica",
+        "description": "Calculadora avanzada con funciones científicas"
+      },
+      "equation-solver": {
+        "title": "Solucionador de Ecuaciones",
+        "description": "Resuelve ecuaciones algebraicas paso a paso"
+      },
+      "graph-plotter": {
+        "title": "Graficador de Funciones",
+        "description": "Grafica funciones matemáticas y ecuaciones"
+      },
+      "matrix-calculator": {
+        "title": "Calculadora de Matrices",
+        "description": "Realiza operaciones de matrices como multiplicación e inversa"
+      },
+      "prime-tools": {
+        "title": "Verificador/Generador de Primos",
+        "description": "Verifica si los números son primos o genera secuencias primas"
+      },
+      "fraction-simplifier": {
+        "title": "Simplificador de Fracciones",
+        "description": "Simplifica fracciones a su mínima expresión"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "Convertidor de Longitud",
+        "description": "Convierte entre metros, pies, pulgadas, kilómetros, millas"
+      },
+      "weight": {
+        "title": "Convertidor de Peso",
+        "description": "Convierte entre kilogramos, libras, onzas, gramos"
+      },
+      "volume": {
+        "title": "Convertidor de Volumen",
+        "description": "Convierte entre litros, galones, tazas, mililitros"
+      },
+      "temperature": {
+        "title": "Convertidor de Temperatura",
+        "description": "Convierte entre Celsius, Fahrenheit, Kelvin"
+      },
+      "area": {
+        "title": "Convertidor de Área",
+        "description": "Convierte entre metros², acres, hectáreas, pies²"
+      },
+      "speed": {
+        "title": "Convertidor de Velocidad",
+        "description": "Convierte entre km/h, mph, m/s, nudos"
+      },
+      "energy": {
+        "title": "Convertidor de Energía",
+        "description": "Convierte entre julios, calorías, BTU, kilovatios-hora"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "Calculadora de IMC",
+        "description": "Calcula el Índice de Masa Corporal desde altura y peso"
+      },
+      "calories-burn": {
+        "title": "Estimador de Calorías Quemadas",
+        "description": "Estima calorías quemadas según actividad y duración"
+      },
+      "body-fat": {
+        "title": "Porcentaje de Grasa Corporal",
+        "description": "Estima el porcentaje de grasa corporal usando método Navy"
+      },
+      "water-intake": {
+        "title": "Calculadora de Consumo de Agua",
+        "description": "Calcula el consumo diario de agua recomendado"
+      },
+      "sleep-cycle": {
+        "title": "Calculadora de Ciclo de Sueño",
+        "description": "Calcula horarios óptimos de sueño según ciclos de sueño"
+      },
+      "heart-rate-zone": {
+        "title": "Zona de Frecuencia Cardíaca",
+        "description": "Calcula zonas de frecuencia cardíaca objetivo para ejercicio"
+      },
+      "pregnancy-due-date": {
+        "title": "Fecha Probable de Parto",
+        "description": "Estima la fecha de parto desde el último período"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "Analizador de Densidad de Palabras Clave",
+        "description": "Analiza la densidad de palabras clave en texto o desde URL"
+      },
+      "meta-tag-generator": {
+        "title": "Generador de Meta Tags",
+        "description": "Genera meta tags optimizados para SEO"
+      },
+      "site-speed": {
+        "title": "Probador de Velocidad del Sitio",
+        "description": "Prueba la velocidad de carga y rendimiento del sitio"
+      },
+      "broken-link-checker": {
+        "title": "Verificador de Enlaces Rotos",
+        "description": "Verifica enlaces rotos en una página web"
+      },
+      "sitemap-generator": {
+        "title": "Generador de Sitemap",
+        "description": "Genera sitemaps XML para sitios web"
+      },
+      "robots-tester": {
+        "title": "Probador de Robots.txt",
+        "description": "Prueba y valida archivos robots.txt"
+      },
+      "mobile-friendly": {
+        "title": "Verificador de Compatibilidad Móvil",
+        "description": "Verifica si una página es compatible con móviles"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "Búsqueda de Dirección IP",
+        "description": "Busca geolocalización y detalles de direcciones IP"
+      },
+      "ping": {
+        "title": "Herramienta Ping",
+        "description": "Mide la latencia a una URL o dirección IP"
+      },
+      "whois": {
+        "title": "Búsqueda WHOIS",
+        "description": "Busca información de registro de dominios"
+      },
+      "dns-resolver": {
+        "title": "Resolutor DNS",
+        "description": "Resuelve nombres de dominio a direcciones IP"
+      },
+      "port-checker": {
+        "title": "Escáner de Puertos (Básico)",
+        "description": "Verifica si puertos específicos están abiertos (alcance limitado)"
+      },
+      "subnet-calculator": {
+        "title": "Calculadora de Subred",
+        "description": "Calcula rangos de subred, notación CIDR y matemática IP"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "Traductor de Texto",
+        "description": "Traduce texto entre idiomas"
+      },
+      "spell-checker": {
+        "title": "Corrector Ortográfico",
+        "description": "Verifica ortografía en múltiples idiomas"
+      },
+      "grammar-checker": {
+        "title": "Corrector Gramatical",
+        "description": "Verifica gramática y estilo de escritura"
+      },
+      "synonym-finder": {
+        "title": "Buscador de Sinónimos",
+        "description": "Encuentra sinónimos y palabras relacionadas"
+      },
+      "language-detector": {
+        "title": "Detector de Idioma",
+        "description": "Detecta el idioma del texto automáticamente"
+      },
+      "morse": {
+        "title": "Convertidor de Código Morse",
+        "description": "Convierte texto a/desde código Morse"
+      },
+      "braille": {
+        "title": "Convertidor de Braille",
+        "description": "Convierte texto a/desde notación Braille"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "Convertidor de Audio",
+        "description": "Convierte archivos de audio entre formatos"
+      },
+      "volume-normalizer": {
+        "title": "Normalizador de Volumen",
+        "description": "Normaliza los niveles de volumen de audio"
+      },
+      "bpm-detector": {
+        "title": "Detector de BPM",
+        "description": "Detecta pulsaciones por minuto en archivos de audio"
+      },
+      "audio-cutter": {
+        "title": "Cortador de Audio",
+        "description": "Corta y recorta archivos de audio"
+      },
+      "tts": {
+        "title": "Texto a Voz",
+        "description": "Convierte texto a audio hablado"
+      },
+      "sfx-generator": {
+        "title": "Generador de Efectos de Sonido",
+        "description": "Genera efectos de sonido y tonos simples"
       }
     }
   },
@@ -421,6 +920,12 @@
     "description": "Herramientas online gratuitas que respetan tu privacidad. Todo el procesamiento ocurre en tu navegador.",
     "quick_links": "Enlaces Rápidos",
     "legal": "Legal",
-    "follow_us": "Síguenos"
+    "follow_us": "Síguenos",
+    "stay_updated": "Manténte Actualizado",
+    "newsletter_description": "Recibe notificaciones cuando lancemos nuevas herramientas",
+    "email_placeholder": "Ingresa tu email",
+    "subscribe": "Suscribirse",
+    "made_with": "Hecho con",
+    "by_team": "por el equipo de Vibetool"
   }
 }

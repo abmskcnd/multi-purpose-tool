@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllTools, getAllConversionRoutes } from '@/config/tools.config';
 import { locales } from '@/i18n/request';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://toolhub.com';
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://vibetool.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = getAllTools();

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: ToolPageProps) {
   }
 
   return {
-    title: `${toolTitle} - ${groupTitle} | ToolHub`,
+    title: `${toolTitle} - ${groupTitle} | Vibetool`,
     description: toolDescription,
     keywords: tool.keywords,
   };

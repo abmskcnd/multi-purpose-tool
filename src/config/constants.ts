@@ -1,8 +1,8 @@
 // Application Constants
 
 export const APP_CONFIG = {
-  name: 'ToolHub',
-  url: process.env.NEXT_PUBLIC_APP_URL || 'https://toolhub.com',
+  name: 'Vibetool',
+  url: process.env.NEXT_PUBLIC_APP_URL || 'https://vibetool.com',
   description: 'Free online tools for image conversion, PDF manipulation, password generation, and more.',
 };
 

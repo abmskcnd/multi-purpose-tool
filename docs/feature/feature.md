@@ -1,563 +1,447 @@
+# Multi-Purpose Tool - Full Feature List
 
-# multi-tools-plan-full.md
-
-Multi Tools Website (Next.js) — Full Feature List + Priority Roadmap (ALL GROUPS INCLUDED)
-
-Goal: Public multi-tools (no login), fast & scalable via **client-side first**, shareable via URL, minimal server usage.
-Routing: `app/tools/[group]/[tool]/page.tsx`
-UI: Sidebar groups + Search + Recent + Favorites (local) + Share link.
+> **Source of Truth**: This document reflects `src/config/tools.registry.ts`  
+> **Total**: 22 groups, 144 tools  
+> **Last Updated**: December 2025
 
 ---
 
-## A) Global Principles (MVP Defaults)
+## Overview
 
-- **Client-side first**: Web Crypto, Canvas, WebAssembly, Web Workers → scale tốt, rẻ, nhanh.
-- **Server-side (API routes) only when needed**:
-  - PDF processing nặng / file lớn
-  - External API calls (YouTube oEmbed, currency, weather, crypto…)
-  - CORS proxy cho “API Tester” (optional)
-- **Public & multi-user**: không cần login; share config qua URL:
-  - nhẹ: query params (`?text=...`)
-  - nặng: hash state (compress) `#state=...` (không gửi server)
-- **Limits**: upload max **10MB/file** (MVP), debounce, abort controller.
-- **Caching & rate limit** (cho API routes): cache response + giới hạn theo IP.
-- **Legal/Ethical**: Không làm YouTube MP3/MP4 downloader. Chỉ metadata/thumbnail/embed/chapter tools hợp lệ.
+**Goal**: Public multi-tools (no login), fast & scalable via **client-side first**, shareable via URL, minimal server usage.
 
-Suggested core libs (UI & DX):
+**Routing**: `app/tools/[group]/[tool]/page.tsx`
 
-- UI: `tailwindcss`, `shadcn/ui`, `lucide-react`, `clsx`
-- Forms/validation: `react-hook-form`, `zod`
-- State share: `lz-string` (compress), `query-string`
-- Fetching (optional): `@tanstack/react-query`
-- Rate limit/cache (server): Upstash Redis / Vercel KV + simple IP limiter (tuỳ bạn chọn)
+**UI**: Sidebar groups + Search + Recent + Favorites (local) + Share link.
 
 ---
 
-## B) Priority Roadmap (tối ưu traffic + dễ ship)
+## Global Principles
 
-> Mỗi Group vẫn giữ **đầy đủ tools bạn liệt kê** + mình **gợi ý thêm** (không xoá thiếu).
-
-### P0 — Foundation (làm trước khi nhồi tool)
-
-- App shell: sidebar, search, tool card list, SEO
-- Shared components: file dropzone, editor panel, result panel, copy/download buttons
-- URL share helpers + “Reset”
-- Error boundary + toasts + analytics (basic)
+- **Client-side first**: Web Crypto, Canvas, WebAssembly, Web Workers
+- **Server-side only when needed**: Heavy processing, external APIs, CORS proxy
+- **Public & multi-user**: No login required; share config via URL
+- **Limits**: Upload max 10MB/file (MVP), debounce, abort controller
+- **Caching & rate limit**: For API routes
+- **Legal/Ethical**: No YouTube MP3/MP4 downloader
 
 ---
 
-## P1 — Highest Traffic + Client-only (MVP nên làm đầu)
+## Priority Tiers
 
-### 1) Password & Security Tools (Client-only)
-
-**Tools (đủ + thêm):**
-
-- Password Generator — rules + copy; **Web Crypto** `crypto.getRandomValues()`
-  - Libs: (optional) `generate-password`
-- Password Strength Checker — entropy/score + tips
-  - Libs: `zxcvbn`
-- Hash / Encode Toolkit — SHA-256/MD5/HMAC + Base64/URL encode/decode
-  - Libs: Web Crypto (SHA-256/HMAC), optional `crypto-js` (MD5)
-- JWT Decoder (Local-only) — decode header/payload + exp checker
-  - Libs: `jwt-decode`
-- UUID / NanoID Generator — batch generate
-  - Libs: `uuid`, `nanoid`
-- QR Code Generator — text/url/vCard → PNG/SVG download
-  - Libs: `qrcode`
-
-**Extra suggestions (nice):**
-
-- Passphrase Generator (word-based) — dễ nhớ, vẫn mạnh
-- Password Policy Checker (enterprise rules)
-
-**Next.js notes:** `use client`, không gửi dữ liệu lên server.
+| Tier | Groups | Description |
+|------|--------|-------------|
+| **P1** (1-10) | password, text, json, random, image, pdf, dev, data, datetime, youtube | Highest Traffic + Client-only |
+| **P2/P3** (11-22) | file-convert, math, unit, finance, health, seo, network, language, audio, video, weather, crypto | Good traffic, may need API/Server |
 
 ---
 
-### 2) Text Tools (Client-only)
+## P1 — Highest Priority Groups (1-10)
 
-**Tools:**
+### Group 1: Password & Security Tools 🔐
+**Priority**: 1 | **Implementation**: Client-side | **Tools**: 8
 
-- Text Diff / Compare — highlight add/remove/change
-  - Libs: `diff` (jsdiff)
-- Case Converter — camel/snake/kebab/Pascal + remove diacritics (VN)
-  - Libs: `unidecode` (or Unicode normalize)
-- Regex Tester + Highlighter — flags/groups + highlight matches
-  - Libs: native `RegExp`
-- Text Cleaner — trim, remove dup spaces, empty lines, sort/unique
-  - Libs: plain JS
-- Word Counter — words/chars/sentences + reading time
-  - Libs: plain JS
-- Markdown Preview + Export HTML — editor + preview
-  - Libs: `react-markdown` (preview), optional `marked` (export HTML)
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `generator` | Password Generator | Generate secure, random passwords with customizable rules |
+| 2 | `strength-checker` | Password Strength Checker | Check password strength with entropy scoring and tips |
+| 3 | `hash-encode` | Hash / Encode Toolkit | Generate SHA-256, MD5, HMAC hashes and Base64/URL encoding |
+| 4 | `jwt-decoder` | JWT Decoder (Local Only) | Decode JWT tokens locally - view header, payload and expiration |
+| 5 | `uuid-nanoid` | UUID / NanoID Generator | Generate UUIDs and NanoIDs in batch with various formats |
+| 6 | `qr-generator` | QR Code Generator | Create QR codes for text, URLs, vCards with PNG/SVG download |
+| 7 | `passphrase-generator` | Passphrase Generator | Generate memorable word-based passphrases that are still secure |
+| 8 | `password-policy-checker` | Password Policy Checker | Check passwords against enterprise security policy rules |
 
-**Extra suggestions:**
-
-- Slug Generator (SEO-friendly)
-- Remove Duplicate Paragraphs / Sort by length
-
-**Next.js notes:** editor MVP dùng textarea, nâng cấp sau bằng `@monaco-editor/react`.
+**Tech Stack**: `crypto.getRandomValues()`, `zxcvbn`, `crypto-js`, `jwt-decode`, `uuid`, `nanoid`, `qrcode`
 
 ---
 
-### 3) JSON / YAML / XML Tools (Client-first)
+### Group 2: Text Tools 📝
+**Priority**: 2 | **Implementation**: Client-side | **Tools**: 7
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `diff` | Text Diff / Compare | Compare two texts and highlight additions, removals, and changes |
+| 2 | `case-converter` | Case Converter | Convert text between camelCase, snake_case, kebab-case, PascalCase + remove diacritics |
+| 3 | `regex-tester` | Regex Tester + Highlighter | Test regular expressions with real-time highlighting and group matching |
+| 4 | `cleaner` | Text Cleaner | Trim, remove duplicate spaces, empty lines, sort and unique lines |
+| 5 | `word-counter` | Word Counter | Count words, characters, sentences with reading time estimation |
+| 6 | `markdown-preview` | Markdown Preview + Export HTML | Live markdown editor with preview and HTML export |
+| 7 | `slug-generator` | Slug Generator | Generate SEO-friendly URL slugs from any text |
 
-- JSON Formatter / Minify / Validator
-  - Libs: `JSON.parse/stringify`
-- JSON Diff / Compare (path-based)
-  - Libs: `deep-diff` hoặc `jsondiffpatch`
-- JSON Schema Generator
-  - Libs: `json-schema-generator` (hoặc lib tương đương)
-- JSON ↔ YAML / XML Converter
-  - Libs: `js-yaml`, `xml2js`
-- JSONPath / jq Playground
-  - Libs: `jsonpath-plus`
-- JSON to CSV Converter
-  - Libs: `papaparse`
-
-**Extra suggestions:**
-
-- “Sort JSON keys” (stable output)
-- “Flatten / Unflatten JSON” (dot-path)
-
-**Next.js notes:** JSON lớn → chạy diff/format trong Web Worker để không đơ UI.
+**Tech Stack**: `diff` (jsdiff), `unidecode`, Native RegExp, `react-markdown`, `marked`
 
 ---
 
-### 8) Random / Fun Tools (Client-only, share tốt)
+### Group 3: JSON / YAML / XML Tools { }
+**Priority**: 3 | **Implementation**: Client-side | **Tools**: 8
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `format-validate` | JSON Formatter / Minify / Validator | Format, minify and validate JSON with syntax highlighting |
+| 2 | `diff` | JSON Diff / Compare | Compare JSON documents with path-based diff highlighting |
+| 3 | `schema-generator` | JSON Schema Generator | Generate JSON Schema from JSON data automatically |
+| 4 | `convert` | JSON ↔ YAML / XML Converter | Convert between JSON, YAML, and XML formats |
+| 5 | `jsonpath` | JSONPath / jq Playground | Query JSON with JSONPath expressions interactively |
+| 6 | `json-to-csv` | JSON to CSV Converter | Convert JSON arrays to CSV format for spreadsheets |
+| 7 | `sort-keys` | Sort JSON Keys | Sort JSON keys alphabetically for stable output |
+| 8 | `flatten-unflatten` | Flatten / Unflatten JSON | Convert nested JSON to/from dot-path notation |
 
-- Wheel Spinner / Random Picker — list items + animation + history + share
-  - Libs: tự code canvas/SVG hoặc lib wheel
-- Random Team Generator — chia nhóm theo size/constraints
-  - Libs: plain JS (shuffle)
-- Dice / Lottery / Random Name — seed “công bằng”
-  - Libs: `chance` hoặc `seedrandom`
-- Countdown / Timer Shareable — share start time qua URL
-  - Libs: plain React timer
-- Random Number / Lorem Ipsum Generator
-  - Libs: `lorem-ipsum` (optional)
-
-**Extra suggestions:**
-
-- “Random decision tree” / “Yes-No picker”
-- “Bracket generator” (tournament)
+**Tech Stack**: Native JSON, `jsondiffpatch`, `json-schema-generator`, `js-yaml`, `xml2js`, `jsonpath-plus`, `papaparse`
 
 ---
 
-## P2 — High Value nhưng có thể cần Worker/Server nhẹ
+### Group 4: Random / Fun Tools 🎲
+**Priority**: 4 | **Implementation**: Client-side | **Tools**: 5
 
-### 5) Image Tools (Client-first)
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `wheel` | Wheel Spinner / Random Picker | Spin a wheel to pick random items with animation and history |
+| 2 | `team-generator` | Random Team Generator | Divide people into random teams with size constraints |
+| 3 | `dice-lottery` | Dice / Lottery / Random Name | Roll dice, generate lottery numbers, pick random names |
+| 4 | `countdown` | Countdown / Timer Shareable | Create shareable countdown timers via URL |
+| 5 | `random-lorem` | Random Number / Lorem Ipsum Generator | Generate random numbers or Lorem Ipsum placeholder text |
 
-**Tools:**
-
-- Image Compressor — quality/resize
-  - Libs: `browser-image-compression`
-- Convert Format — PNG↔JPG↔WebP + keep EXIF (tuỳ)
-  - Libs: Canvas; EXIF đọc bằng `exifr` (optional)
-- Crop / Resize / Rotate
-  - Libs: `react-easy-crop` (hoặc cropper lib)
-- Remove Background (Optional) — AI service (tốn phí)
-  - Libs: gọi API (remove.bg hoặc service khác), server proxy để giấu key
-- QR Code Generator + Scanner
-  - Libs: `qrcode` (gen), `jsqr` (scan)
-
-**Extra suggestions:**
-
-- EXIF remover (privacy) — xoá metadata trước khi tải xuống
-- Image watermark (text/logo) — Canvas
+**Tech Stack**: Canvas/SVG, `chance`, `seedrandom`, `lorem-ipsum`
 
 ---
 
-### 4) PDF Tools (Hybrid)
+### Group 5: Image Tools 🖼️
+**Priority**: 5 | **Implementation**: Client-first | **Tools**: 5
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `compress` | Image Compressor | Compress images while maintaining quality |
+| 2 | `convert` | Convert Format | Convert images between PNG, JPG, WebP formats |
+| 3 | `crop-resize-rotate` | Crop / Resize / Rotate | Crop, resize and rotate images with precision |
+| 4 | `remove-bg` | Remove Background (Optional) | Remove image backgrounds using AI service (hybrid) |
+| 5 | `qr-gen-scan` | QR Code Generator + Scanner | Generate and scan QR codes from images |
 
-- PDF Merge / Split
-- Extract / Rotate Pages
-- Add Page Numbers / Watermark
-- Compress (Basic)
-- PDF to Text / Images
-
-**Implementation hướng Next.js:**
-
-- MVP (10MB): client-side `pdf-lib` cho merge/split/rotate/watermark.
-  - Libs: `pdf-lib`, `pdfjs-dist` (extract text)
-- PDF → images bulk / file lớn: server route (API) + giới hạn + rate limit.
-  - Libs server: `pdfjs-dist` (render) hoặc pipeline phù hợp; cache + queue nếu cần
-
-**Extra suggestions:**
-
-- PDF metadata viewer (title/author/pages)
-- “Remove password” (chỉ khi user cung cấp password; cân nhắc kỹ UX)
+**Tech Stack**: `browser-image-compression`, Canvas, `exifr`, `react-easy-crop`, `jsqr`, remove.bg API
 
 ---
 
-### 6) Dev Utilities (Client-first; một số optional server)
+### Group 6: PDF Tools 📄
+**Priority**: 6 | **Implementation**: Client-first (Hybrid for large files) | **Tools**: 5
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `merge-split` | PDF Merge / Split | Merge multiple PDFs into one or split a PDF into parts |
+| 2 | `extract-rotate` | Extract / Rotate Pages | Extract specific pages or rotate PDF pages |
+| 3 | `watermark` | Add Page Numbers / Watermark | Add page numbers or watermarks to PDF documents |
+| 4 | `compress` | Compress (Basic) | Reduce PDF file size with basic compression |
+| 5 | `pdf-to-text-images` | PDF to Text / Images | Extract text or images from PDF documents |
 
-- Online Code Editor / Formatter — JS/TS/HTML/CSS/JSON + Prettier
-  - Libs: `@monaco-editor/react`, `prettier/standalone`
-- Lint / Type Check Playground (Light)
-  - Libs: (nếu làm) sandbox; lưu ý nặng, có thể postpone
-- Cron Expression Builder
-  - Libs: `cronstrue`
-- Timestamp Converter
-  - Libs: `date-fns` (nhẹ) hoặc `luxon` (timezone mạnh)
-- cURL → Fetch / Axios Converter
-  - Libs: `curlconverter`
-- Git Ignore Generator
-  - Libs: template local JSON (khuyến nghị) hoặc fetch (cache)
-- API Tester
-  - Libs: Fetch API (client). Nếu CORS, thêm **server proxy** (rate limit).
-
-**Extra suggestions:**
-
-- “OpenAPI → TypeScript types” (nâng cao)
-- “JSON → TypeScript interface” (dev rất hay dùng)
+**Tech Stack**: `pdf-lib`, `pdfjs-dist`, Canvas
 
 ---
 
-### 7) Encode/Decode & Data Utilities (Client-only)
+### Group 7: Dev Utilities 💻
+**Priority**: 7 | **Implementation**: Client-first | **Tools**: 9
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `code-editor-formatter` | Online Code Editor / Formatter | Edit and format code with syntax highlighting (JS/TS/HTML/CSS/JSON) |
+| 2 | `lint-typecheck-light` | Lint / Type Check Playground (Light) | Light linting and type checking in browser sandbox |
+| 3 | `cron-builder` | Cron Expression Builder | Build and explain cron expressions visually |
+| 4 | `timestamp-converter` | Timestamp Converter | Convert between Unix timestamps and readable dates |
+| 5 | `curl-converter` | cURL → Fetch / Axios Converter | Convert cURL commands to JavaScript fetch or Axios code |
+| 6 | `gitignore-generator` | Git Ignore Generator | Generate .gitignore files for various project types |
+| 7 | `api-tester` | API Tester | Test REST APIs directly from browser (with CORS proxy option) |
+| 8 | `json-to-ts` | JSON to TypeScript | Generate TypeScript interfaces from JSON data |
+| 9 | `openapi-to-types` | OpenAPI to Types | Generate TypeScript types from OpenAPI specifications |
 
-- Base64 Encode/Decode
-  - Libs: `TextEncoder/TextDecoder` (tránh lỗi Unicode), fallback `atob/btoa`
-- URL Parser
-  - Libs: native `URL`
-- CSV ↔ JSON Converter
-  - Libs: `papaparse`
-- Number Base Converter
-  - Libs: plain JS
-- Color Tools (HEX↔RGB↔HSL, palette)
-  - Libs: `chroma-js`
-- File Hash Checker (SHA-256)
-  - Libs: Web Crypto API
-
-**Extra suggestions:**
-
-- “URLEncode bulk lines”
-- “Checksum verify” (compare hash)
+**Tech Stack**: `@monaco-editor/react`, `prettier/standalone`, `cronstrue`, `date-fns`, `curlconverter`
 
 ---
 
-## P3 — Good traffic, nhưng “nice-to-have” / phụ thuộc dữ liệu/API
+### Group 8: Encode/Decode & Data Utilities 🔤
+**Priority**: 8 | **Implementation**: Client-side | **Tools**: 6
 
-### 9) YouTube Tools (Hợp lệ)
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `base64` | Base64 Encode/Decode | Encode or decode Base64 strings with Unicode support |
+| 2 | `url-parser` | URL Parser | Parse and analyze URL components |
+| 3 | `csv-json` | CSV ↔ JSON Converter | Convert between CSV and JSON formats |
+| 4 | `number-base` | Number Base Converter | Convert numbers between binary, octal, decimal, hexadecimal |
+| 5 | `color-tools` | Color Tools | Convert colors between HEX, RGB, HSL and generate palettes |
+| 6 | `file-hash` | File Hash Checker | Calculate SHA-256 hash of files for verification |
 
-**Tools:**
-
-- YouTube Link Parser — extract videoId/playlistId + canonical URL
-  - Libs: regex + URL parser
-- Metadata Viewer — title/channel/date/thumbnail (oEmbed)
-  - Implementation: API route fetch oEmbed + cache + rate limit
-- Thumbnail Downloader — generate thumbnail URLs by videoId
-  - Libs: string templates
-- Timestamp / Chapters Builder — format chuẩn cho description
-  - Libs: plain JS
-- Embed Player Generator — iframe code + options
-  - Libs: plain JS
-- Transcript Helper — **chỉ nếu có nguồn hợp lệ**
-  - Note: nếu không chắc nguồn, để “Optional / Later”
-
-**Extra suggestions:**
-
-- “Playlist cleaner” (dedupe URLs)
-- “Shorts ↔ watch URL converter”
+**Tech Stack**: `TextEncoder/TextDecoder`, Native URL API, `papaparse`, `chroma-js`, Web Crypto API
 
 ---
 
-### 10) File Convert Tools (Hybrid)
+### Group 9: Date, Time & Calendar Tools 📅
+**Priority**: 9 | **Implementation**: Client-side | **Tools**: 6
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `date-diff` | Date Difference Calculator | Calculate the difference between two dates |
+| 2 | `timezone-converter` | Timezone Converter | Convert times between different timezones (DST aware) |
+| 3 | `age-calculator` | Age Calculator | Calculate exact age from birth date |
+| 4 | `ics-planner` | Calendar Event Planner / ICS Export | Create calendar events and export as ICS files |
+| 5 | `lunar-converter` | Lunar Calendar Converter | Convert between lunar and solar calendar dates |
+| 6 | `weekday-finder` | Weekday Finder | Find what day of the week any date falls on |
 
-- Markdown → PDF / DOCX
-  - Libs: server-side `docx` (DOCX), PDF export tuỳ pipeline
-- Image → PDF
-  - Libs: `pdf-lib` (server hoặc client)
-- PDF → Text (non-OCR)
-  - Libs: `pdfjs-dist` (client)
-- Office-Lite Export (Text/JSON → DOCX/PPTX đơn giản)
-  - Libs: `docx` (DOCX), PPTX tuỳ chọn (nâng cao)
-- Unit Converter (Bonus)
-  - Libs: plain JS; currency nếu có thì API + cache
-
-**Extra suggestions:**
-
-- HTML → PDF (server) (rất hay dùng)
+**Tech Stack**: `date-fns`, `luxon`, `ics`, `rrule`, lunar lib
 
 ---
 
-### 11) Math & Calculator Tools (Client-only)
+### Group 10: YouTube Tools (Legal) ▶️
+**Priority**: 10 | **Implementation**: Hybrid | **Tools**: 6
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `link-parser` | YouTube Link Parser | Extract video ID, playlist ID and canonical URLs from YouTube links |
+| 2 | `metadata` | Metadata Viewer (oEmbed) | View YouTube video title, channel, date, and thumbnails |
+| 3 | `thumbnails` | Thumbnail Downloader | Download YouTube video thumbnails in various resolutions |
+| 4 | `chapters` | Timestamp / Chapters Builder | Build formatted timestamp chapters for video descriptions |
+| 5 | `embed-generator` | Embed Player Generator | Generate YouTube embed iframe code with customization options |
+| 6 | `transcript-helper` | Transcript Helper (Optional) | Help format and work with YouTube transcripts |
 
-- Basic Calculator
-  - Libs: `mathjs` (eval an toàn hơn tự eval)
-- Scientific Calculator
-  - Libs: `mathjs`
-- Equation Solver
-  - Libs: `nerdamer` hoặc `mathjs` (tuỳ mức)
-- Graph Plotter
-  - Libs: `function-plot`
-- Matrix Calculator
-  - Libs: `mathjs`
-- Prime Checker/Generator
-  - Libs: plain JS (sieve)
-- Fraction Simplifier
-  - Libs: `fraction.js`
-
-**Extra suggestions:**
-
-- Percentage calculator (sale/discount)
-- Statistics quick calc (mean/median)
+**Tech Stack**: Regex, oEmbed API + cache, string templates
 
 ---
 
-### 12) Unit & Measurement Converters (Client-only)
+## P2/P3 — Lower Priority Groups (11-22)
 
-**Tools:**
+### Group 11: File Convert Tools 📁
+**Priority**: 11 | **Implementation**: Hybrid | **Tools**: 5
 
-- Length, Weight, Volume, Temperature, Area, Speed, Energy converters
-  - Libs: plain JS ratios (data static)
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `md-to-pdf-docx` | Markdown → PDF / DOCX | Convert Markdown documents to PDF or DOCX format |
+| 2 | `image-to-pdf` | Image → PDF | Convert images to PDF documents |
+| 3 | `pdf-to-text` | PDF → Text | Extract text from PDF documents (non-OCR) |
+| 4 | `office-lite-export` | Office-Lite Export | Export simple text/JSON to DOCX/PPTX formats |
+| 5 | `unit-converter` | Unit Converter (Bonus) | Convert between various units with currency support |
 
-**Extra suggestions:**
-
-- Cooking converter (cups↔ml) preset
-- “Batch convert table” mode
-
----
-
-### 15) Date, Time & Calendar Tools (Client-only)
-
-**Tools:**
-
-- Date Difference Calculator
-  - Libs: `date-fns`
-- Timezone Converter (DST aware)
-  - Libs: `luxon`
-- Age Calculator
-  - Libs: `date-fns`
-- Calendar Event Planner → export ICS
-  - Libs: `ics`, optional `rrule`
-- Lunar Calendar Converter (VN/Asia)
-  - Libs: lunar lib (tuỳ bạn chọn)
-- Weekday Finder
-  - Libs: native Date
-
-**Extra suggestions:**
-
-- “Business days calculator” (exclude weekends/holidays)
+**Tech Stack**: `docx`, `pdf-lib`, `pdfjs-dist`
 
 ---
 
-## P4 — API-heavy / quota / risk abuse (làm sau, cần guardrails)
+### Group 12: Math & Calculator Tools 🔢
+**Priority**: 12 | **Implementation**: Client-side | **Tools**: 7
 
-### 13) Finance & Budget Tools (Hybrid)
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `basic-calculator` | Basic Calculator | Simple calculator for basic arithmetic operations |
+| 2 | `scientific-calculator` | Scientific Calculator | Advanced calculator with scientific functions |
+| 3 | `equation-solver` | Equation Solver | Solve algebraic equations step by step |
+| 4 | `graph-plotter` | Graph Plotter | Plot mathematical functions and equations |
+| 5 | `matrix-calculator` | Matrix Calculator | Perform matrix operations like multiplication and inverse |
+| 6 | `prime-tools` | Prime Number Checker/Generator | Check if numbers are prime or generate prime sequences |
+| 7 | `fraction-simplifier` | Fraction Simplifier | Simplify fractions to their lowest terms |
 
-**Tools:**
-
-- Currency Converter (real-time) — API + cache
-- Loan/EMI Calculator — client formula
-- Budget Planner — charts + localStorage
-  - Libs: `chart.js` hoặc chart lib khác
-- Investment Calculator — client formula
-- Tax Estimator — **disclaimer** (không tư vấn pháp lý)
-- Tip Calculator — client
-- Savings Goal Tracker — client
-
-**Extra suggestions:**
-
-- Inflation calculator (static)
-- Expense split calculator
+**Tech Stack**: `mathjs`, `nerdamer`, `function-plot`, `fraction.js`
 
 ---
 
-### 14) Health & Fitness Calculators (Client-only + disclaimers)
+### Group 13: Unit & Measurement Converters 📏
+**Priority**: 13 | **Implementation**: Client-side | **Tools**: 7
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `length` | Length Converter | Convert between meters, feet, inches, kilometers, miles |
+| 2 | `weight` | Weight Converter | Convert between kilograms, pounds, ounces, grams |
+| 3 | `volume` | Volume Converter | Convert between liters, gallons, cups, milliliters |
+| 4 | `temperature` | Temperature Converter | Convert between Celsius, Fahrenheit, Kelvin |
+| 5 | `area` | Area Converter | Convert between square meters, acres, hectares, square feet |
+| 6 | `speed` | Speed Converter | Convert between km/h, mph, m/s, knots |
+| 7 | `energy` | Energy Converter | Convert between joules, calories, BTU, kilowatt-hours |
 
-- BMI Calculator
-- Calorie Burn Estimator (MET tables)
-- Body Fat Percentage (Navy method)
-- Water Intake Calculator
-- Sleep Cycle Calculator
-- Heart Rate Zone
-- Pregnancy Due Date (disclaimer)
-
-**Extra suggestions:**
-
-- Macro calculator (protein/carb/fat) (disclaimer)
-
----
-
-### 16) SEO & Website Analysis Tools (Hybrid)
-
-**Tools:**
-
-- Keyword Density Analyzer (text/URL)
-- Meta Tag Generator
-- Site Speed Tester (thường cần 3rd-party)
-- Broken Link Checker (crawl) — server + rate limit (dễ bị abuse)
-- Sitemap Generator
-- Robots.txt Tester
-- Mobile-Friendly Checker (thường cần external service)
-
-**Extra suggestions:**
-
-- UTM builder (traffic tool dễ viral)
-- Open Graph preview generator
+**Tech Stack**: Plain JS (static ratios)
 
 ---
 
-### 17) Network & IP Tools (Server + VERY strict rate limit)
+### Group 14: Finance & Budget Tools 💰
+**Priority**: 14 | **Implementation**: Hybrid (API for currency) | **Tools**: 7
 
-**Tools (giữ đủ như bạn viết, nhưng triển khai phải an toàn):**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `currency` | Currency Converter | Convert between currencies with real-time rates |
+| 2 | `loan-emi` | Loan/EMI Calculator | Calculate loan EMI, interest, and amortization |
+| 3 | `budget-planner` | Budget Planner | Plan and visualize your budget with charts |
+| 4 | `investment` | Investment Calculator | Calculate compound interest and investment returns |
+| 5 | `tax-estimator` | Tax Estimator ⚠️ | Estimate taxes (for reference only, not tax advice) |
+| 6 | `tip-calculator` | Tip Calculator | Calculate tips and split bills among groups |
+| 7 | `savings-goal` | Savings Goal Tracker | Track progress toward savings goals |
 
-- IP Address Lookup — external API + cache
-- Ping Tool — **khuyến nghị không làm “real ping”**; chỉ đo latency bằng fetch/head tới URL do user nhập, rate limit
-- WHOIS Lookup — WHOIS API (thường paid), cache
-- DNS Resolver — server-side DNS query (rate limit)
-- Port Scanner (Basic) — **rủi ro abuse cao**
-  - Recommendation: chỉ làm “Port availability checker” cho **own domain** hoặc allowlist + hard rate limit; hoặc bỏ khỏi public MVP
-- Subnet Calculator — client IP math
-
-**Extra suggestions:**
-
-- CIDR expand/collapse tool (client)
-- User-agent / headers viewer (server)
+**Tech Stack**: Currency API + cache, `chart.js`, client formulas
 
 ---
 
-### 18) Language & Translation Tools (Hybrid)
+### Group 15: Health & Fitness Calculators 💪
+**Priority**: 15 | **Implementation**: Client-side (with disclaimers) | **Tools**: 7
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `bmi` | BMI Calculator ⚠️ | Calculate Body Mass Index from height and weight |
+| 2 | `calories-burn` | Calorie Burn Estimator ⚠️ | Estimate calories burned based on activity and duration |
+| 3 | `body-fat` | Body Fat Percentage ⚠️ | Estimate body fat percentage using Navy method |
+| 4 | `water-intake` | Water Intake Calculator | Calculate recommended daily water intake |
+| 5 | `sleep-cycle` | Sleep Cycle Calculator | Calculate optimal sleep and wake times based on sleep cycles |
+| 6 | `heart-rate-zone` | Heart Rate Zone | Calculate target heart rate zones for exercise |
+| 7 | `pregnancy-due-date` | Pregnancy Due Date ⚠️ | Estimate pregnancy due date from last period |
 
-- Text Translator — LibreTranslate/API
-- Spell Checker — Hunspell/API
-- Grammar Checker — LanguageTool API
-- Synonym Finder — API
-- Language Detector — `franc`
-- Morse Code Converter — mapping
-- Braille Converter — mapping/lib
-
-**Extra suggestions:**
-
-- Vietnamese tone/diacritics fixer (client)
-- “Rewrite tone” (nếu sau này add AI)
+**Tech Stack**: Client formulas, MET tables
 
 ---
 
-### 19) Audio Tools (Heavy)
+### Group 16: SEO & Website Analysis Tools 🔍
+**Priority**: 16 | **Implementation**: Hybrid | **Tools**: 7
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `keyword-density` | Keyword Density Analyzer | Analyze keyword density in text or from URL |
+| 2 | `meta-tag-generator` | Meta Tag Generator | Generate SEO-optimized meta tags for your pages |
+| 3 | `site-speed` | Site Speed Tester | Test website loading speed and performance |
+| 4 | `broken-link-checker` | Broken Link Checker | Check for broken links on a webpage |
+| 5 | `sitemap-generator` | Sitemap Generator | Generate XML sitemaps for websites |
+| 6 | `robots-tester` | Robots.txt Tester | Test and validate robots.txt files |
+| 7 | `mobile-friendly` | Mobile-Friendly Checker | Check if a webpage is mobile-friendly |
 
-- Audio Converter — `ffmpeg.wasm` (client) (nặng, load chậm)
-- Volume Normalizer — Web Audio API
-- BPM Detector — `music-metadata` (metadata) / advanced detection (hard)
-- Audio Cutter — `wavesurfer.js`
-- Text to Speech — Web Speech API (browser)
-- Sound Effect Generator — `tone`
-
-**Extra suggestions:**
-
-- Audio trim (basic) (client) — easier than full convert
-
----
-
-### 20) Video Tools (Very heavy)
-
-**Tools:**
-
-- Video Compressor — server ffmpeg (tốn tài nguyên)
-- Format Converter — ffmpeg
-- Frame Extractor — video + canvas (client)
-- Subtitle Generator — speech-to-text API (quota)
-- Video Merger — ffmpeg server
-- GIF Maker — `gif.js`
-- Resolution Changer — ffmpeg
-
-**Extra suggestions:**
-
-- “Video metadata viewer” (duration/codec) (light)
+**Tech Stack**: Text analysis, 3rd-party services, crawler (rate limited)
 
 ---
 
-### 21) Weather & Environment Tools (Hybrid)
+### Group 17: Network & IP Tools 🌐
+**Priority**: 17 | **Implementation**: Server + STRICT rate limit | **Tools**: 6
 
-**Tools:**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `ip-lookup` | IP Address Lookup | Look up IP address geolocation and details |
+| 2 | `ping` | Ping Tool | Measure latency to a URL or IP address |
+| 3 | `whois` | WHOIS Lookup | Look up domain registration information |
+| 4 | `dns-resolver` | DNS Resolver | Resolve domain names to IP addresses |
+| 5 | `port-checker` | Port Scanner (Basic) ⚠️ | Check if specific ports are open (limited scope) |
+| 6 | `subnet-calculator` | Subnet Calculator | Calculate subnet ranges, CIDR notation, and IP math |
 
-- Weather Forecast — weather API + cache
-- Air Quality Index — AQI API + cache
-- Sunrise/Sunset Calculator — `suncalc`
-- UV Index Checker — usually from weather API
-- Carbon Footprint Estimator — client formulas + dataset
-- Tide Predictor — tide API (nếu có)
-
-**Extra suggestions:**
-
-- “Typhoon tracker” (API) (optional)
-
----
-
-### 22) Cryptocurrency Tools (Hybrid)
-
-**Tools:**
-
-- Crypto Price Tracker — CoinGecko API + cache
-- Portfolio Calculator — local + API prices
-- Mining Profitability — client formulas
-- Wallet Address Validator — crypto libs (client)
-- Transaction Fee Estimator — API (gas/fees)
-- Crypto Converter — API
-- Market Cap Ranker — API
-
-**Extra suggestions:**
-
-- DCA calculator (client)
-- Alert price (không login thì local only)
+**Tech Stack**: External APIs, DNS queries, IP math (client)
 
 ---
 
-## C) Suggested Build Order (Concrete)
+### Group 18: Language & Translation Tools 🌍
+**Priority**: 18 | **Implementation**: Hybrid | **Tools**: 7
 
-**Sprint 1 (Ship MVP shell + 8–12 tools):**
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `translator` | Text Translator | Translate text between languages |
+| 2 | `spell-checker` | Spell Checker | Check spelling in multiple languages |
+| 3 | `grammar-checker` | Grammar Checker | Check grammar and writing style |
+| 4 | `synonym-finder` | Synonym Finder | Find synonyms and related words |
+| 5 | `language-detector` | Language Detector | Detect the language of text automatically |
+| 6 | `morse` | Morse Code Converter | Convert text to/from Morse code |
+| 7 | `braille` | Braille Converter | Convert text to/from Braille notation |
 
-- P0 foundation
-- Group 1 (Password) + Group 2 (Text) + Group 3 (JSON) core tools
-
-**Sprint 2 (Grow traffic + share virality):**
-
-- Group 8 (Random) + Group 7 (Data utilities) + Group 5 (Image basic)
-
-**Sprint 3 (PDF “wow factor”):**
-
-- Group 4 (PDF) nhẹ: merge/split/rotate/watermark/text extract
-
-**Sprint 4+ (API-based groups, add caching/rate limit first):**
-
-- Group 9 (YouTube hợp lệ), Group 15 (Date/Time), rồi các nhóm API-heavy
+**Tech Stack**: LibreTranslate/API, Hunspell, LanguageTool API, `franc`
 
 ---
 
-## D) Notes on Shareable URL State (recommended)
+### Group 19: Audio Tools 🎵
+**Priority**: 19 | **Implementation**: Client-side (Heavy) | **Tools**: 6
 
-- Small state → query params (readable)
-- Big state → compress JSON with `lz-string` → store in `#hash`
-- Always include “Copy share link” button
-- For privacy: do not store user data server-side by default
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `audio-converter` | Audio Converter | Convert audio files between formats |
+| 2 | `volume-normalizer` | Volume Normalizer | Normalize audio volume levels |
+| 3 | `bpm-detector` | BPM Detector | Detect beats per minute in audio files |
+| 4 | `audio-cutter` | Audio Cutter | Cut and trim audio files |
+| 5 | `tts` | Text to Speech | Convert text to spoken audio |
+| 6 | `sfx-generator` | Sound Effect Generator | Generate simple sound effects and tones |
+
+**Tech Stack**: `ffmpeg.wasm`, Web Audio API, `music-metadata`, `wavesurfer.js`, Web Speech API, `tone`
 
 ---
 
-## E) MVP Guardrails
+### Group 20: Video Tools 🎬
+**Priority**: 20 | **Implementation**: Server-side (Heavy) | **Tools**: 7
 
-- File size max: 10MB (MVP), show warning for large files
-- Rate limit API routes (YouTube/currency/weather/crypto/network)
-- Avoid high-abuse tools in public MVP (notably “Port Scanner”), or restrict/allowlist
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `video-compressor` | Video Compressor | Compress video files to reduce size |
+| 2 | `format-converter` | Format Converter | Convert videos between different formats |
+| 3 | `frame-extractor` | Frame Extractor | Extract frames/screenshots from videos |
+| 4 | `subtitle-generator` | Subtitle Generator | Generate subtitles using speech-to-text |
+| 5 | `video-merger` | Video Merger | Merge multiple video files into one |
+| 6 | `gif-maker` | GIF Maker | Create GIFs from video clips |
+| 7 | `resolution-changer` | Resolution Changer | Change video resolution and aspect ratio |
 
-Done.
+**Tech Stack**: Server ffmpeg, Canvas, Speech-to-text API, `gif.js`
+
+---
+
+### Group 21: Weather & Environment Tools 🌤️
+**Priority**: 21 | **Implementation**: Hybrid | **Tools**: 6
+
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `forecast` | Weather Forecast | Get weather forecasts for any location |
+| 2 | `aqi` | Air Quality Index | Check air quality index for locations |
+| 3 | `sunrise-sunset` | Sunrise/Sunset Calculator | Calculate sunrise and sunset times for any date and location |
+| 4 | `uv-index` | UV Index Checker | Check UV index and sun protection recommendations |
+| 5 | `carbon-footprint` | Carbon Footprint Estimator | Estimate carbon footprint from activities |
+| 6 | `tide` | Tide Predictor | Check tide times and heights for coastal locations |
+
+**Tech Stack**: Weather API + cache, `suncalc`, AQI API, client formulas
+
+---
+
+### Group 22: Cryptocurrency Tools ₿
+**Priority**: 22 | **Implementation**: Hybrid | **Tools**: 7
+
+| # | Tool ID | Title | Description |
+|---|---------|-------|-------------|
+| 1 | `price-tracker` | Crypto Price Tracker | Track real-time cryptocurrency prices |
+| 2 | `portfolio` | Portfolio Calculator | Calculate cryptocurrency portfolio value |
+| 3 | `mining-profit` | Mining Profitability | Calculate cryptocurrency mining profitability |
+| 4 | `wallet-validator` | Wallet Address Validator | Validate cryptocurrency wallet addresses |
+| 5 | `fee-estimator` | Transaction Fee Estimator | Estimate transaction fees for different networks |
+| 6 | `crypto-converter` | Crypto Converter | Convert between cryptocurrencies |
+| 7 | `market-cap-ranker` | Market Cap Ranker | View cryptocurrencies ranked by market cap |
+
+**Tech Stack**: CoinGecko API + cache, crypto libs (client), formulas
+
+---
+
+## Summary
+
+| Metric | Count |
+|--------|-------|
+| **Total Groups** | 22 |
+| **Total Tools** | 144 |
+| **P1 Groups** | 10 (65 tools) |
+| **P2/P3 Groups** | 12 (79 tools) |
+| **Client-side Only** | ~100 tools |
+| **Hybrid/Server** | ~44 tools |
+
+---
+
+## Implementation Notes
+
+### Suggested Libraries
+
+| Category | Library |
+|----------|---------|
+| UI | `tailwindcss`, `shadcn/ui`, `lucide-react`, `clsx` |
+| Forms | `react-hook-form`, `zod` |
+| State Share | `lz-string` (compress), `query-string` |
+| Fetching | `@tanstack/react-query` |
+| Rate Limit | Upstash Redis / Vercel KV |
+
+### File Structure
+
+```
+src/features/tools/[group]/[tool]/
+├── index.ts                    # Re-export default
+├── [ToolName].tsx              # Main component
+├── hooks/                      # Tool-specific hooks
+└── utils/                      # Pure utility functions
+```
+
+### Status Workflow
+
+1. Tool defined in `tools.registry.ts` with `status: 'coming-soon'`
+2. Component created in `src/features/tools/[group]/[tool]/`
+3. Component registered in `src/config/tool-components.tsx`
+4. Status updated to `'active'` in registry

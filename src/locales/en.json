@@ -1,6 +1,6 @@
 {
   "common": {
-    "site_name": "ToolHub",
+    "site_name": "Vibetool",
     "home": "Home",
     "tools": "Tools",
     "about": "About",
@@ -21,6 +21,9 @@
     "client_side": "100% Client-side (Browser)",
     "server_side": "Server-side processing",
     "hybrid": "Client + Server hybrid",
+    "client_side_short": "Client",
+    "server_side_short": "Server",
+    "hybrid_short": "Hybrid",
     "tools_count": "{count} tools",
     "results_found": "{count} results",
     "no_results": "No tools found",
@@ -47,17 +50,70 @@
     "result": "result",
     "results": "results",
     "no_tools_found": "No tools found for",
-    "more": "more"
+    "more": "more",
+    "categories": "Categories",
+    "filters": "Filters",
+    "sort_by": "Sort by",
+    "all_categories": "All Categories",
+    "all_status": "All Status",
+    "all_types": "All Types",
+    "category": "Category",
+    "loading": "Loading",
+    "status": "Status",
+    "type": "Type",
+    "clear_all": "Clear all",
+    "clear_filters": "Clear filters",
+    "try_different_search": "Try adjusting your search or filters",
+    "for": "for",
+    "free": "Free",
+    "navigation": "Navigation",
+    "close_menu": "Close menu",
+    "open_menu": "Open menu",
+    "get_started": "Get Started",
+    "expand_sidebar": "Expand sidebar",
+    "collapse_sidebar": "Collapse sidebar"
   },
   "home": {
     "title": "Free Online Tools - No Registration Required",
     "description": "100+ free online tools for image conversion, PDF manipulation, password generation, and more. 100% client-side processing - your files never leave your device.",
-    "hero_title": "Powerful Tools, Zero Friction",
-    "hero_subtitle": "Free online utilities that work entirely in your browser. No registration, no uploads to servers.",
+    "hero_title": "Supercharge your workflow with VibeTool",
+    "hero_subtitle": "Discover the best tools curated for modern creators and developers. Find your next productivity booster today.",
     "search_placeholder": "Search tools...",
     "popular_tools": "Popular Tools",
+    "popular_subtitle": "Most used tools by our community",
     "all_tools": "All Tools",
-    "view_all": "View All"
+    "view_all": "View All",
+    "new_tools_badge": "New tools added weekly",
+    "get_started": "Get Started",
+    "browse_all": "Browse All",
+    "quick_picks": "Quick Picks",
+    "editors_choice": "Editor's Choice",
+    "editors_choice_subtitle": "Hand-picked tools for this week",
+    "view_details": "View Details",
+    "most_popular": "Most Popular",
+    "newest": "Newest",
+    "a_to_z": "A to Z",
+    "show_more_tools": "Show More Tools",
+    "free": "Free",
+    "featured": "Featured",
+    "categories_subtitle": "Find the perfect tool for your needs",
+    "coming_soon_title": "Coming Soon",
+    "coming_soon_subtitle": "Exciting new tools we're working on",
+    "cta_title": "Ready to boost your productivity?",
+    "cta_subtitle": "Explore our collection of 100+ free tools designed to make your work easier",
+    "explore_all_tools": "Explore All Tools"
+  },
+  "footer": {
+    "description": "A comprehensive collection of free online tools for developers, designers, and creators. 100% client-side processing for maximum privacy.",
+    "quick_links": "Quick Links",
+    "legal": "Legal",
+    "follow_us": "Follow Us",
+    "stay_updated": "Stay Updated",
+    "newsletter_description": "Get notified when we launch new tools",
+    "email_placeholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "made_with": "Made with",
+    "by_team": "by the Vibetool Team"
   },
   "toolGroups": {
     "password": {
@@ -342,6 +398,431 @@
       "api-tester": {
         "title": "API Tester",
         "description": "Test REST APIs directly from browser (with CORS proxy option)"
+      },
+      "json-to-ts": {
+        "title": "JSON to TypeScript",
+        "description": "Generate TypeScript interfaces from JSON data"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPI to Types",
+        "description": "Generate TypeScript types from OpenAPI specifications"
+      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "Weather Forecast",
+        "description": "Get weather forecasts for any location"
+      },
+      "aqi": {
+        "title": "Air Quality Index",
+        "description": "Check air quality index for locations"
+      },
+      "sunrise-sunset": {
+        "title": "Sunrise/Sunset Calculator",
+        "description": "Calculate sunrise and sunset times for any date and location"
+      },
+      "uv-index": {
+        "title": "UV Index Checker",
+        "description": "Check UV index and sun protection recommendations"
+      },
+      "carbon-footprint": {
+        "title": "Carbon Footprint Estimator",
+        "description": "Estimate carbon footprint from activities"
+      },
+      "tide": {
+        "title": "Tide Predictor",
+        "description": "Check tide times and heights for coastal locations"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "Crypto Price Tracker",
+        "description": "Track real-time cryptocurrency prices"
+      },
+      "portfolio": {
+        "title": "Portfolio Calculator",
+        "description": "Calculate cryptocurrency portfolio value"
+      },
+      "mining-profit": {
+        "title": "Mining Profitability",
+        "description": "Calculate cryptocurrency mining profitability"
+      },
+      "wallet-validator": {
+        "title": "Wallet Address Validator",
+        "description": "Validate cryptocurrency wallet addresses"
+      },
+      "fee-estimator": {
+        "title": "Fee Estimator",
+        "description": "Estimate cryptocurrency transaction fees"
+      },
+      "crypto-converter": {
+        "title": "Crypto Converter",
+        "description": "Convert between cryptocurrencies"
+      },
+      "market-cap-ranker": {
+        "title": "Market Cap Ranker",
+        "description": "View cryptocurrencies ranked by market cap"
+      }    },
+    "finance": {
+      "currency": {
+        "title": "Currency Converter",
+        "description": "Convert between currencies with real-time rates"
+      },
+      "loan-emi": {
+        "title": "Loan/EMI Calculator",
+        "description": "Calculate loan EMI, interest, and amortization"
+      },
+      "budget-planner": {
+        "title": "Budget Planner",
+        "description": "Plan and visualize your budget with charts"
+      },
+      "investment": {
+        "title": "Investment Calculator",
+        "description": "Calculate compound interest and investment returns"
+      },
+      "tax-estimator": {
+        "title": "Tax Estimator",
+        "description": "Estimate taxes (for reference only, not tax advice)"
+      },
+      "tip-calculator": {
+        "title": "Tip Calculator",
+        "description": "Calculate tips and split bills among groups"
+      },
+      "savings-goal": {
+        "title": "Savings Goal Tracker",
+        "description": "Track progress toward savings goals"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "Video Compressor",
+        "description": "Compress video files to reduce size"
+      },
+      "format-converter": {
+        "title": "Format Converter",
+        "description": "Convert videos between different formats"
+      },
+      "frame-extractor": {
+        "title": "Frame Extractor",
+        "description": "Extract frames/screenshots from videos"
+      },
+      "subtitle-generator": {
+        "title": "Subtitle Generator",
+        "description": "Generate subtitles using speech-to-text"
+      },
+      "video-merger": {
+        "title": "Video Merger",
+        "description": "Merge multiple video files into one"
+      },
+      "gif-maker": {
+        "title": "GIF Maker",
+        "description": "Create GIFs from video clips"
+      },
+      "resolution-changer": {
+        "title": "Resolution Changer",
+        "description": "Change video resolution and aspect ratio"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Base64 Encode/Decode",
+        "description": "Encode or decode Base64 strings with Unicode support"
+      },
+      "url-parser": {
+        "title": "URL Parser",
+        "description": "Parse and analyze URL components"
+      },
+      "csv-json": {
+        "title": "CSV ↔ JSON Converter",
+        "description": "Convert between CSV and JSON formats"
+      },
+      "number-base": {
+        "title": "Number Base Converter",
+        "description": "Convert numbers between binary, octal, decimal, hexadecimal"
+      },
+      "color-tools": {
+        "title": "Color Tools",
+        "description": "Convert colors between HEX, RGB, HSL and generate palettes"
+      },
+      "file-hash": {
+        "title": "File Hash Checker",
+        "description": "Calculate SHA-256 hash of files for verification"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "Date Difference Calculator",
+        "description": "Calculate the difference between two dates"
+      },
+      "timezone-converter": {
+        "title": "Timezone Converter",
+        "description": "Convert times between different timezones (DST aware)"
+      },
+      "age-calculator": {
+        "title": "Age Calculator",
+        "description": "Calculate exact age from birth date"
+      },
+      "ics-planner": {
+        "title": "Calendar Event Planner / ICS Export",
+        "description": "Create calendar events and export as ICS files"
+      },
+      "lunar-converter": {
+        "title": "Lunar Calendar Converter",
+        "description": "Convert between lunar and solar calendar dates"
+      },
+      "weekday-finder": {
+        "title": "Weekday Finder",
+        "description": "Find what day of the week any date falls on"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "YouTube Link Parser",
+        "description": "Extract video ID, playlist ID and canonical URLs from YouTube links"
+      },
+      "metadata": {
+        "title": "Metadata Viewer (oEmbed)",
+        "description": "View YouTube video title, channel, date, and thumbnails"
+      },
+      "thumbnails": {
+        "title": "Thumbnail Downloader",
+        "description": "Download YouTube video thumbnails in various resolutions"
+      },
+      "chapters": {
+        "title": "Timestamp / Chapters Builder",
+        "description": "Build formatted timestamp chapters for video descriptions"
+      },
+      "embed-generator": {
+        "title": "Embed Player Generator",
+        "description": "Generate YouTube embed iframe code with customization options"
+      },
+      "transcript-helper": {
+        "title": "Transcript Helper (Optional)",
+        "description": "Help format and work with YouTube transcripts"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "Convert Markdown documents to PDF or DOCX format"
+      },
+      "image-to-pdf": {
+        "title": "Image → PDF",
+        "description": "Convert images to PDF documents"
+      },
+      "pdf-to-text": {
+        "title": "PDF → Text",
+        "description": "Extract text from PDF documents (non-OCR)"
+      },
+      "office-lite-export": {
+        "title": "Office-Lite Export",
+        "description": "Export simple text/JSON to DOCX/PPTX formats"
+      },
+      "unit-converter": {
+        "title": "Unit Converter (Bonus)",
+        "description": "Convert between various units with currency support"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "Basic Calculator",
+        "description": "Simple calculator for basic arithmetic operations"
+      },
+      "scientific-calculator": {
+        "title": "Scientific Calculator",
+        "description": "Advanced calculator with scientific functions"
+      },
+      "equation-solver": {
+        "title": "Equation Solver",
+        "description": "Solve algebraic equations step by step"
+      },
+      "graph-plotter": {
+        "title": "Graph Plotter",
+        "description": "Plot mathematical functions and equations"
+      },
+      "matrix-calculator": {
+        "title": "Matrix Calculator",
+        "description": "Perform matrix operations like multiplication and inverse"
+      },
+      "prime-tools": {
+        "title": "Prime Number Checker/Generator",
+        "description": "Check if numbers are prime or generate prime sequences"
+      },
+      "fraction-simplifier": {
+        "title": "Fraction Simplifier",
+        "description": "Simplify fractions to their lowest terms"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "Length Converter",
+        "description": "Convert between meters, feet, inches, kilometers, miles"
+      },
+      "weight": {
+        "title": "Weight Converter",
+        "description": "Convert between kilograms, pounds, ounces, grams"
+      },
+      "volume": {
+        "title": "Volume Converter",
+        "description": "Convert between liters, gallons, cups, milliliters"
+      },
+      "temperature": {
+        "title": "Temperature Converter",
+        "description": "Convert between Celsius, Fahrenheit, Kelvin"
+      },
+      "area": {
+        "title": "Area Converter",
+        "description": "Convert between square meters, acres, hectares, square feet"
+      },
+      "speed": {
+        "title": "Speed Converter",
+        "description": "Convert between km/h, mph, m/s, knots"
+      },
+      "energy": {
+        "title": "Energy Converter",
+        "description": "Convert between joules, calories, BTU, kilowatt-hours"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "BMI Calculator",
+        "description": "Calculate Body Mass Index from height and weight"
+      },
+      "calories-burn": {
+        "title": "Calorie Burn Estimator",
+        "description": "Estimate calories burned based on activity and duration"
+      },
+      "body-fat": {
+        "title": "Body Fat Percentage",
+        "description": "Estimate body fat percentage using Navy method"
+      },
+      "water-intake": {
+        "title": "Water Intake Calculator",
+        "description": "Calculate recommended daily water intake"
+      },
+      "sleep-cycle": {
+        "title": "Sleep Cycle Calculator",
+        "description": "Calculate optimal sleep and wake times based on sleep cycles"
+      },
+      "heart-rate-zone": {
+        "title": "Heart Rate Zone",
+        "description": "Calculate target heart rate zones for exercise"
+      },
+      "pregnancy-due-date": {
+        "title": "Pregnancy Due Date",
+        "description": "Estimate pregnancy due date from last period"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "Keyword Density Analyzer",
+        "description": "Analyze keyword density in text or from URL"
+      },
+      "meta-tag-generator": {
+        "title": "Meta Tag Generator",
+        "description": "Generate SEO-optimized meta tags for your pages"
+      },
+      "site-speed": {
+        "title": "Site Speed Tester",
+        "description": "Test website loading speed and performance"
+      },
+      "broken-link-checker": {
+        "title": "Broken Link Checker",
+        "description": "Check for broken links on a webpage"
+      },
+      "sitemap-generator": {
+        "title": "Sitemap Generator",
+        "description": "Generate XML sitemaps for websites"
+      },
+      "robots-tester": {
+        "title": "Robots.txt Tester",
+        "description": "Test and validate robots.txt files"
+      },
+      "mobile-friendly": {
+        "title": "Mobile-Friendly Checker",
+        "description": "Check if a webpage is mobile-friendly"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "IP Address Lookup",
+        "description": "Look up IP address geolocation and details"
+      },
+      "ping": {
+        "title": "Ping Tool",
+        "description": "Measure latency to a URL or IP address"
+      },
+      "whois": {
+        "title": "WHOIS Lookup",
+        "description": "Look up domain registration information"
+      },
+      "dns-resolver": {
+        "title": "DNS Resolver",
+        "description": "Resolve domain names to IP addresses"
+      },
+      "port-checker": {
+        "title": "Port Scanner (Basic)",
+        "description": "Check if specific ports are open (limited scope)"
+      },
+      "subnet-calculator": {
+        "title": "Subnet Calculator",
+        "description": "Calculate subnet ranges, CIDR notation, and IP math"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "Text Translator",
+        "description": "Translate text between languages"
+      },
+      "spell-checker": {
+        "title": "Spell Checker",
+        "description": "Check spelling in multiple languages"
+      },
+      "grammar-checker": {
+        "title": "Grammar Checker",
+        "description": "Check grammar and writing style"
+      },
+      "synonym-finder": {
+        "title": "Synonym Finder",
+        "description": "Find synonyms and related words"
+      },
+      "language-detector": {
+        "title": "Language Detector",
+        "description": "Detect the language of text automatically"
+      },
+      "morse": {
+        "title": "Morse Code Converter",
+        "description": "Convert text to/from Morse code"
+      },
+      "braille": {
+        "title": "Braille Converter",
+        "description": "Convert text to/from Braille notation"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "Audio Converter",
+        "description": "Convert audio files between formats"
+      },
+      "volume-normalizer": {
+        "title": "Volume Normalizer",
+        "description": "Normalize audio volume levels"
+      },
+      "bpm-detector": {
+        "title": "BPM Detector",
+        "description": "Detect beats per minute in audio files"
+      },
+      "audio-cutter": {
+        "title": "Audio Cutter",
+        "description": "Cut and trim audio files"
+      },
+      "tts": {
+        "title": "Text to Speech",
+        "description": "Convert text to spoken audio"
+      },
+      "sfx-generator": {
+        "title": "Sound Effect Generator",
+        "description": "Generate simple sound effects and tones"
       }
     }
   },
@@ -416,11 +897,5 @@
     "text": "Text Utilities",
     "developer": "Developer Tools",
     "security": "Security Tools"
-  },
-  "footer": {
-    "description": "Free online tools that respect your privacy. All processing happens in your browser.",
-    "quick_links": "Quick Links",
-    "legal": "Legal",
-    "follow_us": "Follow Us"
   }
 }

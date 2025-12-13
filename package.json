@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "verify": "npm run lint && npm run type-check && npm run build",
+    "deploy": "vercel deploy",
+    "deploy:prod": "vercel deploy --prod"
   },
   "repository": {
     "type": "git",

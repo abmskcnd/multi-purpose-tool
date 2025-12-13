@@ -1,6 +1,6 @@
 {
   "common": {
-    "site_name": "ToolHub",
+    "site_name": "Vibetool",
     "home": "Trang chủ",
     "tools": "Công cụ",
     "about": "Giới thiệu",
@@ -21,6 +21,9 @@
     "client_side": "100% Phía Client (Trình duyệt)",
     "server_side": "Xử lý phía Server",
     "hybrid": "Kết hợp Client + Server",
+    "client_side_short": "Client",
+    "server_side_short": "Server",
+    "hybrid_short": "Hybrid",
     "tools_count": "{count} công cụ",
     "results_found": "{count} kết quả",
     "no_results": "Không tìm thấy công cụ",
@@ -45,19 +48,72 @@
     "tools_in_category_plural": "{count} công cụ trong danh mục này",
     "tool_pending_implementation": "Công cụ này được đánh dấu là hoạt động nhưng chưa được triển khai.",
     "result": "kết quả",
+    "loading": "Đang tải",
     "results": "kết quả",
     "no_tools_found": "Không tìm thấy công cụ cho",
-    "more": "thêm"
+    "more": "thêm",
+    "categories": "Danh mục",
+    "filters": "Bộ lọc",
+    "sort_by": "Sắp xếp theo",
+    "all_categories": "Tất cả danh mục",
+    "all_status": "Tất cả trạng thái",
+    "all_types": "Tất cả loại",
+    "category": "Danh mục",
+    "status": "Trạng thái",
+    "type": "Loại",
+    "clear_all": "Xóa tất cả",
+    "clear_filters": "Xóa bộ lọc",
+    "try_different_search": "Thử điều chỉnh tìm kiếm hoặc bộ lọc",
+    "for": "cho",
+    "free": "Miễn phí",
+    "navigation": "Điều hướng",
+    "close_menu": "Đóng menu",
+    "open_menu": "Mở menu",
+    "get_started": "Bắt đầu",
+    "expand_sidebar": "Mở rộng sidebar",
+    "collapse_sidebar": "Thu gọn sidebar"
   },
   "home": {
     "title": "Công Cụ Online Miễn Phí - Không Cần Đăng Ký",
     "description": "100+ công cụ online miễn phí cho chuyển đổi ảnh, xử lý PDF, tạo mật khẩu và nhiều hơn nữa. Xử lý 100% phía client - file của bạn không bao giờ rời khỏi thiết bị.",
-    "hero_title": "Công Cụ Mạnh Mẽ, Không Rào Cản",
-    "hero_subtitle": "Tiện ích online miễn phí hoạt động hoàn toàn trong trình duyệt. Không cần đăng ký, không upload lên server.",
+    "hero_title": "Tăng tốc quy trình làm việc với VibeTool",
+    "hero_subtitle": "Khám phá các công cụ tốt nhất được tuyển chọn cho nhà sáng tạo và lập trình viên hiện đại. Tìm trợ thủ năng suất tiếp theo của bạn ngay hôm nay.",
     "search_placeholder": "Tìm kiếm công cụ...",
     "popular_tools": "Công Cụ Phổ Biến",
+    "popular_subtitle": "Các công cụ được cộng đồng sử dụng nhiều nhất",
     "all_tools": "Tất Cả Công Cụ",
-    "view_all": "Xem Tất Cả"
+    "view_all": "Xem Tất Cả",
+    "new_tools_badge": "Thêm công cụ mới hàng tuần",
+    "get_started": "Bắt Đầu",
+    "browse_all": "Duyệt Tất Cả",
+    "quick_picks": "Lựa Chọn Nhanh",
+    "editors_choice": "Lựa Chọn Của Biên Tập",
+    "editors_choice_subtitle": "Công cụ được chọn lọc cho tuần này",
+    "view_details": "Xem Chi Tiết",
+    "most_popular": "Phổ Biến Nhất",
+    "newest": "Mới Nhất",
+    "a_to_z": "A đến Z",
+    "show_more_tools": "Xem Thêm Công Cụ",
+    "free": "Miễn phí",
+    "featured": "Nổi bật",
+    "categories_subtitle": "Tìm công cụ phù hợp với nhu cầu của bạn",
+    "coming_soon_title": "Sắp Ra Mắt",
+    "coming_soon_subtitle": "Các công cụ mới thú vị đang được phát triển",
+    "cta_title": "Sẵn sàng tăng năng suất?",
+    "cta_subtitle": "Khám phá bộ sưu tập 100+ công cụ miễn phí giúp công việc của bạn dễ dàng hơn",
+    "explore_all_tools": "Khám Phá Tất Cả Công Cụ"
+  },
+  "footer": {
+    "description": "Bộ sưu tập toàn diện các công cụ trực tuyến miễn phí cho lập trình viên, nhà thiết kế và người sáng tạo. Xử lý 100% phía client để đảm bảo quyền riêng tư tối đa.",
+    "quick_links": "Liên Kết Nhanh",
+    "legal": "Pháp Lý",
+    "follow_us": "Theo Dõi Chúng Tôi",
+    "stay_updated": "Cập Nhật Tin Mới",
+    "newsletter_description": "Nhận thông báo khi chúng tôi ra mắt công cụ mới",
+    "email_placeholder": "Nhập email của bạn",
+    "subscribe": "Đăng ký",
+    "made_with": "Tạo với",
+    "by_team": "bởi đội ngũ Vibetool"
   },
   "toolGroups": {
     "password": {
@@ -342,6 +398,431 @@
       "api-tester": {
         "title": "Kiểm Tra API",
         "description": "Kiểm tra REST API trực tiếp từ trình duyệt (có tùy chọn CORS proxy)"
+      },
+      "json-to-ts": {
+        "title": "JSON sang TypeScript",
+        "description": "Tạo interface TypeScript từ dữ liệu JSON"
+      },
+      "openapi-to-types": {
+        "title": "OpenAPI sang Types",
+        "description": "Tạo kiểu TypeScript từ đặc tả OpenAPI"
+      }
+    },
+    "weather": {
+      "forecast": {
+        "title": "Dự Báo Thời Tiết",
+        "description": "Xem dự báo thời tiết cho bất kỳ địa điểm nào"
+      },
+      "aqi": {
+        "title": "Chỉ Số Chất Lượng Không Khí",
+        "description": "Kiểm tra chỉ số chất lượng không khí tại các địa điểm"
+      },
+      "sunrise-sunset": {
+        "title": "Tính Giờ Mặt Trời Mọc/Lặn",
+        "description": "Tính giờ mặt trời mọc và lặn cho bất kỳ ngày và địa điểm"
+      },
+      "uv-index": {
+        "title": "Kiểm Tra Chỉ Số UV",
+        "description": "Kiểm tra chỉ số UV và khuyến nghị bảo vệ khỏi nắng"
+      },
+      "carbon-footprint": {
+        "title": "Ước Tính Lượng Khí Thải Carbon",
+        "description": "Ước tính lượng khí thải carbon từ các hoạt động"
+      },
+      "tide": {
+        "title": "Dự Đoán Thủy Triều",
+        "description": "Kiểm tra thời gian và độ cao thủy triều tại các địa điểm ven biển"
+      }
+    },
+    "crypto": {
+      "price-tracker": {
+        "title": "Theo Dõi Giá Crypto",
+        "description": "Theo dõi giá tiền điện tử thời gian thực"
+      },
+      "portfolio": {
+        "title": "Tính Danh Mục Đầu Tư",
+        "description": "Tính giá trị danh mục đầu tư tiền điện tử"
+      },
+      "mining-profit": {
+        "title": "Lợi Nhuận Đào Coin",
+        "description": "Tính lợi nhuận đào tiền điện tử"
+      },
+      "wallet-validator": {
+        "title": "Xác Thực Địa Chỉ Ví",
+        "description": "Xác thực địa chỉ ví tiền điện tử"
+      },
+      "fee-estimator": {
+        "title": "Ước Tính Phí",
+        "description": "Ước tính phí giao dịch tiền điện tử"
+      },
+      "crypto-converter": {
+        "title": "Chuyển Đổi Crypto",
+        "description": "Chuyển đổi giữa các loại tiền điện tử"
+      },
+      "market-cap-ranker": {
+        "title": "Xếp Hạng Vốn Hóa",
+        "description": "Xem tiền điện tử xếp hạng theo vốn hóa thị trường"
+      }    },
+    "finance": {
+      "currency": {
+        "title": "Chuyển Đổi Tiền Tệ",
+        "description": "Chuyển đổi giữa các loại tiền tệ với tỷ giá thời gian thực"
+      },
+      "loan-emi": {
+        "title": "Tính Khoản Vay/EMI",
+        "description": "Tính EMI khoản vay, lãi suất và khấu hao"
+      },
+      "budget-planner": {
+        "title": "Lập Kế Hoạch Ngân Sách",
+        "description": "Lập kế hoạch và trực quan hóa ngân sách của bạn bằng biểu đồ"
+      },
+      "investment": {
+        "title": "Tính Đầu Tư",
+        "description": "Tính lãi suất kép và lợi nhuận đầu tư"
+      },
+      "tax-estimator": {
+        "title": "Ước Tính Thuế",
+        "description": "Ước tính thuế (chỉ để tham khảo, không phải lời khuyên thuế)"
+      },
+      "tip-calculator": {
+        "title": "Tính Tiền Boa",
+        "description": "Tính tiền boa và chia hóa đơn cho nhóm"
+      },
+      "savings-goal": {
+        "title": "Theo Dõi Mục Tiêu Tiết Kiệm",
+        "description": "Theo dõi tiến độ hướng tới mục tiêu tiết kiệm"
+      }
+    },
+    "video": {
+      "video-compressor": {
+        "title": "Nén Video",
+        "description": "Nén tệp video để giảm kích thước"
+      },
+      "format-converter": {
+        "title": "Chuyển Đổi Định Dạng",
+        "description": "Chuyển đổi video giữa các định dạng khác nhau"
+      },
+      "frame-extractor": {
+        "title": "Trích Xuất Khung Hình",
+        "description": "Trích xuất khung hình/ảnh chụp màn hình từ video"
+      },
+      "subtitle-generator": {
+        "title": "Tạo Phụ Đề",
+        "description": "Tạo phụ đề sử dụng chuyển giọng nói thành văn bản"
+      },
+      "video-merger": {
+        "title": "Ghép Video",
+        "description": "Ghép nhiều tệp video thành một"
+      },
+      "gif-maker": {
+        "title": "Tạo GIF",
+        "description": "Tạo GIF từ các đoạn video"
+      },
+      "resolution-changer": {
+        "title": "Thay Đổi Độ Phân Giải",
+        "description": "Thay đổi độ phân giải và tỷ lệ khung hình video"
+      }
+    },
+    "data": {
+      "base64": {
+        "title": "Mã Hóa/Giải Mã Base64",
+        "description": "Mã hóa hoặc giải mã chuỗi Base64 hỗ trợ Unicode"
+      },
+      "url-parser": {
+        "title": "Phân Tích URL",
+        "description": "Phân tích và trích xuất các thành phần URL"
+      },
+      "csv-json": {
+        "title": "Chuyển Đổi CSV ↔ JSON",
+        "description": "Chuyển đổi giữa định dạng CSV và JSON"
+      },
+      "number-base": {
+        "title": "Chuyển Đổi Cơ Số",
+        "description": "Chuyển đổi số giữa nhị phân, bát phân, thập phân, thập lục phân"
+      },
+      "color-tools": {
+        "title": "Công Cụ Màu Sắc",
+        "description": "Chuyển đổi màu giữa HEX, RGB, HSL và tạo bảng màu"
+      },
+      "file-hash": {
+        "title": "Kiểm Tra Hash File",
+        "description": "Tính hash SHA-256 của file để xác minh"
+      }
+    },
+    "datetime": {
+      "date-diff": {
+        "title": "Tính Khoảng Cách Ngày",
+        "description": "Tính khoảng cách giữa hai ngày"
+      },
+      "timezone-converter": {
+        "title": "Chuyển Đổi Múi Giờ",
+        "description": "Chuyển đổi thời gian giữa các múi giờ (hỗ trợ DST)"
+      },
+      "age-calculator": {
+        "title": "Tính Tuổi",
+        "description": "Tính tuổi chính xác từ ngày sinh"
+      },
+      "ics-planner": {
+        "title": "Lập Kế Hoạch Sự Kiện / Xuất ICS",
+        "description": "Tạo sự kiện lịch và xuất file ICS"
+      },
+      "lunar-converter": {
+        "title": "Chuyển Đổi Âm Lịch",
+        "description": "Chuyển đổi giữa ngày âm lịch và dương lịch"
+      },
+      "weekday-finder": {
+        "title": "Tìm Thứ Trong Tuần",
+        "description": "Tìm ngày nào trong tuần cho bất kỳ ngày nào"
+      }
+    },
+    "youtube": {
+      "link-parser": {
+        "title": "Phân Tích Link YouTube",
+        "description": "Trích xuất ID video, ID playlist và URL chuẩn từ link YouTube"
+      },
+      "metadata": {
+        "title": "Xem Metadata (oEmbed)",
+        "description": "Xem tiêu đề, kênh, ngày đăng và thumbnail của video YouTube"
+      },
+      "thumbnails": {
+        "title": "Tải Thumbnail",
+        "description": "Tải thumbnail video YouTube với nhiều độ phân giải"
+      },
+      "chapters": {
+        "title": "Tạo Timestamp / Chapters",
+        "description": "Tạo timestamp chapters định dạng cho mô tả video"
+      },
+      "embed-generator": {
+        "title": "Tạo Mã Nhúng",
+        "description": "Tạo mã iframe nhúng YouTube với tùy chọn tùy chỉnh"
+      },
+      "transcript-helper": {
+        "title": "Trợ Lý Phụ Đề (Tùy Chọn)",
+        "description": "Hỗ trợ định dạng và làm việc với phụ đề YouTube"
+      }
+    },
+    "file-convert": {
+      "md-to-pdf-docx": {
+        "title": "Markdown → PDF / DOCX",
+        "description": "Chuyển đổi tài liệu Markdown sang PDF hoặc DOCX"
+      },
+      "image-to-pdf": {
+        "title": "Ảnh → PDF",
+        "description": "Chuyển đổi ảnh thành tài liệu PDF"
+      },
+      "pdf-to-text": {
+        "title": "PDF → Văn Bản",
+        "description": "Trích xuất văn bản từ tài liệu PDF (không OCR)"
+      },
+      "office-lite-export": {
+        "title": "Xuất Office-Lite",
+        "description": "Xuất văn bản/JSON đơn giản sang DOCX/PPTX"
+      },
+      "unit-converter": {
+        "title": "Chuyển Đổi Đơn Vị (Bonus)",
+        "description": "Chuyển đổi giữa các đơn vị với hỗ trợ tiền tệ"
+      }
+    },
+    "math": {
+      "basic-calculator": {
+        "title": "Máy Tính Cơ Bản",
+        "description": "Máy tính đơn giản cho các phép tính số học cơ bản"
+      },
+      "scientific-calculator": {
+        "title": "Máy Tính Khoa Học",
+        "description": "Máy tính nâng cao với các hàm khoa học"
+      },
+      "equation-solver": {
+        "title": "Giải Phương Trình",
+        "description": "Giải phương trình đại số từng bước"
+      },
+      "graph-plotter": {
+        "title": "Vẽ Đồ Thị",
+        "description": "Vẽ đồ thị hàm số và phương trình"
+      },
+      "matrix-calculator": {
+        "title": "Tính Toán Ma Trận",
+        "description": "Thực hiện các phép tính ma trận như nhân và nghịch đảo"
+      },
+      "prime-tools": {
+        "title": "Kiểm Tra/Tạo Số Nguyên Tố",
+        "description": "Kiểm tra số nguyên tố hoặc tạo dãy số nguyên tố"
+      },
+      "fraction-simplifier": {
+        "title": "Rút Gọn Phân Số",
+        "description": "Rút gọn phân số về dạng tối giản"
+      }
+    },
+    "unit": {
+      "length": {
+        "title": "Chuyển Đổi Độ Dài",
+        "description": "Chuyển đổi giữa mét, feet, inch, km, dặm"
+      },
+      "weight": {
+        "title": "Chuyển Đổi Khối Lượng",
+        "description": "Chuyển đổi giữa kg, pound, ounce, gram"
+      },
+      "volume": {
+        "title": "Chuyển Đổi Thể Tích",
+        "description": "Chuyển đổi giữa lít, gallon, cốc, ml"
+      },
+      "temperature": {
+        "title": "Chuyển Đổi Nhiệt Độ",
+        "description": "Chuyển đổi giữa Celsius, Fahrenheit, Kelvin"
+      },
+      "area": {
+        "title": "Chuyển Đổi Diện Tích",
+        "description": "Chuyển đổi giữa m², mẫu Anh, hecta, feet²"
+      },
+      "speed": {
+        "title": "Chuyển Đổi Tốc Độ",
+        "description": "Chuyển đổi giữa km/h, mph, m/s, hải lý/h"
+      },
+      "energy": {
+        "title": "Chuyển Đổi Năng Lượng",
+        "description": "Chuyển đổi giữa joule, calorie, BTU, kilowatt-giờ"
+      }
+    },
+    "health": {
+      "bmi": {
+        "title": "Tính Chỉ Số BMI",
+        "description": "Tính chỉ số khối cơ thể từ chiều cao và cân nặng"
+      },
+      "calories-burn": {
+        "title": "Ước Tính Calo Đốt Cháy",
+        "description": "Ước tính lượng calo đốt cháy theo hoạt động và thời gian"
+      },
+      "body-fat": {
+        "title": "Tỷ Lệ Mỡ Cơ Thể",
+        "description": "Ước tính tỷ lệ mỡ cơ thể theo phương pháp Navy"
+      },
+      "water-intake": {
+        "title": "Tính Lượng Nước Uống",
+        "description": "Tính lượng nước uống hàng ngày khuyến nghị"
+      },
+      "sleep-cycle": {
+        "title": "Tính Chu Kỳ Giấc Ngủ",
+        "description": "Tính thời gian ngủ và thức dậy tối ưu theo chu kỳ giấc ngủ"
+      },
+      "heart-rate-zone": {
+        "title": "Vùng Nhịp Tim",
+        "description": "Tính vùng nhịp tim mục tiêu khi tập luyện"
+      },
+      "pregnancy-due-date": {
+        "title": "Ngày Dự Sinh",
+        "description": "Ước tính ngày dự sinh từ kỳ kinh cuối"
+      }
+    },
+    "seo": {
+      "keyword-density": {
+        "title": "Phân Tích Mật Độ Từ Khóa",
+        "description": "Phân tích mật độ từ khóa trong văn bản hoặc từ URL"
+      },
+      "meta-tag-generator": {
+        "title": "Tạo Meta Tag",
+        "description": "Tạo meta tag tối ưu SEO cho trang web"
+      },
+      "site-speed": {
+        "title": "Kiểm Tra Tốc Độ Website",
+        "description": "Kiểm tra tốc độ tải và hiệu suất website"
+      },
+      "broken-link-checker": {
+        "title": "Kiểm Tra Link Hỏng",
+        "description": "Kiểm tra các link hỏng trên trang web"
+      },
+      "sitemap-generator": {
+        "title": "Tạo Sitemap",
+        "description": "Tạo sitemap XML cho website"
+      },
+      "robots-tester": {
+        "title": "Kiểm Tra Robots.txt",
+        "description": "Kiểm tra và xác thực file robots.txt"
+      },
+      "mobile-friendly": {
+        "title": "Kiểm Tra Thân Thiện Di Động",
+        "description": "Kiểm tra trang web có thân thiện với di động không"
+      }
+    },
+    "network": {
+      "ip-lookup": {
+        "title": "Tra Cứu Địa Chỉ IP",
+        "description": "Tra cứu vị trí địa lý và thông tin địa chỉ IP"
+      },
+      "ping": {
+        "title": "Công Cụ Ping",
+        "description": "Đo độ trễ đến URL hoặc địa chỉ IP"
+      },
+      "whois": {
+        "title": "Tra Cứu WHOIS",
+        "description": "Tra cứu thông tin đăng ký tên miền"
+      },
+      "dns-resolver": {
+        "title": "Phân Giải DNS",
+        "description": "Phân giải tên miền thành địa chỉ IP"
+      },
+      "port-checker": {
+        "title": "Quét Cổng (Cơ Bản)",
+        "description": "Kiểm tra các cổng cụ thể có mở không (phạm vi giới hạn)"
+      },
+      "subnet-calculator": {
+        "title": "Tính Subnet",
+        "description": "Tính dải subnet, ký hiệu CIDR và toán IP"
+      }
+    },
+    "language": {
+      "translator": {
+        "title": "Dịch Văn Bản",
+        "description": "Dịch văn bản giữa các ngôn ngữ"
+      },
+      "spell-checker": {
+        "title": "Kiểm Tra Chính Tả",
+        "description": "Kiểm tra chính tả bằng nhiều ngôn ngữ"
+      },
+      "grammar-checker": {
+        "title": "Kiểm Tra Ngữ Pháp",
+        "description": "Kiểm tra ngữ pháp và phong cách viết"
+      },
+      "synonym-finder": {
+        "title": "Tìm Từ Đồng Nghĩa",
+        "description": "Tìm từ đồng nghĩa và từ liên quan"
+      },
+      "language-detector": {
+        "title": "Nhận Diện Ngôn Ngữ",
+        "description": "Tự động nhận diện ngôn ngữ của văn bản"
+      },
+      "morse": {
+        "title": "Chuyển Đổi Mã Morse",
+        "description": "Chuyển đổi văn bản sang/từ mã Morse"
+      },
+      "braille": {
+        "title": "Chuyển Đổi Chữ Nổi",
+        "description": "Chuyển đổi văn bản sang/từ chữ nổi Braille"
+      }
+    },
+    "audio": {
+      "audio-converter": {
+        "title": "Chuyển Đổi Âm Thanh",
+        "description": "Chuyển đổi file âm thanh giữa các định dạng"
+      },
+      "volume-normalizer": {
+        "title": "Chuẩn Hóa Âm Lượng",
+        "description": "Chuẩn hóa mức âm lượng"
+      },
+      "bpm-detector": {
+        "title": "Phát Hiện BPM",
+        "description": "Phát hiện nhịp độ (BPM) trong file âm thanh"
+      },
+      "audio-cutter": {
+        "title": "Cắt Âm Thanh",
+        "description": "Cắt và cắt tỉa file âm thanh"
+      },
+      "tts": {
+        "title": "Chuyển Văn Bản Thành Giọng Nói",
+        "description": "Chuyển đổi văn bản thành âm thanh giọng nói"
+      },
+      "sfx-generator": {
+        "title": "Tạo Hiệu Ứng Âm Thanh",
+        "description": "Tạo hiệu ứng âm thanh và âm báo đơn giản"
       }
     }
   },
@@ -416,11 +897,5 @@
     "text": "Tiện Ích Văn Bản",
     "developer": "Công Cụ Lập Trình",
     "security": "Công Cụ Bảo Mật"
-  },
-  "footer": {
-    "description": "Công cụ online miễn phí tôn trọng quyền riêng tư của bạn. Tất cả xử lý diễn ra trong trình duyệt.",
-    "quick_links": "Liên Kết Nhanh",
-    "legal": "Pháp Lý",
-    "follow_us": "Theo Dõi Chúng Tôi"
   }
 }

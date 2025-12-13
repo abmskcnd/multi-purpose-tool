@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: GroupPageProps) {
   }
 
   return {
-    title: `${groupTitle} | ToolHub`,
+    title: `${groupTitle} | Vibetool`,
     description: groupDescription,
   };
 }

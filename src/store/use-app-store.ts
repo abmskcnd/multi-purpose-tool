@@ -50,7 +50,7 @@ export const useAppStore = create<AppState>()(
         })),
     }),
     {
-      name: 'toolhub-storage',
+      name: 'vibetool-storage',
       partialize: (state) => ({
         locale: state.locale,
         theme: state.theme,
